@@ -1,0 +1,529 @@
+/* ============================================
+   FAVERO ENGENHARIA - NAVY DREAM PALETTE
+   ============================================ */
+
+/* CSS Variables - Light Mode */
+:root {
+    --navy: #1E1E2A;
+    --marine-blue: #24273A;
+    --dark-blue: #2E3E58;
+    --deep-teal: #4D7493;
+    --stone-blue: #90ADC1;
+    --light-gray: #D2D7DB;
+    --medium-gray: #98A1AA;
+    --steel-blue: #7F99B2;
+    --off-white: #F7F7F7;
+    --dark-navy: #2C4156;
+    --dark-teal: #39586D;
+
+    /* Semantic Colors - Light Mode */
+    --background: #F7F7F7;
+    --foreground: #1E1E2A;
+    --card: #FFFFFF;
+    --card-foreground: #1E1E2A;
+    --primary: #4D7493;
+    --primary-foreground: #F7F7F7;
+    --secondary: #D2D7DB;
+    --secondary-foreground: #1E1E2A;
+    --muted: #D2D7DB;
+    --muted-foreground: #98A1AA;
+    --accent: #7F99B2;
+    --accent-foreground: #F7F7F7;
+    --border: #D2D7DB;
+    --input: #D2D7DB;
+    --ring: #4D7493;
+    --hero-gradient-start: #2C4156;
+    --hero-gradient-end: #39586D;
+}
+
+/* Dark Mode */
+.dark {
+    --background: #1E1E2A;
+    --foreground: #F7F7F7;
+    --card: #24273A;
+    --card-foreground: #F7F7F7;
+    --primary: #4D7493;
+    --primary-foreground: #F7F7F7;
+    --secondary: #24273A;
+    --secondary-foreground: #F7F7F7;
+    --muted: #2E3E58;
+    --muted-foreground: #98A1AA;
+    --accent: #90ADC1;
+    --accent-foreground: #1E1E2A;
+    --border: #2E3E58;
+    --input: #2E3E58;
+    --ring: #90ADC1;
+    --hero-gradient-start: #1E1E2A;
+    --hero-gradient-end: #2E3E58;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+/* Dark mode overrides for Tailwind */
+html.dark body {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+html.dark .bg-card {
+    background-color: var(--card);
+    color: var(--card-foreground);
+}
+
+html.dark .bg-primary {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+}
+
+html.dark .bg-secondary {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+}
+
+html.dark .bg-muted {
+    background-color: var(--muted);
+}
+
+html.dark .text-muted-foreground {
+    color: var(--muted-foreground);
+}
+
+html.dark .border-border {
+    border-color: var(--border);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(77, 116, 147, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(77, 116, 147, 0.5);
+    }
+}
+
+/* Animation Classes */
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.fade-in-left {
+    animation: fadeInLeft 0.6s ease-out forwards;
+}
+
+.fade-in-right {
+    animation: fadeInRight 0.6s ease-out forwards;
+}
+
+.scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Scroll-triggered animations */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animation direction variants */
+.animate-on-scroll.fade-up {
+    transform: translateY(30px);
+}
+
+.animate-on-scroll.fade-left {
+    transform: translateX(-30px);
+}
+
+.animate-on-scroll.fade-right {
+    transform: translateX(30px);
+}
+
+.animate-on-scroll.zoom-in {
+    transform: scale(0.95);
+}
+
+/* Triggered states - both visible and animate-in work */
+.animate-on-scroll.visible,
+.animate-on-scroll.animate-in {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Stagger delays for transitions */
+.animate-on-scroll.delay-100 {
+    transition-delay: 0.1s;
+}
+
+.animate-on-scroll.delay-200 {
+    transition-delay: 0.2s;
+}
+
+.animate-on-scroll.delay-300 {
+    transition-delay: 0.3s;
+}
+
+.animate-on-scroll.delay-400 {
+    transition-delay: 0.4s;
+}
+
+.animate-on-scroll.delay-500 {
+    transition-delay: 0.5s;
+}
+
+/* Fallback: show content if JS fails or file:// protocol */
+@media (prefers-reduced-motion: reduce) {
+    .animate-on-scroll {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Stagger delays for keyframe animations */
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+}
+
+/* ============================================
+   SECTION STYLES
+   ============================================ */
+
+section {
+    scroll-margin-top: 64px;
+    /* Height of fixed header */
+}
+
+/* Hero Gradient */
+.hero-gradient {
+    background: linear-gradient(135deg, var(--hero-gradient-start) 0%, var(--hero-gradient-end) 100%);
+}
+
+/* Alternating sections */
+.section-light {
+    background-color: var(--background);
+}
+
+.section-muted {
+    background-color: var(--secondary);
+}
+
+html.dark .section-muted {
+    background-color: var(--muted);
+}
+
+/* ============================================
+   NAVIGATION STYLES
+   ============================================ */
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-link.active {
+    color: var(--primary);
+}
+
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(77, 116, 147, 0.3);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+}
+
+/* ============================================
+   CARD STYLES
+   ============================================ */
+
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(30, 30, 42, 0.15);
+}
+
+html.dark .card-hover:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   PARTNER CAROUSEL
+   ============================================ */
+
+.partner-carousel {
+    --animation-duration: 30s;
+    overflow: hidden;
+    position: relative;
+}
+
+.partner-carousel::before,
+.partner-carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.partner-carousel::before {
+    left: 0;
+    background: linear-gradient(to right, var(--background), transparent);
+}
+
+.partner-carousel::after {
+    right: 0;
+    background: linear-gradient(to left, var(--background), transparent);
+}
+
+html.dark .partner-carousel::before {
+    background: linear-gradient(to right, var(--background), transparent);
+}
+
+html.dark .partner-carousel::after {
+    background: linear-gradient(to left, var(--background), transparent);
+}
+
+.partner-track {
+    display: flex;
+    animation: scroll var(--animation-duration) linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* ============================================
+   FORM STYLES
+   ============================================ */
+
+.form-input {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    color: var(--foreground);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(77, 116, 147, 0.2);
+    outline: none;
+}
+
+.form-input::placeholder {
+    color: var(--muted-foreground);
+}
+
+/* ============================================
+   UTILITIES
+   ============================================ */
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--deep-teal), var(--stone-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, var(--deep-teal), var(--dark-blue));
+}
+
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+html.dark .glassmorphism {
+    background: rgba(30, 30, 42, 0.8);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+
+    .partner-carousel::before,
+    .partner-carousel::after {
+        width: 50px;
+    }
+
+    section {
+        scroll-margin-top: 56px;
+    }
+}
+
+/* ============================================
+   PARTNERS CAROUSEL ANIMATION
+   ============================================ */
+
+.animate-partners-scroll {
+    display: flex;
+    animation: partners-scroll 30s linear infinite;
+}
+
+.animate-partners-scroll:hover {
+    animation-play-state: paused;
+}
+
+@keyframes partners-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Faster scroll on mobile */
+@media (max-width: 768px) {
+    .animate-partners-scroll {
+        animation-duration: 20s;
+    }
+}

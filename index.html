@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favero Engenharia</title>
+    <meta name="description"
+        content="Empresa especializada em projetos estruturais, consultoria técnica e gerenciamento de obras em São Paulo.">
+    <link rel="icon" type="image/png" href="assets/images/favero-logo.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="assets/images/Logo_RF_white.png" media="(prefers-color-scheme: dark)">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        border: "var(--border)",
+                        input: "var(--input)",
+                        ring: "var(--ring)",
+                        background: "var(--background)",
+                        foreground: "var(--foreground)",
+                        primary: { DEFAULT: "var(--primary)", foreground: "var(--primary-foreground)" },
+                        secondary: { DEFAULT: "var(--secondary)", foreground: "var(--secondary-foreground)" },
+                        muted: { DEFAULT: "var(--muted)", foreground: "var(--muted-foreground)" },
+                        accent: { DEFAULT: "var(--accent)", foreground: "var(--accent-foreground)" },
+                        card: { DEFAULT: "var(--card)", foreground: "var(--card-foreground)" },
+                    },
+                    borderRadius: { lg: "0.75rem", md: "calc(0.75rem - 2px)", sm: "calc(0.75rem - 4px)" },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.1)',
+                        'glow': '0 0 15px rgba(77, 116, 147, 0.5)',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            /* Navy Dream Palette */
+            --navy: #1E1E2A;
+            --marine-blue: #24273A;
+            --dark-blue: #2E3E58;
+            --deep-teal: #4D7493;
+            --stone-blue: #90ADC1;
+            --light-gray: #D2D7DB;
+            --medium-gray: #98A1AA;
+            --steel-blue: #7F99B2;
+            --off-white: #F7F7F7;
+            --dark-navy: #2C4156;
+            --dark-teal: #39586D;
+
+            /* Semantic Colors - Light Mode */
+            --background: #F7F7F7;
+            --foreground: #1E1E2A;
+            --card: #FFFFFF;
+            --card-foreground: #1E1E2A;
+            --primary: #4D7493;
+            --primary-foreground: #F7F7F7;
+            --secondary: #E8EBED;
+            --secondary-foreground: #1E1E2A;
+            --muted: #D2D7DB;
+            --muted-foreground: #98A1AA;
+            --accent: #7F99B2;
+            --accent-foreground: #F7F7F7;
+            --border: #D2D7DB;
+            --input: #D2D7DB;
+            --ring: #4D7493;
+        }
+
+        .dark {
+            --background: #1E1E2A;
+            --foreground: #F7F7F7;
+            --card: #24273A;
+            --card-foreground: #F7F7F7;
+            --primary: #4D7493;
+            --primary-foreground: #F7F7F7;
+            --secondary: #24273A;
+            --secondary-foreground: #F7F7F7;
+            --muted: #2E3E58;
+            --muted-foreground: #98A1AA;
+            --accent: #90ADC1;
+            --accent-foreground: #1E1E2A;
+            --border: #2E3E58;
+            --input: #2E3E58;
+            --ring: #90ADC1;
+        }
+
+
+        @keyframes scroll-wheel {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+        }
+
+        .animate-scroll-wheel {
+            animation: scroll-wheel 1.5s ease-out infinite;
+        }
+    </style>
+    <noscript>
+        <style>
+            .animate-on-scroll {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        </style>
+    </noscript>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/cookies.js" defer></script>
+    <script src="assets/js/i18n.js" defer></script>
+</head>
+
+<body class="font-sans antialiased bg-background text-foreground min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b border-border bg-white/85 backdrop-blur-md dark:bg-[#1E1E2A]/90">
+        <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="assets/images/logo_favero_eng_topo_black.png" alt="Favero Engenharia Logo"
+                    class="h-10 w-auto object-contain dark:hidden">
+                <img src="assets/images/logo_favero_eng_white.png" alt="Favero Engenharia Logo"
+                    class="hidden h-10 w-auto object-contain dark:block">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden items-center gap-1 md:flex">
+                <a href="#inicio"
+                    class="nav-link rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                    data-i18n="nav.home">Início</a>
+                <a href="#servicos"
+                    class="nav-link rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                    data-i18n="nav.services">Serviços</a>
+                <a href="#sobre"
+                    class="nav-link rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                    data-i18n="nav.about">Sobre</a>
+                <a href="#projetos"
+                    class="nav-link rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                    data-i18n="nav.projects">Projetos</a>
+                <a href="#blog"
+                    class="nav-link rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                    data-i18n="nav.blog">Blog</a>
+                <a href="#contato"
+                    class="nav-link rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                    data-i18n="nav.contact">Contato</a>
+            </nav>
+
+            <!-- Right side -->
+            <div class="flex items-center gap-2">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9">
+                    <i data-lucide="sun"
+                        class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"></i>
+                    <i data-lucide="moon"
+                        class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"></i>
+                    <span class="sr-only">Toggle theme</span>
+                </button>
+
+                <!-- CTA -->
+                <a href="#contato"
+                    class="hidden md:inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-semibold ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 hover:shadow-soft h-9 px-6 py-2"
+                    data-i18n="nav.quote">
+                    Solicitar Orçamento
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" aria-expanded="false"
+                    class="md:hidden inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground h-9 w-9">
+                    <i data-lucide="menu" class="h-5 w-5"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden border-t border-border bg-background md:hidden">
+            <nav class="flex flex-col p-4 space-y-2">
+                <a href="#inicio"
+                    class="mobile-nav-link rounded-md px-3 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                    data-i18n="nav.home">Início</a>
+                <a href="#servicos"
+                    class="mobile-nav-link rounded-md px-3 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                    data-i18n="nav.services">Serviços</a>
+                <a href="#sobre"
+                    class="mobile-nav-link rounded-md px-3 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                    data-i18n="nav.about">Sobre</a>
+                <a href="#projetos"
+                    class="mobile-nav-link rounded-md px-3 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                    data-i18n="nav.projects">Projetos</a>
+                <a href="#blog"
+                    class="mobile-nav-link rounded-md px-3 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                    data-i18n="nav.blog">Blog</a>
+                <a href="#contato"
+                    class="mobile-nav-link rounded-md px-3 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                    data-i18n="nav.contact">Contato</a>
+                <a href="#contato"
+                    class="mt-4 w-full inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-semibold bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-md h-10 px-4 py-2 transition-all"
+                    data-i18n="nav.quote">
+                    Solicitar Orçamento
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <!-- Hero Section -->
+        <section id="inicio"
+            class="relative overflow-hidden bg-gradient-to-br from-[#2C4156] to-[#39586D] py-24 sm:py-32">
+            <div
+                class="absolute inset-0 bg-[url('assets/images/construction-animation.gif')] bg-cover bg-center opacity-20">
+            </div>
+            <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="mx-auto max-w-3xl text-center">
+                    <img id="hero-img" src="assets/images/logo_favero_branco.gif" alt="Favero Engenharia"
+                        class="mx-auto mb-8 h-32 w-auto sm:h-48 animate-on-scroll fade-up">
+                    <h1 class="text-balance text-4xl font-extrabold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl animate-on-scroll fade-up delay-100"
+                        data-i18n="hero.title">
+                        Engenharia Civil de Excelência
+                    </h1>
+                    <p class="mt-6 text-pretty text-lg leading-relaxed text-white sm:text-xl animate-on-scroll fade-up delay-200"
+                        data-i18n="hero.subtitle">
+                        Desenvolvemos projetos completos de engenharia civil, hidrossanitários, elétricos e preventivos.
+                    </p>
+                    <p class="mt-3 text-pretty text-sm leading-relaxed text-white sm:text-base animate-on-scroll fade-up delay-300"
+                        data-i18n="hero.description">
+                        Soluções técnicas precisas e certificadas para sua obra ou empreendimento.
+                    </p>
+                    <div
+                        class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-on-scroll fade-up delay-400">
+                        <a href="#contato"
+                            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-semibold ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/90 hover:scale-105 hover:shadow-xl h-12 rounded-full px-8 w-full gap-2 sm:w-auto shadow-md">
+                            <span data-i18n="hero.cta_quote">Solicitar Orçamento</span>
+                            <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                        </a>
+                        <a href="#projetos"
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-semibold ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 h-12 px-8 w-full sm:w-auto backdrop-blur-sm"
+                            data-i18n="hero.cta_projects">
+                            Conheça Nossos Projetos
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Scroll Down Indicator -->
+            <a href="#servicos"
+                class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all hover:opacity-100 opacity-70 z-20 group">
+                <div
+                    class="h-[40px] w-[24px] rounded-full border-2 border-white flex justify-center pt-2 shadow-lg group-hover:shadow-glow transition-shadow duration-300">
+                    <div class="w-1 h-2 bg-white rounded-full animate-scroll-wheel"></div>
+                </div>
+            </a>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="border-b border-border bg-background py-12">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-wrap justify-center gap-12 md:gap-24 animate-on-scroll fade-up delay-100">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary sm:text-4xl">10+</div>
+                        <div class="mt-1 text-sm text-muted-foreground" data-i18n="stats.experience">Anos de Experiência
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary sm:text-4xl">500+</div>
+                        <div class="mt-1 text-sm text-muted-foreground" data-i18n="stats.projects">Projetos Realizados
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary sm:text-4xl">300+</div>
+                        <div class="mt-1 text-sm text-muted-foreground" data-i18n="stats.clients">Clientes Satisfeitos
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicos" class="bg-secondary/30 py-20 sm:py-24">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16 animate-on-scroll fade-up">
+                    <div
+                        class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-6">
+                        <i data-lucide="wrench" class="h-4 w-4"></i>
+                        <span data-i18n="services.badge">O que fazemos</span>
+                    </div>
+                    <h2 class="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl"
+                        data-i18n="services.title">Nossos
+                        Serviços</h2>
+                    <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground" data-i18n="services.subtitle">
+                        Soluções completas e integradas
+                        para sua obra.</p>
+                </div>
+
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    <!-- Service 1: Cabeamento -->
+                    <!-- Service 1: Cabeamento -->
+                    <div
+                        class="group rounded-xl border bg-card text-card-foreground shadow-sm transition-all duration-300 hover:shadow-soft hover:-translate-y-1 p-6 animate-on-scroll fade-up">
+                        <div
+                            class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary">
+                            <i data-lucide="network"
+                                class="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors"></i>
+                        </div>
+                        <h3 class="mb-3 text-xl font-semibold text-foreground" data-i18n="services.cabeamento.title">
+                            Cabeamento Estruturado</h3>
+                        <p class="mb-4 text-sm leading-relaxed text-muted-foreground"
+                            data-i18n="services.cabeamento.desc">Infraestrutura segura para dados e
+                            voz.</p>
+                        <ul class="space-y-2 border-t border-border pt-4 text-sm text-muted-foreground">
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="services.cabeamento.item1">Rede lógica e dados</span></li>
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="services.cabeamento.item2">CFTV e Segurança</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 2: Gás -->
+                    <!-- Service 2: Gás -->
+                    <div
+                        class="group rounded-xl border bg-card text-card-foreground shadow-sm transition-all duration-300 hover:shadow-soft hover:-translate-y-1 p-6 animate-on-scroll fade-up delay-100">
+                        <div
+                            class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary">
+                            <i data-lucide="flame"
+                                class="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors"></i>
+                        </div>
+                        <h3 class="mb-3 text-xl font-semibold text-foreground" data-i18n="services.gas.title">
+                            Instalações de Gás</h3>
+                        <p class="mb-4 text-sm leading-relaxed text-muted-foreground" data-i18n="services.gas.desc">
+                            Projetos seguros seguindo NBR
+                            15526.</p>
+                        <ul class="space-y-2 border-t border-border pt-4 text-sm text-muted-foreground">
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="services.gas.item1">Ventilação adequada</span></li>
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="services.gas.item2">Dispositivos de segurança</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 3: Prevenção de Incêndio -->
+                    <!-- Service 3: Prevenção de Incêndio -->
+                    <div
+                        class="group rounded-xl border bg-card text-card-foreground shadow-sm transition-all duration-300 hover:shadow-soft hover:-translate-y-1 p-6 animate-on-scroll fade-up delay-200">
+                        <div
+                            class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary">
+                            <i data-lucide="fire-extinguisher"
+                                class="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors"></i>
+                        </div>
+                        <h3 class="mb-3 text-xl font-semibold text-foreground" data-i18n="services.fire.title">Prevenção
+                            de Incêndio</h3>
+                        <p class="mb-4 text-sm leading-relaxed text-muted-foreground" data-i18n="services.fire.desc">
+                            Segurança para edificações
+                            comerciais e residenciais.</p>
+                        <ul class="space-y-2 border-t border-border pt-4 text-sm text-muted-foreground">
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="services.fire.item1">Rotas de fuga</span></li>
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="services.fire.item2">Aprovação de projeto</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 4: Climatização -->
+                    <!-- Service 4: Climatização -->
+                    <div
+                        class="group rounded-xl border bg-card text-card-foreground shadow-sm transition-all duration-300 hover:shadow-soft hover:-translate-y-1 p-6 animate-on-scroll fade-up delay-300">
+                        <div
+                            class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary">
+                            <i data-lucide="thermometer"
+                                class="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors"></i>
+                        </div>
+                        <h3 class="mb-3 text-xl font-semibold text-foreground" data-i18n="services.clima.title">
+                            Climatização</h3>
+                        <p class="mb-4 text-sm leading-relaxed text-muted-foreground" data-i18n="services.clima.desc">
+                            Conforto térmico e eficiência
+                            energética.</p>
+                        <ul class="space-y-2 border-t border-border pt-4 text-sm text-muted-foreground">
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="services.clima.item1">Carga térmica</span></li>
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="services.clima.item2">Eficiência energética</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 5: Hidrossanitário -->
+                    <!-- Service 5: Hidrossanitário -->
+                    <div
+                        class="group rounded-xl border bg-card text-card-foreground shadow-sm transition-all duration-300 hover:shadow-soft hover:-translate-y-1 p-6 animate-on-scroll fade-up delay-100">
+                        <div
+                            class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary">
+                            <i data-lucide="droplet"
+                                class="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors"></i>
+                        </div>
+                        <h3 class="mb-3 text-xl font-semibold text-foreground" data-i18n="services.hydro.title">
+                            Hidrossanitário</h3>
+                        <p class="mb-4 text-sm leading-relaxed text-muted-foreground" data-i18n="services.hydro.desc">
+                            Projetos de água e esgoto
+                            eficientes.</p>
+                        <ul class="space-y-2 border-t border-border pt-4 text-sm text-muted-foreground">
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="services.hydro.item1">Abastecimento de água</span></li>
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="services.hydro.item2">Rede de esgoto</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 6: Elétrico -->
+                    <!-- Service 6: Elétrico -->
+                    <div
+                        class="group rounded-xl border bg-card text-card-foreground shadow-sm transition-all duration-300 hover:shadow-soft hover:-translate-y-1 p-6 animate-on-scroll fade-up delay-200">
+                        <div
+                            class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary">
+                            <i data-lucide="zap"
+                                class="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors"></i>
+                        </div>
+                        <h3 class="mb-3 text-xl font-semibold text-foreground" data-i18n="services.electric.title">
+                            Instalações Elétricas</h3>
+                        <p class="mb-4 text-sm leading-relaxed text-muted-foreground"
+                            data-i18n="services.electric.desc">Eficiência e segurança elétrica.
+                        </p>
+                        <ul class="space-y-2 border-t border-border pt-4 text-sm text-muted-foreground">
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="services.electric.item1">Quadros de distribuição</span></li>
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="services.electric.item2">Eficiência energética</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 7: Exaustão -->
+                    <!-- Service 7: Exaustão -->
+                    <div
+                        class="group rounded-xl border bg-card text-card-foreground shadow-sm transition-all duration-300 hover:shadow-soft hover:-translate-y-1 p-6 animate-on-scroll fade-up delay-300">
+                        <div
+                            class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary">
+                            <i data-lucide="wind"
+                                class="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors"></i>
+                        </div>
+                        <h3 class="mb-3 text-xl font-semibold text-foreground" data-i18n="services.exhaust.title">
+                            Exaustão e Ventilação</h3>
+                        <p class="mb-4 text-sm leading-relaxed text-muted-foreground" data-i18n="services.exhaust.desc">
+                            Renovação de ar e dutos.</p>
+                        <ul class="space-y-2 border-t border-border pt-4 text-sm text-muted-foreground">
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="services.exhaust.item1">Cozinhas comerciais</span></li>
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="services.exhaust.item2">Normas Anvisa/ABNT</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 8: SPDA -->
+                    <!-- Service 8: SPDA -->
+                    <div
+                        class="group rounded-xl border bg-card text-card-foreground shadow-sm transition-all duration-300 hover:shadow-soft hover:-translate-y-1 p-6 animate-on-scroll fade-up delay-100">
+                        <div
+                            class="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary">
+                            <i data-lucide="cloud-lightning"
+                                class="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors"></i>
+                        </div>
+                        <h3 class="mb-3 text-xl font-semibold text-foreground" data-i18n="services.spda.title">SPDA</h3>
+                        <p class="mb-4 text-sm leading-relaxed text-muted-foreground" data-i18n="services.spda.desc">
+                            Proteção contra descargas
+                            atmosféricas.</p>
+                        <ul class="space-y-2 border-t border-border pt-4 text-sm text-muted-foreground">
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="services.spda.item1">Para-raios</span></li>
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="services.spda.item2">Aterramento</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- About Section -->
+        <section id="sobre" class="bg-background py-20 sm:py-24">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16 animate-on-scroll fade-up">
+                    <div
+                        class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-6">
+                        <i data-lucide="users" class="h-4 w-4"></i>
+                        <span data-i18n="about.badge">Quem somos</span>
+                    </div>
+                    <h2 class="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl"
+                        data-i18n="about.title">Sobre a Favero
+                        Engenharia</h2>
+                    <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground" data-i18n="about.subtitle">Conheça a
+                        história e os valores que
+                        guiam nossa engenharia.</p>
+                </div>
+
+                <!-- Company Overview -->
+                <div class="grid items-center gap-12 lg:grid-cols-2 mb-20">
+                    <div class="animate-on-scroll fade-left">
+                        <h3 class="text-2xl font-bold tracking-tight text-foreground sm:text-3xl mb-6"
+                            data-i18n="about.history.title">Nossa História
+                        </h3>
+                        <p class="text-muted-foreground leading-relaxed mb-6" data-i18n="about.history.text">
+                            Fundada em 2025, a Favero Engenharia é uma empresa especializada em soluções de engenharia
+                            civil, com foco em projetos estruturais, consultoria técnica e gerenciamento de obras. Nossa
+                            equipe multidisciplinar combina experiência técnica com inovação para entregar resultados
+                            que superam expectativas.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="h-5 w-5 flex-shrink-0 text-primary"></i>
+                                <span class="text-foreground" data-i18n="about.item1">Equipe técnica
+                                    especializada</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="h-5 w-5 flex-shrink-0 text-primary"></i>
+                                <span class="text-foreground" data-i18n="about.item2">Compromisso com prazos</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="h-5 w-5 flex-shrink-0 text-primary"></i>
+                                <span class="text-foreground" data-i18n="about.item3">Qualidade certificada</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="check-circle-2" class="h-5 w-5 flex-shrink-0 text-primary"></i>
+                                <span class="text-foreground" data-i18n="about.item4">Suporte contínuo</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative animate-on-scroll fade-right delay-200">
+                        <div id="image-carousel-container">
+                            <!-- Carousel JS will inject here -->
+                        </div>
+                        <div
+                            class="absolute -bottom-6 -left-6 z-20 rounded-xl bg-primary p-6 text-primary-foreground shadow-lg">
+                            <div class="text-3xl font-bold">10+</div>
+                            <div class="text-sm opacity-90" data-i18n="stats.experience">Anos de Experiência</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission, Vision, Values -->
+                <div class="grid gap-8 md:grid-cols-3 mb-20">
+                    <div
+                        class="rounded-xl border bg-card text-card-foreground shadow-sm p-6 animate-on-scroll fade-up hover:shadow-soft transition-all">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                            <i data-lucide="target" class="h-6 w-6 text-primary"></i>
+                        </div>
+                        <h3 class="mb-3 text-xl font-semibold text-foreground" data-i18n="about.mission.title">Missão
+                        </h3>
+                        <p class="text-sm leading-relaxed text-muted-foreground" data-i18n="about.mission.text">Na
+                            Favero Engenharia, nossa missão é
+                            simplificar as soluções de engenharia civil, proporcionando agilidade e eficiência em cada
+                            projeto.</p>
+                    </div>
+                    <div
+                        class="rounded-xl border bg-card text-card-foreground shadow-sm p-6 animate-on-scroll fade-up delay-100 hover:shadow-soft transition-all">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                            <i data-lucide="eye" class="h-6 w-6 text-primary"></i>
+                        </div>
+                        <h3 class="mb-3 text-xl font-semibold text-foreground" data-i18n="about.vision.title">Visão</h3>
+                        <p class="text-sm leading-relaxed text-muted-foreground" data-i18n="about.vision.text">Ser
+                            referência nacional em engenharia
+                            civil, reconhecida pela qualidade, inovação e compromisso com a satisfação dos clientes.</p>
+                    </div>
+                    <div
+                        class="rounded-xl border bg-card text-card-foreground shadow-sm p-6 animate-on-scroll fade-up delay-200 hover:shadow-soft transition-all">
+                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                            <i data-lucide="heart" class="h-6 w-6 text-primary"></i>
+                        </div>
+                        <h3 class="mb-3 text-xl font-semibold text-foreground" data-i18n="about.values.title">Valores
+                        </h3>
+                        <ul class="space-y-2 text-sm text-muted-foreground">
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="about.values.item1">Excelência técnica</span></li>
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="about.values.item2">Integridade e ética</span></li>
+                            <li class="flex items-center gap-2"><span
+                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
+                                    data-i18n="about.values.item3">Inovação contínua</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section
+            class="relative bg-gradient-to-br from-[#1e3a5f] to-[#2C4156] py-20 sm:py-28 overflow-hidden text-white">
+            <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 animate-on-scroll fade-up">
+                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
+                        data-i18n="team.title">Os Pilares da
+                        Favero</h2>
+                    <p class="mx-auto mt-6 max-w-2xl text-lg text-white/70" data-i18n="team.subtitle">Nossa empresa é
+                        sustentada por profissionais
+                        de excelência.</p>
+                </div>
+
+                <!-- CEO Card -->
+                <div class="mb-12 animate-on-scroll fade-up delay-100">
+                    <div
+                        class="relative max-w-2xl mx-auto bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 sm:p-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8">
+                        <div
+                            class="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-white/30 flex-shrink-0 bg-white/20 flex items-center justify-center">
+                            <i data-lucide="user" class="h-20 w-20 text-white/40"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl sm:text-3xl font-bold text-white">Reinaldo Favero Filho</h3>
+                            <p class="mt-2 text-lg font-medium text-[#7db3e8]" data-i18n="team.ceo.role">CEO & Fundador
+                            </p>
+                            <p class="mt-4 text-white/70 leading-relaxed" data-i18n="team.ceo.desc">Visionário e líder,
+                                construiu a Favero
+                                Engenharia sobre os alicerces da excelência técnica e inovação.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Grid -->
+                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
+                    <div
+                        class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center animate-on-scroll fade-up delay-200 hover:bg-white/15 transition-all">
+                        <h3 class="text-lg font-bold text-white">Arieli Favero</h3>
+                        <p class="mt-1 text-sm font-medium text-[#7db3e8]" data-i18n="team.arieli.role">Diretora Geral
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center animate-on-scroll fade-up delay-300 hover:bg-white/15 transition-all">
+                        <h3 class="text-lg font-bold text-white">Adriel</h3>
+                        <p class="mt-1 text-sm font-medium text-[#7db3e8]" data-i18n="team.adriel.role">Engenheiro Civil
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center animate-on-scroll fade-up delay-400 hover:bg-white/15 transition-all">
+                        <h3 class="text-lg font-bold text-white">Vinicius</h3>
+                        <p class="mt-1 text-sm font-medium text-[#7db3e8]" data-i18n="team.vinicius.role">Engenheiro
+                            Civil</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-gradient-to-br from-[#2C4156] to-[#39586D] py-16">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-center animate-on-scroll zoom-in">
+                    <a href="#contato"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/90 gap-2 px-10 py-6 text-lg font-bold shadow-xl transition-all hover:scale-105 hover:-translate-y-1">
+                        <span data-i18n="nav.quote">Solicitar Orçamento</span>
+                        <i data-lucide="arrow-right" class="h-5 w-5"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projetos" class="py-20 sm:py-24 bg-secondary/50 overflow-hidden">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16 animate-on-scroll fade-up">
+                    <div
+                        class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-6">
+                        <i data-lucide="building-2" class="h-4 w-4"></i>
+                        <span data-i18n="projects.badge">Nosso Portfólio</span>
+                    </div>
+                    <h2 class="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl"
+                        data-i18n="projects.title">Projetos
+                        Realizados</h2>
+                    <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground" data-i18n="projects.subtitle">
+                        Conheça algumas das obras e
+                        projetos realizados pela Favero Engenharia em todo o Brasil.</p>
+                </div>
+
+                <!-- Stats -->
+                <div class="flex flex-wrap justify-center gap-12 md:gap-20 mb-16 animate-on-scroll fade-up delay-100">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-primary">500+</div>
+                        <div class="mt-1 text-sm text-muted-foreground" data-i18n="stats.projects">Projetos Realizados
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-primary">15</div>
+                        <div class="mt-1 text-sm text-muted-foreground" data-i18n="stats.states">Estados Atendidos</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-primary">350+</div>
+                        <div class="mt-1 text-sm text-muted-foreground" data-i18n="stats.clients">Clientes Satisfeitos
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Cards Grid -->
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-16 animate-on-scroll fade-up delay-200">
+                    <!-- Project Card 1 -->
+                    <div data-project="beiramar"
+                        class="group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
+                        <div
+                            class="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-[#4D7493] to-[#2C4156]">
+                            <div class="flex h-full items-center justify-center text-white/60">
+                                <i data-lucide="building" class="h-16 w-16"></i>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="text-lg font-semibold text-white" data-i18n="projects.beiramar.title">
+                                    Beiramar Shopping</h3>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="mb-4 text-sm leading-relaxed text-muted-foreground line-clamp-2"
+                                data-i18n="projects.beiramar.desc">Projeto de
+                                instalações elétricas e hidrossanitárias para expansão do shopping.</p>
+                            <div class="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
+                                <div class="flex items-center gap-1"><i data-lucide="map-pin" class="h-3.5 w-3.5"></i>
+                                    Florianópolis, SC</div>
+                                <div class="flex items-center gap-1"><i data-lucide="calendar" class="h-3.5 w-3.5"></i>
+                                    2024</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div data-project="sesc"
+                        class="group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
+                        <div
+                            class="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-[#7F99B2] to-[#39586D]">
+                            <div class="flex h-full items-center justify-center text-white/60">
+                                <i data-lucide="factory" class="h-16 w-16"></i>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="text-lg font-semibold text-white" data-i18n="projects.sesc.title">SESC
+                                    Florianópolis</h3>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="mb-4 text-sm leading-relaxed text-muted-foreground line-clamp-2"
+                                data-i18n="projects.sesc.desc">Projetos de
+                                climatização e prevenção contra incêndio.</p>
+                            <div class="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
+                                <div class="flex items-center gap-1"><i data-lucide="map-pin" class="h-3.5 w-3.5"></i>
+                                    Florianópolis, SC</div>
+                                <div class="flex items-center gap-1"><i data-lucide="calendar" class="h-3.5 w-3.5"></i>
+                                    2023</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div data-project="prefeitura"
+                        class="group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
+                        <div
+                            class="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-[#90ADC1] to-[#4D7493]">
+                            <div class="flex h-full items-center justify-center text-white/60">
+                                <i data-lucide="landmark" class="h-16 w-16"></i>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <h3 class="text-lg font-semibold text-white" data-i18n="projects.prefeitura.title">
+                                    Prefeitura de Porto Alegre</h3>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <p class="mb-4 text-sm leading-relaxed text-muted-foreground line-clamp-2"
+                                data-i18n="projects.prefeitura.desc">Consultoria
+                                técnica e projetos de instalações para edifícios públicos.</p>
+                            <div class="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
+                                <div class="flex items-center gap-1"><i data-lucide="map-pin" class="h-3.5 w-3.5"></i>
+                                    Porto Alegre, RS</div>
+                                <div class="flex items-center gap-1"><i data-lucide="calendar" class="h-3.5 w-3.5"></i>
+                                    2023</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Map Section -->
+                <div class="mt-16 mb-16">
+                    <div class="text-center mb-10 animate-on-scroll fade-up">
+                        <div class="flex items-center justify-center gap-3 mb-4">
+                            <div class="h-px w-16 bg-gradient-to-r from-transparent to-primary/30"></div>
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <div class="h-px w-16 bg-gradient-to-l from-transparent to-primary/30"></div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-foreground" data-i18n="map.title">Nossa Atuação no Brasil
+                        </h3>
+                        <p class="mt-3 text-muted-foreground max-w-xl mx-auto" data-i18n="map.subtitle">
+                            Clique nos estados destacados para ver os projetos realizados em cada região.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row gap-10 items-start animate-on-scroll fade-up delay-200">
+                        <!-- Map SVG Container -->
+                        <div class="flex-1 relative w-full">
+                            <div class="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 rounded-3xl p-6 border border-border shadow-sm"
+                                id="map-svg-container">
+                                <!-- SVG will be injected here by map.js -->
+                            </div>
+                        </div>
+
+                        <!-- Projects Panel -->
+                        <div id="map-info-panel" class="flex-1 lg:max-w-md w-full">
+                            <!-- Panel content injected by map.js -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partners Subtitle -->
+                <div class="text-center mb-8 animate-on-scroll fade-up">
+                    <h3 class="text-2xl font-bold text-foreground mb-4" data-i18n="partners.title">Parceiros Diretos e
+                        Indiretos</h3>
+                    <p class="text-muted-foreground max-w-3xl mx-auto leading-relaxed" data-i18n="partners.desc">
+                        Trabalhamos com serviços voltados para empresa a empresa (B2B). Boa parte dos nossos clientes
+                        utiliza nossos serviços para atender demandas de companhias de maior porte.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Partners Carousel with Gradient Edges -->
+            <div class="relative overflow-hidden">
+                <div
+                    class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-secondary/50 via-white/80 to-transparent z-10 pointer-events-none dark:via-black/80">
+                </div>
+                <div
+                    class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-secondary/50 via-white/80 to-transparent z-10 pointer-events-none dark:via-black/80">
+                </div>
+
+                <div class="flex animate-partners-scroll hover:pause">
+                    <!-- Partner Items (Duplicated for infinite scroll) -->
+                    <!-- We will inline 12 items (6 unique x 2) -->
+
+                    <!-- Item 1 -->
+                    <div
+                        class="flex-shrink-0 mx-8 w-56 h-32 bg-white dark:bg-white border border-border rounded-xl flex items-center justify-center hover:border-primary/50 hover:shadow-soft transition-all duration-300 group px-6">
+                        <a href="https://www.beiramarshopping.com.br/" target="_blank">
+                            <img src="assets/images/logo_beiramar_shopping.png" alt="Beiramar Shopping"
+                                class="max-w-full max-h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                                loading="lazy">
+                        </a>
+                    </div>
+                    <!-- Item 2 -->
+                    <div
+                        class="flex-shrink-0 mx-8 w-56 h-32 bg-white dark:bg-white border border-border rounded-xl flex items-center justify-center hover:border-primary/50 hover:shadow-soft transition-all duration-300 group px-6">
+                        <a href="https://www.grupooad.com.br/" target="_blank">
+                            <img src="assets/images/logo_grupo-oad.png" alt="Grupo OAD"
+                                class="max-w-full max-h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                                loading="lazy">
+                        </a>
+                    </div>
+                    <!-- Item 3 -->
+                    <div
+                        class="flex-shrink-0 mx-8 w-56 h-32 bg-white dark:bg-white border border-border rounded-xl flex items-center justify-center hover:border-primary/50 hover:shadow-soft transition-all duration-300 group px-6">
+                        <a href="https://www.sesc.com.br/" target="_blank">
+                            <img src="assets/images/logo_sesc.png" alt="SESC"
+                                class="max-w-full max-h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                                loading="lazy">
+                        </a>
+                    </div>
+                    <!-- Item 4 -->
+                    <div
+                        class="flex-shrink-0 mx-8 w-56 h-32 bg-white dark:bg-white border border-border rounded-xl flex items-center justify-center hover:border-primary/50 hover:shadow-soft transition-all duration-300 group px-6">
+                        <a href="https://www.sc.gov.br/" target="_blank">
+                            <img src="assets/images/logo_estado_de_santa_catarina.png" alt="Estado de SC"
+                                class="max-w-full max-h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                                loading="lazy">
+                        </a>
+                    </div>
+                    <!-- Item 5 -->
+                    <div
+                        class="flex-shrink-0 mx-8 w-56 h-32 bg-white dark:bg-white border border-border rounded-xl flex items-center justify-center hover:border-primary/50 hover:shadow-soft transition-all duration-300 group px-6">
+                        <a href="https://prefeitura.poa.br/" target="_blank">
+                            <img src="assets/images/logo_prefeitura_porto_alegre.png" alt="Prefeitura POA"
+                                class="max-w-full max-h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                                loading="lazy">
+                        </a>
+                    </div>
+                    <!-- Item 6 -->
+                    <div
+                        class="flex-shrink-0 mx-8 w-56 h-32 bg-white dark:bg-white border border-border rounded-xl flex items-center justify-center hover:border-primary/50 hover:shadow-soft transition-all duration-300 group px-6">
+                        <a href="https://sistrelsc.com/" target="_blank">
+                            <img src="assets/images/logo_sistrel.png" alt="SISTREL"
+                                class="max-w-full max-h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                                loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- REPEAT (Duplicate) -->
+                    <!-- Item 1 DUP -->
+                    <div
+                        class="flex-shrink-0 mx-8 w-56 h-32 bg-white dark:bg-white border border-border rounded-xl flex items-center justify-center hover:border-primary/50 hover:shadow-soft transition-all duration-300 group px-6">
+                        <a href="https://www.beiramarshopping.com.br/" target="_blank">
+                            <img src="assets/images/logo_beiramar_shopping.png" alt="Beiramar Shopping"
+                                class="max-w-full max-h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                                loading="lazy">
+                        </a>
+                    </div>
+                    <!-- Item 2 DUP -->
+                    <div
+                        class="flex-shrink-0 mx-8 w-56 h-32 bg-white dark:bg-white border border-border rounded-xl flex items-center justify-center hover:border-primary/50 hover:shadow-soft transition-all duration-300 group px-6">
+                        <a href="https://www.grupooad.com.br/" target="_blank">
+                            <img src="assets/images/logo_grupo-oad.png" alt="Grupo OAD"
+                                class="max-w-full max-h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                                loading="lazy">
+                        </a>
+                    </div>
+                    <!-- Item 3 DUP -->
+                    <div
+                        class="flex-shrink-0 mx-8 w-56 h-32 bg-white dark:bg-white border border-border rounded-xl flex items-center justify-center hover:border-primary/50 hover:shadow-soft transition-all duration-300 group px-6">
+                        <a href="https://www.sesc.com.br/" target="_blank">
+                            <img src="assets/images/logo_sesc.png" alt="SESC"
+                                class="max-w-full max-h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                                loading="lazy">
+                        </a>
+                    </div>
+                    <!-- Item 4 DUP -->
+                    <div
+                        class="flex-shrink-0 mx-8 w-56 h-32 bg-white dark:bg-white border border-border rounded-xl flex items-center justify-center hover:border-primary/50 hover:shadow-soft transition-all duration-300 group px-6">
+                        <a href="https://www.sc.gov.br/" target="_blank">
+                            <img src="assets/images/logo_estado_de_santa_catarina.png" alt="Estado de SC"
+                                class="max-w-full max-h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                                loading="lazy">
+                        </a>
+                    </div>
+                    <!-- Item 5 DUP -->
+                    <div
+                        class="flex-shrink-0 mx-8 w-56 h-32 bg-white dark:bg-white border border-border rounded-xl flex items-center justify-center hover:border-primary/50 hover:shadow-soft transition-all duration-300 group px-6">
+                        <a href="https://prefeitura.poa.br/" target="_blank">
+                            <img src="assets/images/logo_prefeitura_porto_alegre.png" alt="Prefeitura POA"
+                                class="max-w-full max-h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                                loading="lazy">
+                        </a>
+                    </div>
+                    <!-- Item 6 DUP -->
+                    <div
+                        class="flex-shrink-0 mx-8 w-56 h-32 bg-white dark:bg-white border border-border rounded-xl flex items-center justify-center hover:border-primary/50 hover:shadow-soft transition-all duration-300 group px-6">
+                        <a href="https://sistrelsc.com/" target="_blank">
+                            <img src="assets/images/logo_sistrel.png" alt="SISTREL"
+                                class="max-w-full max-h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="py-20 sm:py-24 bg-background">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16 animate-on-scroll fade-up">
+                    <div
+                        class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-6">
+                        <i data-lucide="newspaper" class="h-4 w-4"></i>
+                        <span data-i18n="blog.badge">Conhecimento</span>
+                    </div>
+                    <h2 class="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl"
+                        data-i18n="blog.title">Blog</h2>
+                    <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground" data-i18n="blog.subtitle">Artigos,
+                        notícias e insights sobre
+                        engenharia civil e construção.</p>
+                </div>
+
+                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 animate-on-scroll fade-up delay-200">
+                    <!-- Blog Post Card 1 -->
+                    <a href="blog/post-1.html" class="group">
+                        <article
+                            class="flex flex-col overflow-hidden rounded-xl border bg-card text-card-foreground shadow-sm transition-all hover:shadow-soft hover:-translate-y-1 card-hover h-full">
+                            <div class="aspect-video w-full bg-gradient-to-br from-[#4D7493] to-[#2C4156]">
+                                <div class="flex h-full items-center justify-center text-white/80">
+                                    <i data-lucide="file-text"
+                                        class="h-12 w-12 transform group-hover:scale-110 transition-transform duration-300"></i>
+                                </div>
+                            </div>
+                            <div class="flex flex-1 flex-col p-6">
+                                <h3 class="text-xl font-bold leading-tight mb-2 text-foreground group-hover:text-primary transition-colors"
+                                    data-i18n="blog.post1.title">
+                                    Normas NBR para projetos elétricos
+                                </h3>
+                                <p class="text-muted-foreground text-sm mb-4 line-clamp-3" data-i18n="blog.post1.desc">
+                                    Conheça as principais normas brasileiras para instalações elétricas em edificações.
+                                </p>
+                                <div class="mt-auto flex items-center justify-between">
+                                    <span class="text-xs text-muted-foreground">27 Jan 2026</span>
+                                    <span
+                                        class="text-sm font-medium text-primary flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <span data-i18n="blog.read_more">Ler artigo</span> <i data-lucide="arrow-right"
+                                            class="h-4 w-4"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+
+                    <!-- Blog Post Card 2 -->
+                    <a href="blog/post-2.html" class="group">
+                        <article
+                            class="flex flex-col overflow-hidden rounded-xl border bg-card text-card-foreground shadow-sm transition-all hover:shadow-soft hover:-translate-y-1 card-hover h-full">
+                            <div class="aspect-video w-full bg-gradient-to-br from-[#7F99B2] to-[#39586D]">
+                                <div class="flex h-full items-center justify-center text-white/80">
+                                    <i data-lucide="flame"
+                                        class="h-12 w-12 transform group-hover:scale-110 transition-transform duration-300"></i>
+                                </div>
+                            </div>
+                            <div class="flex flex-1 flex-col p-6">
+                                <h3 class="text-xl font-bold leading-tight mb-2 text-foreground group-hover:text-primary transition-colors"
+                                    data-i18n="blog.post2.title">
+                                    Prevenção contra incêndio em edifícios
+                                </h3>
+                                <p class="text-muted-foreground text-sm mb-4 line-clamp-3" data-i18n="blog.post2.desc">
+                                    Sistemas preventivos essenciais para garantir a segurança de edificações.
+                                </p>
+                                <div class="mt-auto flex items-center justify-between">
+                                    <span class="text-xs text-muted-foreground">20 Jan 2026</span>
+                                    <span
+                                        class="text-sm font-medium text-primary flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <span data-i18n="blog.read_more">Ler artigo</span> <i data-lucide="arrow-right"
+                                            class="h-4 w-4"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+
+                    <!-- Blog Post Card 3 -->
+                    <a href="blog/post-3.html" class="group">
+                        <article
+                            class="flex flex-col overflow-hidden rounded-xl border bg-card text-card-foreground shadow-sm transition-all hover:shadow-soft hover:-translate-y-1 card-hover h-full">
+                            <div class="aspect-video w-full bg-gradient-to-br from-[#90ADC1] to-[#4D7493]">
+                                <div class="flex h-full items-center justify-center text-white/80">
+                                    <i data-lucide="droplets"
+                                        class="h-12 w-12 transform group-hover:scale-110 transition-transform duration-300"></i>
+                                </div>
+                            </div>
+                            <div class="flex flex-1 flex-col p-6">
+                                <h3 class="text-xl font-bold leading-tight mb-2 text-foreground group-hover:text-primary transition-colors"
+                                    data-i18n="blog.post3.title">
+                                    Eficiência em sistemas hidrossanitários
+                                </h3>
+                                <p class="text-muted-foreground text-sm mb-4 line-clamp-3" data-i18n="blog.post3.desc">
+                                    Dicas para projetos eficientes e sustentáveis de água e esgoto.
+                                </p>
+                                <div class="mt-auto flex items-center justify-between">
+                                    <span class="text-xs text-muted-foreground">15 Jan 2026</span>
+                                    <span
+                                        class="text-sm font-medium text-primary flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <span data-i18n="blog.read_more">Ler artigo</span> <i data-lucide="arrow-right"
+                                            class="h-4 w-4"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="py-20 sm:py-24 bg-secondary/30">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16 animate-on-scroll fade-up">
+                    <div
+                        class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-6">
+                        <i data-lucide="mail" class="h-4 w-4"></i>
+                        <span data-i18n="contact.badge">Fale Conosco</span>
+                    </div>
+                    <h2 class="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl"
+                        data-i18n="contact.title">Entre em
+                        Contato</h2>
+                    <p class="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground" data-i18n="contact.subtitle">
+                        Solicite um orçamento ou tire suas
+                        dúvidas.</p>
+                </div>
+
+                <div class="grid gap-8 lg:grid-cols-2 animate-on-scroll fade-up delay-200">
+                    <!-- Contact Form -->
+                    <div class="rounded-xl border bg-card p-8 shadow-sm">
+                        <form action="contact/send_email.php" method="POST" class="space-y-6">
+                            <div class="grid gap-4 sm:grid-cols-2">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-foreground mb-2"
+                                        data-i18n="contact.form.name">Nome</label>
+                                    <input type="text" id="name" name="name" required
+                                        class="form-input w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-foreground mb-2"
+                                        data-i18n="contact.form.email">E-mail</label>
+                                    <input type="email" id="email" name="email" required
+                                        class="form-input w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-foreground mb-2"
+                                    data-i18n="contact.form.phone">Telefone</label>
+                                <input type="tel" id="phone" name="phone"
+                                    class="form-input w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-foreground mb-2"
+                                    data-i18n="contact.form.subject">Assunto</label>
+                                <select id="subject" name="subject"
+                                    class="form-input w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                                    <option value="" data-i18n="contact.form.select">Selecione um assunto</option>
+                                    <option value="orcamento" data-i18n="contact.form.opt.budget">Solicitar Orçamento
+                                    </option>
+                                    <option value="duvida" data-i18n="contact.form.opt.doubt">Tirar Dúvidas</option>
+                                    <option value="parceria" data-i18n="contact.form.opt.partner">Proposta de Parceria
+                                    </option>
+                                    <option value="outro" data-i18n="contact.form.opt.other">Outro</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-foreground mb-2"
+                                    data-i18n="contact.form.message">Mensagem</label>
+                                <textarea id="message" name="message" rows="5" required
+                                    class="form-input w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 text-sm font-semibold transition-all hover:scale-[1.02] hover:shadow-soft">
+                                <i data-lucide="send" class="h-4 w-4"></i>
+                                <span data-i18n="contact.form.send">Enviar Mensagem</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="space-y-6">
+                        <div class="rounded-xl border bg-card p-6 shadow-sm">
+                            <h3 class="text-lg font-semibold text-foreground mb-4" data-i18n="contact.info.title">
+                                Informações de Contato</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-4">
+                                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                                        <i data-lucide="map-pin" class="h-5 w-5 text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium text-foreground" data-i18n="contact.info.address">Endereço
+                                        </p>
+                                        <p class="text-sm text-muted-foreground">R. Fúlvio Aducci, 626 - Florianópolis,
+                                            SC</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                                        <i data-lucide="phone" class="h-5 w-5 text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium text-foreground" data-i18n="contact.info.phone">Telefone
+                                        </p>
+                                        <p class="text-sm text-muted-foreground">+55 (48) 99110-1237</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
+                                        <i data-lucide="mail" class="h-5 w-5 text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium text-foreground" data-i18n="contact.info.email">E-mail</p>
+                                        <p class="text-sm text-muted-foreground">contato@faveroeng.com.br</p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <!-- Redes Sociais -->
+                            <div class="mt-8 pt-6 border-t border-border">
+                                <h4 class="text-sm font-semibold text-foreground mb-4" data-i18n="contact.socials">Redes
+                                    Sociais</h4>
+                                <div class="flex gap-4">
+                                    <a href="https://www.instagram.com/faverooengenharia?igsh=MW5uY3pjcGp6a2F5bw=="
+                                        target="_blank"
+                                        class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground">
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/faveroengenharia" target="_blank"
+                                        class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground">
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.facebook.com/faveroengenharia" target="_blank"
+                                        class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground">
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://wa.me/5548991101237" target="_blank"
+                                        class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground">
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rounded-xl border bg-card p-6 shadow-sm">
+                            <h3 class="text-lg font-semibold text-foreground mb-4" data-i18n="contact.hours.title">
+                                Horário de Atendimento</h3>
+                            <ul class="space-y-2 text-sm mb-6">
+                                <li class="flex justify-between">
+                                    <span class="text-muted-foreground" data-i18n="contact.hours.week">Segunda -
+                                        Sexta</span>
+                                    <span class="text-foreground font-medium">08:00 - 18:00</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span class="text-muted-foreground" data-i18n="contact.hours.sat">Sábado</span>
+                                    <span class="text-foreground font-medium">08:00 - 12:00</span>
+                                </li>
+                            </ul>
+
+                            <!-- Google Maps -->
+                            <div class="overflow-hidden rounded-lg border border-border h-[250px] w-full">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17662.085042723458!2d-48.59155236044919!3d-27.590415299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952737e8b21b994f%3A0xb622b9dd164aea3a!2sEd.%20Park%20Real%20Comercial!5e1!3m2!1spt-BR!2sbr!4v1769800057241!5m2!1spt-BR!2sbr"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-border bg-secondary/30">
+        <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-[1.5fr_0.5fr_1.5fr_1.5fr]">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <a href="index.html">
+                        <img src="assets/images/logo-favrto-withe.png" alt="Favero Engenharia"
+                            class="w-52 h-auto object-contain dark:block hidden">
+                        <img src="assets/images/logo_favero_black.png" alt="Favero Engenharia"
+                            class="w-52 h-auto object-contain dark:hidden block">
+                    </a>
+                    <!-- Socials -->
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/faverooengenharia?igsh=MW5uY3pjcGp6a2F5bw==" target="_blank"
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/faveroengenharia" target="_blank"
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/faveroengenharia" target="_blank"
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/5548991101237" target="_blank"
+                            class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"
+                        data-i18n="footer.menu">Menu</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-sm text-muted-foreground hover:text-foreground"
+                                data-i18n="nav.home">Início</a>
+                        </li>
+                        <li><a href="#sobre" class="text-sm text-muted-foreground hover:text-foreground"
+                                data-i18n="nav.about">Sobre</a></li>
+                        <li><a href="#projetos" class="text-sm text-muted-foreground hover:text-foreground"
+                                data-i18n="nav.projects">Projetos</a>
+                        </li>
+                        <li><a href="#blog" class="text-sm text-muted-foreground hover:text-foreground"
+                                data-i18n="nav.blog">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"
+                        data-i18n="footer.services">Serviços</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#servicos" class="text-sm text-muted-foreground hover:text-foreground"
+                                data-i18n="services.cabeamento.title">Cabeamento Estruturado</a></li>
+                        <li><a href="#servicos" class="text-sm text-muted-foreground hover:text-foreground"
+                                data-i18n="services.gas.title">Instalações de Gás</a></li>
+                        <li><a href="#servicos" class="text-sm text-muted-foreground hover:text-foreground"
+                                data-i18n="services.fire.title">Prevenção de Incêndio</a></li>
+                        <li><a href="#servicos" class="text-sm text-muted-foreground hover:text-foreground"
+                                data-i18n="services.clima.title">Climatização</a></li>
+                        <li><a href="#servicos" class="text-sm text-muted-foreground hover:text-foreground"
+                                data-i18n="services.exhaust.title">Exaustão e Ventilação</a></li>
+                        <li><a href="#servicos" class="text-sm text-muted-foreground hover:text-foreground"
+                                data-i18n="services.hydro.title">Hidrossanitário</a></li>
+                        <li><a href="#servicos" class="text-sm text-muted-foreground hover:text-foreground"
+                                data-i18n="services.electric.title">Instalações Elétricas</a></li>
+                        <li><a href="#servicos" class="text-sm text-muted-foreground hover:text-foreground"
+                                data-i18n="services.spda.title">SPDA</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"
+                        data-i18n="footer.contact">Contato</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="map-pin" class="mt-0.5 h-4 w-4 flex-shrink-0 text-muted-foreground"></i>
+                            <span class="text-sm text-muted-foreground">R. Fúlvio Aducci, 626 - Florianópolis, SC</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="h-4 w-4 flex-shrink-0 text-muted-foreground"></i>
+                            <span class="text-sm text-muted-foreground">+55 (48) 99110-1237</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="mail" class="h-4 w-4 flex-shrink-0 text-muted-foreground"></i>
+                            <span class="text-sm text-muted-foreground">contato@faveroeng.com.br</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div class="mt-12 border-t border-border pt-8">
+                <p class="text-center text-sm text-muted-foreground" data-i18n="footer.rights">
+                    © 2026 Favero Engenharia. Todos os direitos reservados.
+                </p>
+                <div class="mt-4 flex justify-center pb-4">
+                    <a href="https://github.com/grechakimarcos" target="_blank" rel="noopener noreferrer"
+                        class="group relative flex items-center gap-1.5 overflow-hidden rounded-full border border-primary/20 bg-secondary/50 px-3 py-1 text-[10px] font-medium text-muted-foreground backdrop-blur-sm transition-all hover:bg-primary/10 hover:text-primary sm:text-xs">
+                        <span class="relative z-10 transition-transform duration-300 group-hover:-translate-y-[150%]"
+                            data-i18n="footer.made">
+                            Made with 🖤 by
+                        </span>
+                        <span
+                            class="relative z-10 font-bold tracking-wide transition-transform duration-300 group-hover:-translate-y-[150%]">
+                            Marcos Roberto Grechaki
+                        </span>
+                        <span
+                            class="absolute inset-0 z-0 flex h-full w-full translate-y-[150%] items-center justify-center gap-1.5 text-primary transition-transform duration-300 group-hover:translate-y-0">
+                            <span class="font-bold" data-i18n="footer.profile">Ver perfil</span>
+                            <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/map.js"></script>
+    <script src="assets/js/project-modal.js"></script>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5548991101237" target="_blank"
+        class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl animate-bounce hover:animate-none"
+        aria-label="Fale conosco pelo WhatsApp">
+        <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+    </a>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new ImageCarousel('image-carousel-container', [
+                'assets/images/civil-engineering-team-working-professional.jpg',
+                'assets/images/civil-engineering-construction-site-modern.jpg',
+                'assets/images/civil-engineering-office-professional-team.jpg'
+            ]);
+        });
+    </script>
+</body>
+
+</html>
