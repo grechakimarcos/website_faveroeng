@@ -1274,43 +1274,54 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-border bg-secondary/30">
+    <footer role="contentinfo" aria-label="Informações da empresa"
+        class="border-t border-border bg-gradient-to-t from-secondary/50 to-secondary/30">
         <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-[1.5fr_0.5fr_1.5fr_1.5fr]">
+            <!-- Desktop Grid -->
+            <div class="hidden lg:grid gap-8 lg:grid-cols-[1.5fr_0.5fr_1fr_1.5fr] relative">
                 <!-- Company Info -->
                 <div class="space-y-4">
-                    <a href="index.html">
-                        <img src="assets/images/logo-favrto-withe.png" alt="Favero Engenharia"
+                    <a href="index.html" aria-label="Página inicial da Favero Engenharia">
+                        <img src="assets/images/logo-favrto-withe.png" alt="Logo Favero Engenharia" loading="lazy"
                             class="w-52 h-auto object-contain dark:block hidden">
-                        <img src="assets/images/logo_favero_black.png" alt="Favero Engenharia"
+                        <img src="assets/images/logo_favero_black.png" alt="Logo Favero Engenharia" loading="lazy"
                             class="w-52 h-auto object-contain dark:hidden block">
                     </a>
+                    <p class="text-sm text-muted-foreground leading-relaxed max-w-xs">
+                        Mais de 10 anos desenvolvendo projetos de engenharia com excelência técnica e compromisso.
+                    </p>
                     <!-- Socials -->
-                    <div class="flex gap-4">
+                    <div class="flex gap-3" role="list" aria-label="Redes sociais">
                         <a href="https://www.instagram.com/faverooengenharia?igsh=MW5uY3pjcGp6a2F5bw==" target="_blank"
-                            class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground">
-                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            rel="noopener noreferrer" title="Siga-nos no Instagram"
+                            aria-label="Instagram da Favero Engenharia"
+                            class="social-icon flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:rotate-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                             </svg>
                         </a>
                         <a href="https://www.linkedin.com/company/faveroengenharia" target="_blank"
-                            class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground">
-                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            rel="noopener noreferrer" title="Conecte-se no LinkedIn"
+                            aria-label="LinkedIn da Favero Engenharia"
+                            class="social-icon flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:rotate-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path
                                     d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                             </svg>
                         </a>
-                        <a href="https://www.facebook.com/faveroengenharia" target="_blank"
-                            class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground">
-                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                        <a href="https://www.facebook.com/faveroengenharia" target="_blank" rel="noopener noreferrer"
+                            title="Curta no Facebook" aria-label="Facebook da Favero Engenharia"
+                            class="social-icon flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:rotate-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path
                                     d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                             </svg>
                         </a>
-                        <a href="https://wa.me/5548991101237" target="_blank"
-                            class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground">
-                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                        <a href="https://wa.me/5548991101237" target="_blank" rel="noopener noreferrer"
+                            title="Fale conosco no WhatsApp" aria-label="WhatsApp da Favero Engenharia"
+                            class="social-icon flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:rotate-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path
                                     d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                             </svg>
@@ -1318,77 +1329,233 @@
                     </div>
                 </div>
 
+                <!-- Vertical Divider -->
+                <div class="hidden lg:block w-px bg-border self-stretch" aria-hidden="true"></div>
+
                 <!-- Quick Links -->
                 <div>
-                    <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"
-                        data-i18n="footer.menu">Menu</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#inicio" class="text-sm text-muted-foreground hover:text-foreground"
-                                data-i18n="nav.home">Início</a>
-                        </li>
-                        <li><a href="#sobre" class="text-sm text-muted-foreground hover:text-foreground"
+                    <h3 class="flex items-center gap-2 mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"
+                        data-i18n="footer.menu">
+                        <i data-lucide="menu" class="h-4 w-4" aria-hidden="true"></i>
+                        Menu
+                    </h3>
+                    <ul class="space-y-2" role="list">
+                        <li><a href="#inicio"
+                                class="footer-link group text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                data-i18n="nav.home">Início</a></li>
+                        <li><a href="#sobre"
+                                class="footer-link group text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                                 data-i18n="nav.about">Sobre</a></li>
-                        <li><a href="#projetos" class="text-sm text-muted-foreground hover:text-foreground"
-                                data-i18n="nav.projects">Projetos</a>
-                        </li>
-                        <li><a href="#blog" class="text-sm text-muted-foreground hover:text-foreground"
+                        <li><a href="#projetos"
+                                class="footer-link group text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                data-i18n="nav.projects">Projetos</a></li>
+                        <li><a href="#blog"
+                                class="footer-link group text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
                                 data-i18n="nav.blog">Blog</a></li>
-                    </ul>
-                </div>
-
-                <!-- Services -->
-                <div>
-                    <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"
-                        data-i18n="footer.services">Serviços</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#servicos" class="text-sm text-muted-foreground hover:text-foreground"
-                                data-i18n="services.cabeamento.title">Cabeamento Estruturado</a></li>
-                        <li><a href="#servicos" class="text-sm text-muted-foreground hover:text-foreground"
-                                data-i18n="services.gas.title">Instalações de Gás</a></li>
-                        <li><a href="#servicos" class="text-sm text-muted-foreground hover:text-foreground"
-                                data-i18n="services.fire.title">Prevenção de Incêndio</a></li>
-                        <li><a href="#servicos" class="text-sm text-muted-foreground hover:text-foreground"
-                                data-i18n="services.clima.title">Climatização</a></li>
-                        <li><a href="#servicos" class="text-sm text-muted-foreground hover:text-foreground"
-                                data-i18n="services.exhaust.title">Exaustão e Ventilação</a></li>
-                        <li><a href="#servicos" class="text-sm text-muted-foreground hover:text-foreground"
-                                data-i18n="services.hydro.title">Hidrossanitário</a></li>
-                        <li><a href="#servicos" class="text-sm text-muted-foreground hover:text-foreground"
-                                data-i18n="services.electric.title">Instalações Elétricas</a></li>
-                        <li><a href="#servicos" class="text-sm text-muted-foreground hover:text-foreground"
-                                data-i18n="services.spda.title">SPDA</a></li>
+                        <li><a href="#contato"
+                                class="footer-link group text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                data-i18n="nav.contact">Contato</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact -->
                 <div>
-                    <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"
-                        data-i18n="footer.contact">Contato</h3>
-                    <ul class="space-y-3">
+                    <h3 class="flex items-center gap-2 mb-4 text-sm font-semibold uppercase tracking-wider text-foreground"
+                        data-i18n="footer.contact">
+                        <i data-lucide="phone" class="h-4 w-4" aria-hidden="true"></i>
+                        Contato
+                    </h3>
+                    <ul class="space-y-3" role="list">
                         <li class="flex items-start gap-2">
-                            <i data-lucide="map-pin" class="mt-0.5 h-4 w-4 flex-shrink-0 text-muted-foreground"></i>
+                            <i data-lucide="map-pin" class="mt-0.5 h-4 w-4 flex-shrink-0 text-muted-foreground"
+                                aria-hidden="true"></i>
                             <span class="text-sm text-muted-foreground">R. Fúlvio Aducci, 626 - Florianópolis, SC</span>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <i data-lucide="phone" class="h-4 w-4 flex-shrink-0 text-muted-foreground"></i>
-                            <span class="text-sm text-muted-foreground">+55 (48) 99110-1237</span>
+                        <li class="flex items-center gap-2 group">
+                            <i data-lucide="phone" class="h-4 w-4 flex-shrink-0 text-muted-foreground"
+                                aria-hidden="true"></i>
+                            <a href="tel:+5548991101237"
+                                class="text-sm text-muted-foreground hover:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">+55
+                                (48) 99110-1237</a>
+                            <button
+                                onclick="navigator.clipboard.writeText('+5548991101237'); this.querySelector('.copy-feedback').classList.add('show');"
+                                title="Copiar telefone"
+                                class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity p-1 hover:bg-primary/10 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                aria-label="Copiar número de telefone">
+                                <i data-lucide="copy" class="h-3 w-3 text-muted-foreground" aria-hidden="true"></i>
+                            </button>
                         </li>
-                        <li class="flex items-center gap-2">
-                            <i data-lucide="mail" class="h-4 w-4 flex-shrink-0 text-muted-foreground"></i>
-                            <span class="text-sm text-muted-foreground">contato@faveroeng.com.br</span>
+                        <li class="flex items-center gap-2 group">
+                            <i data-lucide="mail" class="h-4 w-4 flex-shrink-0 text-muted-foreground"
+                                aria-hidden="true"></i>
+                            <a href="mailto:contato@faveroeng.com.br"
+                                class="text-sm text-muted-foreground hover:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">contato@faveroeng.com.br</a>
+                            <button
+                                onclick="navigator.clipboard.writeText('contato@faveroeng.com.br'); this.querySelector('.copy-feedback').classList.add('show');"
+                                title="Copiar e-mail"
+                                class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity p-1 hover:bg-primary/10 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                aria-label="Copiar endereço de e-mail">
+                                <i data-lucide="copy" class="h-3 w-3 text-muted-foreground" aria-hidden="true"></i>
+                            </button>
                         </li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Bottom -->
-            <div class="mt-12 border-t border-border pt-8">
+            <!-- Mobile Version with Accordion -->
+            <div class="lg:hidden space-y-4">
+                <!-- Logo always visible -->
+                <div class="space-y-4">
+                    <a href="index.html" aria-label="Página inicial da Favero Engenharia">
+                        <img src="assets/images/logo-favrto-withe.png" alt="Logo Favero Engenharia" loading="lazy"
+                            class="w-52 h-auto object-contain dark:block hidden mx-auto sm:mx-0">
+                        <img src="assets/images/logo_favero_black.png" alt="Logo Favero Engenharia" loading="lazy"
+                            class="w-52 h-auto object-contain dark:hidden block mx-auto sm:mx-0">
+                    </a>
+                    <p class="text-sm text-muted-foreground leading-relaxed text-center sm:text-left">
+                        Mais de 10 anos desenvolvendo projetos de engenharia com excelência técnica e compromisso.
+                    </p>
+                </div>
+
+                <!-- Accordion sections -->
+                <details class="border-b border-border pb-4">
+                    <summary
+                        class="font-semibold cursor-pointer flex items-center justify-between py-2 text-foreground hover:text-primary transition-colors">
+                        <span class="flex items-center gap-2">
+                            <i data-lucide="menu" class="h-4 w-4" aria-hidden="true"></i>
+                            Menu
+                        </span>
+                        <i data-lucide="chevron-down" class="h-4 w-4 transition-transform ui-open:rotate-180"
+                            aria-hidden="true"></i>
+                    </summary>
+                    <ul class="mt-2 space-y-2 pl-6">
+                        <li><a href="#inicio" class="text-sm text-muted-foreground hover:text-foreground">Início</a>
+                        </li>
+                        <li><a href="#sobre" class="text-sm text-muted-foreground hover:text-foreground">Sobre</a></li>
+                        <li><a href="#projetos" class="text-sm text-muted-foreground hover:text-foreground">Projetos</a>
+                        </li>
+                        <li><a href="#blog" class="text-sm text-muted-foreground hover:text-foreground">Blog</a></li>
+                        <li><a href="#contato" class="text-sm text-muted-foreground hover:text-foreground">Contato</a>
+                        </li>
+                    </ul>
+                </details>
+
+                <details class="border-b border-border pb-4">
+                    <summary
+                        class="font-semibold cursor-pointer flex items-center justify-between py-2 text-foreground hover:text-primary transition-colors">
+                        <span class="flex items-center gap-2">
+                            <i data-lucide="briefcase" class="h-4 w-4" aria-hidden="true"></i>
+                            Serviços
+                        </span>
+                        <i data-lucide="chevron-down" class="h-4 w-4 transition-transform ui-open:rotate-180"
+                            aria-hidden="true"></i>
+                    </summary>
+                    <ul class="mt-2 space-y-2 pl-6 text-sm text-muted-foreground">
+                        <li><a href="#servicos" class="hover:text-foreground">Cabeamento Estruturado</a></li>
+                        <li><a href="#servicos" class="hover:text-foreground">Instalações de Gás</a></li>
+                        <li><a href="#servicos" class="hover:text-foreground">Prevenção de Incêndio</a></li>
+                        <li><a href="#servicos" class="hover:text-foreground">Climatização</a></li>
+                        <li><a href="#servicos" class="hover:text-foreground">Hidrossanitário</a></li>
+                    </ul>
+                </details>
+
+                <!-- Contact section always expanded on mobile -->
+                <div class="space-y-3 border-b border-border pb-4">
+                    <h3 class="font-semibold flex items-center gap-2 text-foreground">
+                        <i data-lucide="phone" class="h-4 w-4" aria-hidden="true"></i>
+                        Contato
+                    </h3>
+                    <div class="space-y-3">
+                        <!-- Mobile-optimized contact buttons -->
+                        <a href="tel:+5548991101237"
+                            class="flex items-center gap-3 p-3 bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors">
+                            <i data-lucide="phone" class="h-5 w-5 text-primary" aria-hidden="true"></i>
+                            <div class="flex-1">
+                                <div class="text-xs text-muted-foreground">Ligue agora</div>
+                                <div class="text-sm font-semibold text-foreground">+55 (48) 99110-1237</div>
+                            </div>
+                        </a>
+                        <a href="mailto:contato@faveroeng.com.br"
+                            class="flex items-center gap-3 p-3 bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors">
+                            <i data-lucide="mail" class="h-5 w-5 text-primary" aria-hidden="true"></i>
+                            <div class="flex-1">
+                                <div class="text-xs text-muted-foreground">Envie um e-mail</div>
+                                <div class="text-sm font-semibold text-foreground">contato@faveroeng.com.br</div>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/5548991101237" target="_blank"
+                            class="flex items-center gap-3 p-3 bg-green-500/10 rounded-lg hover:bg-green-500/20 transition-colors">
+                            <svg class="h-5 w-5 text-green-600 dark:text-green-400" fill="currentColor"
+                                viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                            <div class="flex-1">
+                                <div class="text-xs text-green-600 dark:text-green-400">WhatsApp</div>
+                                <div class="text-sm font-semibold text-foreground">Falar agora</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Social media on mobile -->
+                <div class="flex justify-center gap-3 pt-2">
+                    <a href="https://www.instagram.com/faverooengenharia?igsh=MW5uY3pjcGp6a2F5bw==" target="_blank"
+                        title="Instagram" rel="noopener noreferrer"
+                        class="social-icon flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground hover:scale-110">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/faveroengenharia" target="_blank" title="LinkedIn"
+                        rel="noopener noreferrer"
+                        class="social-icon flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground hover:scale-110">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/faveroengenharia" target="_blank" title="Facebook"
+                        rel="noopener noreferrer"
+                        class="social-icon flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary transition-all hover:bg-primary hover:text-primary-foreground hover:scale-110">
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Section (Same for both) -->
+            <div class="mt-12 border-t border-border pt-8 space-y-4">
+                <!-- Legal Links -->
+                <div class="flex flex-wrap justify-center gap-4 text-xs text-muted-foreground">
+                    <a href="#"
+                        class="hover:text-foreground transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Política
+                        de Privacidade</a>
+                    <span aria-hidden="true">•</span>
+                    <a href="#"
+                        class="hover:text-foreground transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Termos
+                        de Uso</a>
+                    <span aria-hidden="true">•</span>
+                    <button onclick="window.scrollTo({top:0,behavior:'smooth'})"
+                        class="hover:text-primary transition-colors inline-flex items-center gap-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                        aria-label="Voltar ao topo da página">
+                        <i data-lucide="arrow-up" class="h-3 w-3" aria-hidden="true"></i>
+                        Voltar ao topo
+                    </button>
+                </div>
+
+                <!-- Copyright -->
                 <p class="text-center text-sm text-muted-foreground" data-i18n="footer.rights">
-                    © 2026 Favero Engenharia. Todos os direitos reservados.
+                    © <span id="copyright-year">2026</span> Favero Engenharia. Todos os direitos reservados.
                 </p>
-                <div class="mt-4 flex justify-center pb-4">
+
+                <!-- Developer Credit -->
+                <div class="flex justify-center pb-4">
                     <a href="https://github.com/grechakimarcos" target="_blank" rel="noopener noreferrer"
-                        class="group relative flex items-center gap-1.5 overflow-hidden rounded-full border border-primary/20 bg-secondary/50 px-3 py-1 text-[10px] font-medium text-muted-foreground backdrop-blur-sm transition-all hover:bg-primary/10 hover:text-primary sm:text-xs">
+                        class="group relative flex items-center gap-1.5 overflow-hidden rounded-full border border-primary/20 bg-secondary/50 px-3 py-1 text-[10px] font-medium text-muted-foreground backdrop-blur-sm transition-all hover:bg-primary/10 hover:text-primary sm:text-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
                         <span class="relative z-10 transition-transform duration-300 group-hover:-translate-y-[150%]"
                             data-i18n="footer.made">
                             Made with 🖤 by
@@ -1401,7 +1568,7 @@
                             class="absolute inset-0 z-0 flex h-full w-full translate-y-[150%] items-center justify-center gap-1.5 text-primary transition-transform duration-300 group-hover:translate-y-0">
                             <span class="font-bold" data-i18n="footer.profile">Ver perfil</span>
                             <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                             </svg>
@@ -1410,6 +1577,67 @@
                 </div>
             </div>
         </div>
+
+        <!-- Schema.org Microdata for SEO -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "Favero Engenharia",
+          "description": "Empresa especializada em projetos de engenharia civil, hidrossanitária, elétrica, climatização e prevenção de incêndio",
+          "url": "https://faveroeng.com.br",
+          "logo": "https://faveroeng.com.br/assets/images/logo_favero_black.png",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "R. Fúlvio Aducci, 626",
+            "addressLocality": "Florianópolis",
+            "addressRegion": "SC",
+            "postalCode": "88000-000",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-27.5954",
+            "longitude": "-48.5480"
+          },
+          "telephone": "+55-48-99110-1237",
+          "email": "contato@faveroeng.com.br",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "18:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "08:00",
+              "closes": "12:00"
+            }
+          ],
+          "sameAs": [
+            "https://www.instagram.com/faverooengenharia",
+            "https://www.linkedin.com/company/faveroengenharia",
+            "https://www.facebook.com/faveroengenharia"
+          ],
+          "foundingDate": "2014",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Brasil"
+          }
+        }
+        </script>
+
+        <!-- Dynamic Year Script -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const yearElement = document.getElementById('copyright-year');
+                if (yearElement) {
+                    yearElement.textContent = new Date().getFullYear();
+                }
+            });
+        </script>
     </footer>
 
     <script src="assets/js/carousel.js"></script>

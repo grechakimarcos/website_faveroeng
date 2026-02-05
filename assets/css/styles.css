@@ -527,3 +527,52 @@ html.dark .glassmorphism {
         animation-duration: 20s;
     }
 }
+
+/* ============================================
+   FOOTER ENHANCEMENTS
+   ============================================ */
+
+/* Social icon animations */
+.social-icon {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.social-icon:hover {
+    transform: scale(1.15) rotate(6deg);
+}
+
+/* Footer link underline effect */
+.footer-link {
+    position: relative;
+    display: inline-block;
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
+
+/* Details/Summary chevron rotation */
+details[open] summary i.lucide-chevron-down {
+    transform: rotate(180deg);
+}
+
+details summary i.lucide-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+/* Focus visible styles for accessibility */
+*:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
