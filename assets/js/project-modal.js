@@ -10,21 +10,21 @@ document.addEventListener('DOMContentLoaded', () => {
             description: 'Projeto completo de instalações elétricas, hidrossanitárias e sistema de prevenção contra incêndio para a expansão do Beiramar Shopping. O projeto contemplou mais de 15.000m² de área construída, incluindo novas lojas, praça de alimentação e estacionamento.',
             services: ['Projeto Elétrico', 'Hidrossanitário', 'PPCI', 'Climatização'],
             images: [
-                'assets/images/civil-engineering-construction-site-modern.jpg',
+                'assets/images/Capa_projetoBeriamarShopping.jpg',
                 'assets/images/civil-engineering-team-working-professional.jpg',
                 'assets/images/civil-engineering-office-professional-team.jpg'
             ],
             stats: { area: '15.000 m²', duration: '8 meses', team: '12 engenheiros' }
         },
         'sesc': {
-            title: 'SESC Florianópolis',
-            location: 'Florianópolis, SC',
+            title: 'SESC Minas Gerais',
+            location: 'Belo Horizonte, MG',
             year: '2023',
             category: 'Institucional',
             description: 'Desenvolvimento de projetos de climatização e sistema preventivo contra incêndio para unidade do SESC em Florianópolis. Projeto focado em eficiência energética e sustentabilidade, atendendo às normas mais rigorosas do mercado.',
             services: ['Climatização', 'PPCI', 'Consultoria Técnica'],
             images: [
-                'assets/images/civil-engineering-office-professional-team.jpg',
+                'assets/images/Capa_projetoSescMG.jpg',
                 'assets/images/civil-engineering-construction-site-modern.jpg',
                 'assets/images/civil-engineering-team-working-professional.jpg'
             ],
@@ -38,11 +38,67 @@ document.addEventListener('DOMContentLoaded', () => {
             description: 'Consultoria técnica e desenvolvimento de projetos de instalações para diversos edifícios públicos da Prefeitura de Porto Alegre. Trabalho envolveu adequação às normas de acessibilidade e modernização dos sistemas existentes.',
             services: ['Elétrico', 'Hidrossanitário', 'Consultoria', 'Adequação NR'],
             images: [
-                'assets/images/civil-engineering-team-working-professional.jpg',
+                'assets/images/Capa_projetoPrefeituaPoa.jpg',
                 'assets/images/civil-engineering-office-professional-team.jpg',
                 'assets/images/civil-engineering-construction-site-modern.jpg'
             ],
             stats: { area: '25.000 m²', duration: '12 meses', team: '15 engenheiros' }
+        },
+        'hospital-curitiba': {
+            title: 'Hospital Regional Curitiba',
+            location: 'Curitiba, PR',
+            year: '2024',
+            category: 'SST & Climatização',
+            description: 'Projeto completo de sistema de climatização hospitalar e implementação do programa de saúde e segurança do trabalho. O projeto contemplou adequação dos sistemas de HVAC para ambientes hospitalares críticos, incluindo salas cirúrgicas, UTI e áreas de isolamento, seguindo as normas da ANVISA e NR-32.',
+            services: ['Climatização', 'SST', 'HVAC Hospitalar', 'Adequação NR-32'],
+            images: [
+                'assets/images/Capa_ProjetoHospitalRegionalCuritiba.jpg',
+                'assets/images/civil-engineering-construction-site-modern.jpg',
+                'assets/images/civil-engineering-team-working-professional.jpg'
+            ],
+            stats: { area: '12.000 m²', duration: '10 meses', team: '10 engenheiros' }
+        },
+        'grupo-oad-sp': {
+            title: 'Grupo OAD - Unidade São Paulo',
+            location: 'São Paulo, SP',
+            year: '2024',
+            category: 'Adequações Técnicas',
+            description: 'Adequação de sistemas prediais e implementação de programa de saúde ocupacional para a unidade do Grupo OAD em São Paulo. O projeto envolveu modernização completa das instalações elétricas, hidrossanitárias e de climatização, além da implementação do PCMSO e PPRA.',
+            services: ['Sistemas Prediais', 'Saúde Ocupacional', 'PCMSO', 'Adequação NR'],
+            images: [
+                'assets/images/Capa_ProjetoGrupoOADUnidadeSaoPaulo.avif',
+                'assets/images/civil-engineering-office-professional-team.jpg',
+                'assets/images/civil-engineering-team-working-professional.jpg'
+            ],
+            stats: { area: '9.200 m²', duration: '7 meses', team: '9 engenheiros' }
+        },
+        'complexo-industrial-bh': {
+            title: 'Complexo Industrial BH',
+            location: 'Belo Horizonte, MG',
+            year: '2023',
+            category: 'Projetos Integrados',
+            description: 'Desenvolvimento de projetos hidrossanitários e elétricos integrados para complexo industrial em Belo Horizonte. O escopo incluiu dimensionamento completo das redes de água fria, esgoto sanitário, águas pluviais e instalações elétricas de média e baixa tensão.',
+            services: ['Hidrossanitário', 'Elétrico', 'Águas Pluviais', 'Média Tensão'],
+            images: [
+                'assets/images/Capa_ProjetoComplexoIndustrialBH.png',
+                'assets/images/civil-engineering-construction-site-modern.jpg',
+                'assets/images/civil-engineering-office-professional-team.jpg'
+            ],
+            stats: { area: '18.000 m²', duration: '9 meses', team: '14 engenheiros' }
+        },
+        'edificio-florianopolis': {
+            title: 'Edifício Empresarial Florianópolis',
+            location: 'Florianópolis, SC',
+            year: '2024',
+            category: 'Projeto Completo',
+            description: 'Projeto elétrico completo e sistema de climatização para edifício corporativo em Florianópolis. Incluiu projetos de instalações elétricas, SPDA, cabeamento estruturado, climatização VRF e sistema preventivo contra incêndio, atendendo às mais rigorosas normas técnicas.',
+            services: ['Elétrico', 'Climatização', 'SPDA', 'Cabeamento', 'PPCI'],
+            images: [
+                'assets/images/Capa_ProjetoEdifícioEmpresarialFlorianópolis.jpg',
+                'assets/images/civil-engineering-team-working-professional.jpg',
+                'assets/images/civil-engineering-construction-site-modern.jpg'
+            ],
+            stats: { area: '20.000 m²', duration: '11 meses', team: '13 engenheiros' }
         }
     };
 
