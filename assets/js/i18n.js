@@ -472,4 +472,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Special handling for dynamic content if needed
         // e.g. updating document title
     }
+
+    // Expose globally for mobile nav language buttons
+    window.changeLanguage = setLanguage;
 });

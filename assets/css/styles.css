@@ -576,3 +576,193 @@ details summary i.lucide-chevron-down {
     outline: 2px solid var(--primary);
     outline-offset: 2px;
 }
+
+/* ============================================
+   MOBILE UX IMPROVEMENTS
+   ============================================ */
+
+/* Issue #8: Hover effects only on devices with hover capability */
+@media (hover: hover) and (pointer: fine) {
+    .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(30, 30, 42, 0.15);
+    }
+    .social-icon:hover {
+        transform: scale(1.15) rotate(6deg);
+    }
+}
+
+/* Disable card lift/shadow on touch devices */
+@media (hover: none) {
+    .card-hover:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    /* Active state for touch feedback instead of hover */
+    .card-hover:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+    /* Disable image zoom hover on project cards */
+    .group:hover .group-hover\:scale-110 {
+        transform: none !important;
+    }
+    /* Active press feedback for project cards */
+    .group:active .group-hover\:scale-110 {
+        transform: scale(1.03) !important;
+        transition: transform 0.15s ease;
+    }
+    /* Social icons: no rotation on touch */
+    .social-icon:hover {
+        transform: none;
+    }
+    .social-icon:active {
+        transform: scale(0.9);
+    }
+}
+
+/* Issue #9: WhatsApp FAB bounce auto-stop */
+@keyframes whatsapp-bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-8px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
+}
+
+.whatsapp-fab {
+    animation: whatsapp-bounce 1s ease-in-out 3;
+    animation-fill-mode: forwards;
+}
+.whatsapp-fab:hover {
+    animation: none;
+}
+
+/* Issue #10: Footer legal links bigger touch targets on mobile */
+@media (max-width: 768px) {
+    .legal-links a,
+    .legal-links button {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.8125rem;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+/* Issue #11: Partner carousel touch pause */
+.animate-partners-scroll.touch-paused {
+    animation-play-state: paused !important;
+}
+
+/* Issue #1: "10+ Anos" card responsive fix */
+@media (max-width: 640px) {
+    .about-stats-card {
+        position: relative !important;
+        bottom: auto !important;
+        left: auto !important;
+        margin-top: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Issue #2: Map scroll trap overlay */
+.map-touch-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    border-radius: 1.5rem;
+}
+.map-touch-overlay span {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+}
+.map-touch-overlay.active {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Only show map overlay on touch devices */
+@media (hover: hover) {
+    .map-touch-overlay {
+        display: none;
+    }
+}
+
+/* Issue #5: Projects show more button */
+@media (max-width: 767px) {
+    .projects-grid .project-card-item:nth-child(n+5) {
+        display: none;
+    }
+    .projects-grid.show-all .project-card-item:nth-child(n+5) {
+        display: block;
+    }
+    .projects-show-more {
+        display: flex !important;
+    }
+}
+@media (min-width: 768px) {
+    .projects-show-more {
+        display: none !important;
+    }
+}
+
+/* Issue #4: Services horizontal scroll on mobile */
+@media (max-width: 767px) {
+    .services-grid-mobile {
+        display: flex !important;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        scrollbar-width: none;
+        /* Firefox */
+    }
+    .services-grid-mobile::-webkit-scrollbar {
+        display: none;
+    }
+    .services-grid-mobile > * {
+        min-width: 280px;
+        max-width: 300px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+}
+
+/* Services scroll indicator dots */
+.services-scroll-hint {
+    display: none;
+}
+@media (max-width: 767px) {
+    .services-scroll-hint {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        padding-top: 0.75rem;
+    }
+    .services-scroll-hint span {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--muted-foreground);
+        opacity: 0.3;
+    }
+}

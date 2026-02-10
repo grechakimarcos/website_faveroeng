@@ -217,6 +217,18 @@
                 <a href="#contato"
                     class="mobile-nav-link rounded-md px-3 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
                     data-i18n="nav.contact">Contato</a>
+                <!-- Issue #12: Language Selector on Mobile -->
+                <div class="flex items-center justify-center gap-2 pt-2 border-t border-border mt-2">
+                    <button onclick="changeLanguage('pt')"
+                        class="lang-btn px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
+                        data-lang="pt">🇧🇷 PT</button>
+                    <button onclick="changeLanguage('en')"
+                        class="lang-btn px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
+                        data-lang="en">🇺🇸 EN</button>
+                    <button onclick="changeLanguage('es')"
+                        class="lang-btn px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
+                        data-lang="es">🇪🇸 ES</button>
+                </div>
                 <a href="#contato"
                     class="mt-4 w-full inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-semibold bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-md h-10 px-4 py-2 transition-all"
                     data-i18n="nav.quote">
@@ -315,7 +327,7 @@
                         para sua obra.</p>
                 </div>
 
-                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 services-grid-mobile">
                     <!-- Service 1: Cabeamento -->
                     <!-- Service 1: Cabeamento -->
                     <div
@@ -506,6 +518,10 @@
                         </ul>
                     </div>
                 </div>
+                <!-- Issue #4: Scroll hint for mobile -->
+                <div class="services-scroll-hint" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
             </div>
         </section>
 
@@ -571,7 +587,7 @@
                             <!-- Carousel JS will inject here -->
                         </div>
                         <div
-                            class="absolute -bottom-6 -left-6 z-20 rounded-xl bg-primary p-6 text-primary-foreground shadow-lg">
+                            class="about-stats-card absolute -bottom-6 -left-6 z-20 rounded-xl bg-primary p-6 text-primary-foreground shadow-lg">
                             <div class="text-3xl font-bold">10+</div>
                             <div class="text-sm opacity-90" data-i18n="stats.experience">Anos de Experiência</div>
                         </div>
@@ -643,8 +659,9 @@
                     <div
                         class="relative max-w-2xl mx-auto bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 sm:p-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8">
                         <div
-                            class="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-white/30 flex-shrink-0 bg-white/20 flex items-center justify-center">
-                            <i data-lucide="user" class="h-20 w-20 text-white/40"></i>
+                            class="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-white/30 flex-shrink-0">
+                            <img src="assets/images/ReinaldoFavero.png" alt="Reinaldo Favero Filho - CEO & Fundador"
+                                class="w-full h-full object-cover" loading="lazy">
                         </div>
                         <div>
                             <h3 class="text-2xl sm:text-3xl font-bold text-white">Reinaldo Favero Filho</h3>
@@ -731,10 +748,11 @@
                 </div>
 
                 <!-- Project Cards Grid -->
-                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-16 animate-on-scroll fade-up delay-200">
+                <div
+                    class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-16 animate-on-scroll fade-up delay-200 projects-grid">
                     <!-- Project Card 1: Beiramar Shopping -->
                     <div data-project="beiramar"
-                        class="group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
+                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
                         <div class="relative aspect-[4/3] overflow-hidden">
                             <!-- Icon Badge -->
                             <div
@@ -770,7 +788,7 @@
 
                     <!-- Project Card 2: SESC Minas Gerais -->
                     <div data-project="sesc"
-                        class="group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
+                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
                         <div class="relative aspect-[4/3] overflow-hidden">
                             <!-- Icon Badge -->
                             <div
@@ -807,7 +825,7 @@
 
                     <!-- Project Card 3: Prefeitura de Porto Alegre -->
                     <div data-project="prefeitura"
-                        class="group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
+                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
                         <div class="relative aspect-[4/3] overflow-hidden">
                             <!-- Icon Badge -->
                             <div
@@ -843,7 +861,7 @@
 
                     <!-- Project Card 4: Hospital Regional Curitiba -->
                     <div data-project="hospital-curitiba"
-                        class="group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
+                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
                         <div class="relative aspect-[4/3] overflow-hidden">
                             <!-- Icon Badge -->
                             <div
@@ -878,7 +896,7 @@
 
                     <!-- Project Card 5: Grupo OAD - Unidade São Paulo -->
                     <div data-project="grupo-oad-sp"
-                        class="group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
+                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
                         <div class="relative aspect-[4/3] overflow-hidden">
                             <!-- Icon Badge -->
                             <div
@@ -915,7 +933,7 @@
 
                     <!-- Project Card 6: Complexo Industrial BH -->
                     <div data-project="complexo-industrial-bh"
-                        class="group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
+                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
                         <div class="relative aspect-[4/3] overflow-hidden">
                             <!-- Icon Badge -->
                             <div
@@ -949,7 +967,7 @@
 
                     <!-- Project Card 7: Edifício Empresarial Florianópolis -->
                     <div data-project="edificio-florianopolis"
-                        class="group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
+                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
                         <div class="relative aspect-[4/3] overflow-hidden">
                             <!-- Icon Badge -->
                             <div
@@ -984,6 +1002,16 @@
                     </div>
                 </div>
 
+                <!-- Issue #5: Show More button for mobile -->
+                <div class="projects-show-more hidden justify-center mb-16">
+                    <button
+                        onclick="document.querySelector('.projects-grid').classList.toggle('show-all'); this.querySelector('span').textContent = document.querySelector('.projects-grid').classList.contains('show-all') ? 'Ver menos' : 'Ver mais projetos'; this.querySelector('i').style.transform = document.querySelector('.projects-grid').classList.contains('show-all') ? 'rotate(180deg)' : ''"
+                        class="inline-flex items-center gap-2 rounded-full border border-primary bg-transparent text-primary hover:bg-primary/10 px-6 py-3 text-sm font-semibold transition-all">
+                        <span>Ver mais projetos</span>
+                        <i data-lucide="chevron-down" class="h-4 w-4 transition-transform"></i>
+                    </button>
+                </div>
+
                 <!-- Interactive Map Section -->
                 <div class="mt-16 mb-16">
                     <div class="text-center mb-10 animate-on-scroll fade-up">
@@ -1004,9 +1032,14 @@
                     <div class="flex flex-col lg:flex-row gap-10 items-start animate-on-scroll fade-up delay-200">
                         <!-- Map SVG Container -->
                         <div class="flex-1 relative w-full">
-                            <div class="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 rounded-3xl p-6 border border-border shadow-sm"
+                            <div class="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 rounded-3xl p-6 border border-border shadow-sm relative"
                                 id="map-svg-container">
                                 <!-- SVG will be injected here by map.js -->
+                                <!-- Issue #2: Map touch overlay to prevent scroll trap -->
+                                <div class="map-touch-overlay" id="mapTouchOverlay"
+                                    onclick="this.classList.add('active'); setTimeout(() => this.classList.remove('active'), 5000)">
+                                    <span>Toque para interagir com o mapa</span>
+                                </div>
                             </div>
                         </div>
 
@@ -1037,7 +1070,9 @@
                     class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-secondary/50 via-white/80 to-transparent z-10 pointer-events-none dark:via-black/80">
                 </div>
 
-                <div class="flex animate-partners-scroll hover:pause">
+                <div class="flex animate-partners-scroll hover:pause" id="partnersTrack"
+                    ontouchstart="this.classList.add('touch-paused')"
+                    ontouchend="clearTimeout(this._touchTimer); this._touchTimer = setTimeout(() => this.classList.remove('touch-paused'), 3000)">
                     <!-- Partner Items (Duplicated for infinite scroll) -->
                     <!-- We will inline 12 items (6 unique x 2) -->
 
@@ -1700,7 +1735,7 @@
             <!-- Bottom Section (Same for both) -->
             <div class="mt-12 border-t border-border pt-8 space-y-4">
                 <!-- Legal Links -->
-                <div class="flex flex-wrap justify-center gap-4 text-xs text-muted-foreground">
+                <div class="flex flex-wrap justify-center gap-4 text-xs text-muted-foreground legal-links">
                     <a href="#"
                         class="hover:text-foreground transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Política
                         de Privacidade</a>
@@ -1815,7 +1850,7 @@
     <script src="assets/js/project-modal.js"></script>
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/5548991101237" target="_blank"
-        class="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl animate-bounce hover:animate-none"
+        class="whatsapp-fab fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl"
         aria-label="Fale conosco pelo WhatsApp">
         <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
             <path

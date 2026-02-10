@@ -403,6 +403,45 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'ArrowRight') nextSlide();
     });
 
+    // Issue #3: Touch/swipe support for carousel
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchEndX = 0;
+    let isSwiping = false;
+
+    const carouselContainer = document.getElementById('carouselContainer');
+
+    carouselContainer.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+        isSwiping = true;
+    }, { passive: true });
+
+    carouselContainer.addEventListener('touchmove', (e) => {
+        if (!isSwiping) return;
+        const diffX = Math.abs(e.changedTouches[0].screenX - touchStartX);
+        const diffY = Math.abs(e.changedTouches[0].screenY - touchStartY);
+        // If horizontal swipe is dominant, prevent vertical scroll
+        if (diffX > diffY && diffX > 10) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+
+    carouselContainer.addEventListener('touchend', (e) => {
+        if (!isSwiping) return;
+        isSwiping = false;
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        // Minimum swipe distance of 50px
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) {
+                nextSlide(); // Swipe left = next
+            } else {
+                prevSlide(); // Swipe right = prev
+            }
+        }
+    }, { passive: true });
+
     // Make project cards clickable
     document.querySelectorAll('[data-project]').forEach(card => {
         card.classList.add('project-card-clickable');
