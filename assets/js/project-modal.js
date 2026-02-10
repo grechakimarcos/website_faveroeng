@@ -132,12 +132,18 @@ document.addEventListener('DOMContentLoaded', () => {
             max-height: 90vh;
             background: var(--card);
             border-radius: 1.5rem;
-            overflow: hidden;
+            overflow-y: auto;
+            overflow-x: hidden;
             z-index: 10000;
             opacity: 0;
             visibility: hidden;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .project-modal::-webkit-scrollbar {
+            display: none;
         }
         .project-modal.active {
             opacity: 1;
@@ -168,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         .carousel-container {
             position: relative;
-            aspect-ratio: 16/9;
+            aspect-ratio: 16/10;
             overflow: hidden;
         }
         .carousel-track {
@@ -228,13 +234,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         .modal-content {
             padding: 2rem;
-            max-height: calc(90vh - 56.25vw);
-            overflow-y: auto;
-        }
-        @media (min-width: 768px) {
-            .modal-content {
-                max-height: 40vh;
-            }
         }
         .service-tag {
             display: inline-flex;
