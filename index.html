@@ -527,8 +527,12 @@
 
 
         <!-- About Section -->
-        <section id="sobre" class="bg-background py-20 sm:py-24">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section id="sobre" class="relative overflow-hidden bg-background py-20 sm:py-24">
+            <!-- Background Decoration -->
+            <div class="absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-primary/5 blur-3xl"></div>
+            <div class="absolute -bottom-40 -right-40 h-[500px] w-[500px] rounded-full bg-primary/5 blur-3xl"></div>
+
+            <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
                 <!-- Section Header -->
                 <div class="text-center mb-16 animate-on-scroll fade-up">
                     <div
@@ -550,7 +554,8 @@
                         <h3 class="text-2xl font-bold tracking-tight text-foreground sm:text-3xl mb-6"
                             data-i18n="about.history.title">Nossa História
                         </h3>
-                        <p class="text-muted-foreground leading-relaxed mb-6" data-i18n="about.history.text">
+                        <p class="text-muted-foreground leading-relaxed mb-8 text-justify text-base sm:text-lg"
+                            data-i18n="about.history.text">
                             Somos uma empresa que desenvolve projetos de engenharia em diferentes disciplinas, como
                             projetos de instalações hidrossanitárias, instalações elétricas, estruturais, climatização
                             e prevenção e combate a incêndio. Atendemos desde o residencial e predial, até estruturas
@@ -561,30 +566,50 @@
                             ser e como atuamos.
                         </p>
                         <ul class="space-y-4">
-                            <li class="flex items-center gap-3">
-                                <i data-lucide="check-circle-2" class="h-5 w-5 flex-shrink-0 text-primary"></i>
-                                <span class="text-foreground" data-i18n="about.item1">Projetos multidisciplinares de
-                                    engenharia</span>
+                            <li class="flex items-center gap-4 group transition-all hover:translate-x-2">
+                                <div
+                                    class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary shadow-sm">
+                                    <i data-lucide="check"
+                                        class="h-5 w-5 flex-shrink-0 text-primary group-hover:text-primary-foreground transition-colors duration-300"></i>
+                                </div>
+                                <span class="text-foreground font-medium text-base" data-i18n="about.item1">Projetos
+                                    multidisciplinares de engenharia</span>
                             </li>
-                            <li class="flex items-center gap-3">
-                                <i data-lucide="check-circle-2" class="h-5 w-5 flex-shrink-0 text-primary"></i>
-                                <span class="text-foreground" data-i18n="about.item2">Atendimento em todo o
-                                    Brasil</span>
+                            <li class="flex items-center gap-4 group transition-all hover:translate-x-2">
+                                <div
+                                    class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary shadow-sm">
+                                    <i data-lucide="map-pin"
+                                        class="h-5 w-5 flex-shrink-0 text-primary group-hover:text-primary-foreground transition-colors duration-300"></i>
+                                </div>
+                                <span class="text-foreground font-medium text-base" data-i18n="about.item2">Atendimento
+                                    em todo o Brasil</span>
                             </li>
-                            <li class="flex items-center gap-3">
-                                <i data-lucide="check-circle-2" class="h-5 w-5 flex-shrink-0 text-primary"></i>
-                                <span class="text-foreground" data-i18n="about.item3">Obras públicas e privadas</span>
+                            <li class="flex items-center gap-4 group transition-all hover:translate-x-2">
+                                <div
+                                    class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary shadow-sm">
+                                    <i data-lucide="building"
+                                        class="h-5 w-5 flex-shrink-0 text-primary group-hover:text-primary-foreground transition-colors duration-300"></i>
+                                </div>
+                                <span class="text-foreground font-medium text-base" data-i18n="about.item3">Obras
+                                    públicas e privadas</span>
                             </li>
-                            <li class="flex items-center gap-3">
-                                <i data-lucide="check-circle-2" class="h-5 w-5 flex-shrink-0 text-primary"></i>
-                                <span class="text-foreground" data-i18n="about.item4">Mais de 10 anos de excelência
-                                    técnica</span>
+                            <li class="flex items-center gap-4 group transition-all hover:translate-x-2">
+                                <div
+                                    class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 transition-colors duration-300 group-hover:bg-primary shadow-sm">
+                                    <i data-lucide="award"
+                                        class="h-5 w-5 flex-shrink-0 text-primary group-hover:text-primary-foreground transition-colors duration-300"></i>
+                                </div>
+                                <span class="text-foreground font-medium text-base" data-i18n="about.item4">Mais de 10
+                                    anos de excelência técnica</span>
                             </li>
                         </ul>
                     </div>
                     <div class="relative animate-on-scroll fade-right delay-200">
-                        <div id="image-carousel-container">
-                            <!-- Carousel JS will inject here -->
+                        <div
+                            class="relative aspect-square overflow-hidden rounded-2xl bg-secondary/30 border border-border shadow-2xl">
+                            <img src="assets/images/EquipeFavero.webp" alt="Equipe Favero"
+                                class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                                loading="lazy">
                         </div>
                         <div
                             class="about-stats-card absolute -bottom-6 -left-6 z-20 rounded-xl bg-primary p-6 text-primary-foreground shadow-lg">
@@ -597,45 +622,75 @@
                 <!-- Mission, Vision, Values -->
                 <div class="grid gap-8 md:grid-cols-3 mb-20">
                     <div
-                        class="rounded-xl border bg-card text-card-foreground shadow-sm p-6 animate-on-scroll fade-up hover:shadow-soft transition-all">
-                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-                            <i data-lucide="target" class="h-6 w-6 text-primary"></i>
+                        class="group relative overflow-hidden rounded-2xl border bg-gradient-to-br from-card to-secondary/20 text-card-foreground shadow-sm p-8 animate-on-scroll fade-up transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <div
+                            class="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/5 transition-transform duration-500 group-hover:scale-150">
                         </div>
-                        <h3 class="mb-3 text-xl font-semibold text-foreground" data-i18n="about.mission.title">Missão
-                        </h3>
-                        <p class="text-sm leading-relaxed text-muted-foreground" data-i18n="about.mission.text">Na
-                            Favero Engenharia, nossa missão é
-                            simplificar as soluções de engenharia civil, proporcionando agilidade e eficiência em cada
-                            projeto.</p>
+                        <div class="relative z-10">
+                            <div
+                                class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors duration-300 group-hover:bg-primary shadow-sm">
+                                <i data-lucide="target"
+                                    class="h-7 w-7 text-primary transition-colors duration-300 group-hover:text-primary-foreground"></i>
+                            </div>
+                            <h3 class="mb-3 text-2xl font-bold text-foreground" data-i18n="about.mission.title">Missão
+                            </h3>
+                            <p class="text-sm leading-relaxed text-muted-foreground" data-i18n="about.mission.text">Na
+                                Favero Engenharia, nossa missão é
+                                simplificar as soluções de engenharia civil, proporcionando agilidade e eficiência em
+                                cada
+                                projeto.</p>
+                        </div>
                     </div>
                     <div
-                        class="rounded-xl border bg-card text-card-foreground shadow-sm p-6 animate-on-scroll fade-up delay-100 hover:shadow-soft transition-all">
-                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-                            <i data-lucide="eye" class="h-6 w-6 text-primary"></i>
+                        class="group relative overflow-hidden rounded-2xl border bg-gradient-to-br from-card to-secondary/20 text-card-foreground shadow-sm p-8 animate-on-scroll fade-up delay-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <div
+                            class="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/5 transition-transform duration-500 group-hover:scale-150">
                         </div>
-                        <h3 class="mb-3 text-xl font-semibold text-foreground" data-i18n="about.vision.title">Visão</h3>
-                        <p class="text-sm leading-relaxed text-muted-foreground" data-i18n="about.vision.text">Ser
-                            referência nacional em engenharia
-                            civil, reconhecida pela qualidade, inovação e compromisso com a satisfação dos clientes.</p>
+                        <div class="relative z-10">
+                            <div
+                                class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors duration-300 group-hover:bg-primary shadow-sm">
+                                <i data-lucide="eye"
+                                    class="h-7 w-7 text-primary transition-colors duration-300 group-hover:text-primary-foreground"></i>
+                            </div>
+                            <h3 class="mb-3 text-2xl font-bold text-foreground" data-i18n="about.vision.title">Visão
+                            </h3>
+                            <p class="text-sm leading-relaxed text-muted-foreground" data-i18n="about.vision.text">Ser
+                                referência nacional em engenharia
+                                civil, reconhecida pela qualidade, inovação e compromisso com a satisfação dos clientes.
+                            </p>
+                        </div>
                     </div>
                     <div
-                        class="rounded-xl border bg-card text-card-foreground shadow-sm p-6 animate-on-scroll fade-up delay-200 hover:shadow-soft transition-all">
-                        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-                            <i data-lucide="heart" class="h-6 w-6 text-primary"></i>
+                        class="group relative overflow-hidden rounded-2xl border bg-gradient-to-br from-card to-secondary/20 text-card-foreground shadow-sm p-8 animate-on-scroll fade-up delay-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <div
+                            class="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/5 transition-transform duration-500 group-hover:scale-150">
                         </div>
-                        <h3 class="mb-3 text-xl font-semibold text-foreground" data-i18n="about.values.title">Valores
-                        </h3>
-                        <ul class="space-y-2 text-sm text-muted-foreground">
-                            <li class="flex items-center gap-2"><span
-                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
-                                    data-i18n="about.values.item1">Excelência técnica</span></li>
-                            <li class="flex items-center gap-2"><span
-                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
-                                    data-i18n="about.values.item2">Integridade e ética</span></li>
-                            <li class="flex items-center gap-2"><span
-                                    class="h-1.5 w-1.5 rounded-full bg-primary"></span> <span
-                                    data-i18n="about.values.item3">Inovação contínua</span></li>
-                        </ul>
+                        <div class="relative z-10">
+                            <div
+                                class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors duration-300 group-hover:bg-primary shadow-sm">
+                                <i data-lucide="heart"
+                                    class="h-7 w-7 text-primary transition-colors duration-300 group-hover:text-primary-foreground"></i>
+                            </div>
+                            <h3 class="mb-3 text-2xl font-bold text-foreground" data-i18n="about.values.title">Valores
+                            </h3>
+                            <ul class="space-y-4 text-sm text-muted-foreground mt-4">
+                                <li class="flex items-center gap-3">
+                                    <span class="flex h-2 w-2 rounded-full bg-primary shadow-sm"></span>
+                                    <span data-i18n="about.values.item1"
+                                        class="font-medium text-foreground/90">Excelência técnica</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="flex h-2 w-2 rounded-full bg-primary shadow-sm"></span>
+                                    <span data-i18n="about.values.item2"
+                                        class="font-medium text-foreground/90">Integridade e ética</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="flex h-2 w-2 rounded-full bg-primary shadow-sm"></span>
+                                    <span data-i18n="about.values.item3" class="font-medium text-foreground/90">Inovação
+                                        contínua</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -654,48 +709,257 @@
                         de excelência.</p>
                 </div>
 
-                <!-- CEO Card -->
-                <div class="mb-12 animate-on-scroll fade-up delay-100">
-                    <div
-                        class="relative max-w-2xl mx-auto bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 sm:p-10 text-center sm:text-left flex flex-col sm:flex-row items-center gap-8">
-                        <div
-                            class="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-white/30 flex-shrink-0">
-                            <img src="assets/images/ReinaldoFavero.png" alt="Reinaldo Favero Filho - CEO & Fundador"
-                                class="w-full h-full object-cover" loading="lazy">
+                <!-- Team Carousel -->
+                <div class="relative max-w-5xl mx-auto w-full group mt-12 animate-on-scroll fade-up delay-100">
+                    <!-- Nav buttons -->
+                    <button id="teamPrev"
+                        class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-md p-3 rounded-full text-white transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary shadow-lg border border-white/20">
+                        <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                    </button>
+                    <button id="teamNext"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-md p-3 rounded-full text-white transition-all opacity-0 group-hover:opacity-100 disabled:opacity-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary shadow-lg border border-white/20">
+                        <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                    </button>
+
+                    <!-- Carousel Container -->
+                    <div id="teamCarousel"
+                        class="flex overflow-x-auto gap-6 pb-12 snap-x snap-mandatory scroll-smooth hide-scrollbar px-4 sm:px-8 lg:px-12"
+                        style="scrollbar-width: none; -ms-overflow-style: none;">
+                        <style>
+                            #teamCarousel::-webkit-scrollbar {
+                                display: none;
+                            }
+
+                            /* Team Card Animations */
+                            .team-card .card-inner {
+                                transform: translateY(16px);
+                                transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                            }
+
+                            .team-card:hover .card-inner {
+                                transform: translateY(0);
+                            }
+
+                            .team-card img {
+                                transition: transform 0.7s ease;
+                            }
+
+                            .team-card:hover img {
+                                transform: scale(1.1);
+                            }
+
+                            .team-card .card-gradient {
+                                transition: opacity 0.3s ease;
+                            }
+
+                            .team-card:hover .card-gradient {
+                                opacity: 1;
+                            }
+
+                            .team-card .card-title {
+                                transition: color 0.3s ease;
+                            }
+
+                            .team-card:hover .card-title {
+                                color: #7db3e8;
+                            }
+
+                            .team-card:hover>div {
+                                transform: translateY(-4px);
+                                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+                                border-color: rgba(125, 179, 232, 0.3);
+                            }
+                        </style>
+
+                        <!-- Card 1: Reinaldo (CEO) -->
+                        <div class="team-card w-[85vw] sm:w-[300px] shrink-0 snap-center sm:snap-start flex flex-col cursor-pointer"
+                            onclick="openTeamModal(this.querySelector('img').src)">
+                            <div
+                                class="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-xl transition-all duration-300">
+                                <img src="assets/images/CarrosselSobre/SobreReinaldo.webp" alt="Reinaldo Favero"
+                                    class="w-full h-full object-cover object-top pointer-events-none" loading="lazy">
+                                <div
+                                    class="card-gradient absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/95 via-[#1e3a5f]/50 to-transparent opacity-90">
+                                </div>
+                                <div class="card-inner absolute bottom-0 left-0 w-full p-6">
+                                    <h3 class="card-title text-xl font-bold text-white mb-1">Reinaldo Favero</h3>
+                                    <p class="text-xs font-bold text-[#7db3e8] uppercase tracking-wider"
+                                        data-i18n="team.ceo.role">CEO & Fundador</p>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="text-2xl sm:text-3xl font-bold text-white">Reinaldo Favero Filho</h3>
-                            <p class="mt-2 text-lg font-medium text-[#7db3e8]" data-i18n="team.ceo.role">CEO & Fundador
-                            </p>
-                            <p class="mt-4 text-white/70 leading-relaxed" data-i18n="team.ceo.desc">Visionário e líder,
-                                construiu a Favero
-                                Engenharia sobre os alicerces da excelência técnica e inovação.</p>
+
+                        <!-- Card 2: Arieli -->
+                        <div class="team-card w-[85vw] sm:w-[300px] shrink-0 snap-center sm:snap-start flex flex-col cursor-pointer"
+                            onclick="openTeamModal(this.querySelector('img').src)">
+                            <div
+                                class="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-xl transition-all duration-300">
+                                <img src="assets/images/CarrosselSobre/SobreAri.webp" alt="Arieli Favero"
+                                    class="w-full h-full object-cover pointer-events-none object-top" loading="lazy">
+                                <div
+                                    class="card-gradient absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/95 via-[#1e3a5f]/50 to-transparent opacity-90">
+                                </div>
+                                <div class="card-inner absolute bottom-0 left-0 w-full p-6">
+                                    <h3 class="card-title text-xl font-bold text-white mb-1">Arieli Favero</h3>
+                                    <p class="text-xs font-bold text-[#7db3e8] uppercase tracking-wider"
+                                        data-i18n="team.arieli.role">Diretora Geral</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Adriel -->
+                        <div class="team-card w-[85vw] sm:w-[300px] shrink-0 snap-center sm:snap-start flex flex-col cursor-pointer"
+                            onclick="openTeamModal(this.querySelector('img').src)">
+                            <div
+                                class="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-xl transition-all duration-300">
+                                <img src="assets/images/CarrosselSobre/SobreAdriel.webp" alt="Adriel Brito"
+                                    class="w-full h-full object-cover pointer-events-none object-top" loading="lazy">
+                                <div
+                                    class="card-gradient absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/95 via-[#1e3a5f]/50 to-transparent opacity-90">
+                                </div>
+                                <div class="card-inner absolute bottom-0 left-0 w-full p-6">
+                                    <h3 class="card-title text-xl font-bold text-white mb-1">Adriel Brito</h3>
+                                    <p class="text-xs font-bold text-[#7db3e8] uppercase tracking-wider"
+                                        data-i18n="team.adriel.role">Engenheiro Civil</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Vinicius -->
+                        <div class="team-card w-[85vw] sm:w-[300px] shrink-0 snap-center sm:snap-start flex flex-col cursor-pointer"
+                            onclick="openTeamModal(this.querySelector('img').src)">
+                            <div
+                                class="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-xl transition-all duration-300">
+                                <img src="assets/images/CarrosselSobre/SobreVinicius.webp" alt="Vinicius Vila Verde"
+                                    class="w-full h-full object-cover pointer-events-none object-top" loading="lazy">
+                                <div
+                                    class="card-gradient absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/95 via-[#1e3a5f]/50 to-transparent opacity-90">
+                                </div>
+                                <div class="card-inner absolute bottom-0 left-0 w-full p-6">
+                                    <h3 class="card-title text-xl font-bold text-white mb-1">Vinicius Vila Verde</h3>
+                                    <p class="text-xs font-bold text-[#7db3e8] uppercase tracking-wider"
+                                        data-i18n="team.vinicius.role">Engenheiro Civil</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Lucas Ricardo -->
+                        <div class="team-card w-[85vw] sm:w-[300px] shrink-0 snap-center sm:snap-start flex flex-col cursor-pointer"
+                            onclick="openTeamModal(this.querySelector('img').src)">
+                            <div
+                                class="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-xl transition-all duration-300">
+                                <img src="assets/images/CarrosselSobre/SobreLucasRicardo.webp" alt="Lucas Ricardo"
+                                    class="w-full h-full object-cover pointer-events-none object-top" loading="lazy">
+                                <div
+                                    class="card-gradient absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/95 via-[#1e3a5f]/50 to-transparent opacity-90">
+                                </div>
+                                <div class="card-inner absolute bottom-0 left-0 w-full p-6">
+                                    <h3 class="card-title text-xl font-bold text-white mb-1">Lucas Ricardo</h3>
+                                    <p class="text-xs font-bold text-[#7db3e8] uppercase tracking-wider"
+                                        data-i18n="team.lucas.role">Engenheiro Civil</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scroll Hint for Mobile -->
+                    <div class="flex justify-center mt-4 md:hidden">
+                        <div class="flex gap-2 items-center text-white/50 text-sm">
+                            <i data-lucide="arrow-left-right" class="w-4 h-4"></i>
+                            <span>Deslize para ver mais</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Team Grid -->
-                <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
-                    <div
-                        class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center animate-on-scroll fade-up delay-200 hover:bg-white/15 transition-all">
-                        <h3 class="text-lg font-bold text-white">Arieli Favero</h3>
-                        <p class="mt-1 text-sm font-medium text-[#7db3e8]" data-i18n="team.arieli.role">Diretora Geral
-                        </p>
-                    </div>
-                    <div
-                        class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center animate-on-scroll fade-up delay-300 hover:bg-white/15 transition-all">
-                        <h3 class="text-lg font-bold text-white">Adriel</h3>
-                        <p class="mt-1 text-sm font-medium text-[#7db3e8]" data-i18n="team.adriel.role">Engenheiro Civil
-                        </p>
-                    </div>
-                    <div
-                        class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center animate-on-scroll fade-up delay-400 hover:bg-white/15 transition-all">
-                        <h3 class="text-lg font-bold text-white">Vinicius</h3>
-                        <p class="mt-1 text-sm font-medium text-[#7db3e8]" data-i18n="team.vinicius.role">Engenheiro
-                            Civil</p>
-                    </div>
+                <!-- Team Image Modal -->
+                <div id="teamImageModal"
+                    class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/90 p-4 transition-opacity duration-300 opacity-0 backdrop-blur-sm"
+                    onclick="closeTeamModal()">
+                    <button class="absolute top-4 right-4 text-white hover:text-primary transition-colors p-2"
+                        onclick="closeTeamModal()">
+                        <i data-lucide="x" class="w-8 h-8"></i>
+                    </button>
+                    <img id="teamModalImage" src=""
+                        class="max-w-[95vw] max-h-[90vh] rounded-xl shadow-2xl object-contain transition-transform duration-300 scale-95"
+                        onclick="event.stopPropagation()">
                 </div>
             </div>
+
+            <!-- Team Carousel Script -->
+            <script>
+                // Modal Functions
+                function openTeamModal(src) {
+                    const modal = document.getElementById('teamImageModal');
+                    const img = document.getElementById('teamModalImage');
+                    if (img) img.src = src;
+                    if (modal) {
+                        modal.classList.remove('hidden');
+                        modal.classList.add('flex');
+                        // Trigger reflow
+                        void modal.offsetWidth;
+                        modal.classList.remove('opacity-0');
+                        if (img) {
+                            img.classList.remove('scale-95');
+                            img.classList.add('scale-100');
+                        }
+                        document.body.style.overflow = 'hidden';
+                    }
+                }
+
+                function closeTeamModal() {
+                    const modal = document.getElementById('teamImageModal');
+                    const img = document.getElementById('teamModalImage');
+                    if (modal) {
+                        modal.classList.add('opacity-0');
+                        if (img) {
+                            img.classList.remove('scale-100');
+                            img.classList.add('scale-95');
+                        }
+                        setTimeout(() => {
+                            modal.classList.add('hidden');
+                            modal.classList.remove('flex');
+                            document.body.style.overflow = '';
+                        }, 300);
+                    }
+                }
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    const carousel = document.getElementById('teamCarousel');
+                    const btnPrev = document.getElementById('teamPrev');
+                    const btnNext = document.getElementById('teamNext');
+
+                    if (!carousel || !btnPrev || !btnNext) return;
+
+                    const scrollAmount = () => carousel.clientWidth >= 768 ? carousel.clientWidth / 3 : carousel.clientWidth;
+
+                    btnPrev.addEventListener('click', () => {
+                        carousel.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+                    });
+
+                    btnNext.addEventListener('click', () => {
+                        carousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+                    });
+
+                    // Optional Auto-play
+                    let autoPlayInterval;
+                    const startAutoPlay = () => {
+                        autoPlayInterval = setInterval(() => {
+                            if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
+                                carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                            } else {
+                                carousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+                            }
+                        }, 4000);
+                    };
+                    const stopAutoPlay = () => clearInterval(autoPlayInterval);
+
+                    carousel.addEventListener('mouseenter', stopAutoPlay);
+                    carousel.addEventListener('mouseleave', startAutoPlay);
+                    carousel.addEventListener('touchstart', stopAutoPlay, { passive: true });
+
+                    startAutoPlay();
+                });
+            </script>
         </section>
 
         <!-- CTA Section -->
@@ -1861,13 +2125,7 @@
 
     <script src="assets/js/script.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            new ImageCarousel('image-carousel-container', [
-                'assets/images/civil-engineering-team-working-professional.jpg',
-                'assets/images/civil-engineering-construction-site-modern.jpg',
-                'assets/images/civil-engineering-office-professional-team.jpg'
-            ]);
-        });
+        // Component initialization
     </script>
 </body>
 
