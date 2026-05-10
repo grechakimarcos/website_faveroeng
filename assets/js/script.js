@@ -185,4 +185,75 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1500);
         });
     }
+
+    // --- Web3Forms Contact Form Logic ---
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('contactSubmitBtn');
+            const btnText = document.getElementById('contactBtnText');
+            const btnIcon = document.getElementById('contactBtnIcon');
+            const resultMsg = document.getElementById('contactResult');
+
+            // Save original state
+            const originalText = btnText.innerText;
+            const originalIcon = btnIcon.className;
+
+            // Loading state
+            btnText.innerText = 'Enviando...';
+            btnIcon.className = 'lucide-loader animate-spin h-4 w-4';
+            btn.disabled = true;
+            resultMsg.classList.add('hidden');
+            resultMsg.classList.remove('text-[#dc2626]', 'bg-[#fef2f2]', 'border-[#fecaca]');
+            resultMsg.classList.add('text-[#16a34a]', 'bg-[#f0fdf4]', 'border-[#bbf7d0]');
+
+            const formData = new FormData(contactForm);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let jsonResponse = await response.json();
+                if (response.status == 200) {
+                    resultMsg.innerText = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
+                    resultMsg.classList.remove('hidden');
+                    contactForm.reset();
+                } else {
+                    console.log(response);
+                    resultMsg.innerText = jsonResponse.message || 'Ocorreu um erro ao enviar a mensagem.';
+                    resultMsg.classList.remove('text-[#16a34a]', 'bg-[#f0fdf4]', 'border-[#bbf7d0]');
+                    resultMsg.classList.add('text-[#dc2626]', 'bg-[#fef2f2]', 'border-[#fecaca]');
+                    resultMsg.classList.remove('hidden');
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+                resultMsg.innerText = 'Erro de conexão. Tente novamente mais tarde.';
+                resultMsg.classList.remove('text-[#16a34a]', 'bg-[#f0fdf4]', 'border-[#bbf7d0]');
+                resultMsg.classList.add('text-[#dc2626]', 'bg-[#fef2f2]', 'border-[#fecaca]');
+                resultMsg.classList.remove('hidden');
+            })
+            .finally(() => {
+                // Restore button state
+                btnText.innerText = originalText;
+                btnIcon.className = originalIcon;
+                btn.disabled = false;
+                
+                // Hide success message after 5 seconds
+                if (!resultMsg.classList.contains('text-[#dc2626]')) {
+                    setTimeout(() => {
+                        resultMsg.classList.add('hidden');
+                    }, 5000);
+                }
+            });
+        });
+    }
 });

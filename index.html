@@ -1586,9 +1586,8 @@
                 <div class="grid gap-8 lg:grid-cols-2 animate-on-scroll fade-up delay-200">
                     <!-- Contact Form -->
                     <div class="rounded-xl border bg-card p-8 shadow-sm">
-                        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
                             <input type="hidden" name="access_key" value="f8547b9d-7028-4987-96aa-dca8060d2122">
-                            <input type="hidden" name="redirect" value="https://faveroeng.com.br/#contato">
                             <div class="grid gap-4 sm:grid-cols-2">
                                 <div>
                                     <label for="name" class="block text-sm font-medium text-foreground mb-2"
@@ -1629,11 +1628,14 @@
                                 <textarea id="message" name="message" rows="5" required
                                     class="form-input w-full rounded-lg border border-border bg-background px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-none"></textarea>
                             </div>
-                            <button type="submit"
+                            <button type="submit" id="contactSubmitBtn"
                                 class="w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 text-sm font-semibold transition-all hover:scale-[1.02] hover:shadow-soft">
-                                <i data-lucide="send" class="h-4 w-4"></i>
-                                <span data-i18n="contact.form.send">Enviar Mensagem</span>
+                                <i data-lucide="send" class="h-4 w-4" id="contactBtnIcon"></i>
+                                <span data-i18n="contact.form.send" id="contactBtnText">Enviar Mensagem</span>
                             </button>
+                            <div id="contactResult" class="hidden text-center text-[#16a34a] font-medium bg-[#f0fdf4] p-4 rounded-lg border border-[#bbf7d0] mt-4">
+                                Mensagem enviada com sucesso! Entraremos em contato em breve.
+                            </div>
                         </form>
                     </div>
 
