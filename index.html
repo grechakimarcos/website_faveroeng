@@ -1014,237 +1014,33 @@
                 <!-- Project Cards Grid -->
                 <div
                     class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-16 animate-on-scroll fade-up delay-200 projects-grid">
-                    <!-- Project Card 1: Beiramar Shopping -->
-                    <div data-project="beiramar"
+                    <!-- Project Card 1: Makai -->
+                    <div data-project="makai"
                         class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
-                        <div class="relative aspect-[4/3] overflow-hidden">
+                        <div class="relative aspect-[4/3] overflow-hidden project-carousel">
                             <!-- Icon Badge -->
                             <div
                                 class="absolute top-4 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
-                                <i data-lucide="zap" class="h-6 w-6"></i>
+                                <i data-lucide="building" class="h-6 w-6"></i>
                             </div>
-                            <img src="assets/images/Capa_projetoBeriamarShopping.jpg" alt="Beiramar Shopping"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            <img src="assets/images/Projetos/Makai/MakaiCapa.webp" alt="Makai"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-100 group-hover:scale-110"
                                 loading="lazy">
-                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent"></div>
-                            <!-- Category Badge -->
-                            <div class="absolute bottom-4 left-4">
-                                <span
-                                    class="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-md">
-                                    Elétrico & Hidrossanitário
-                                </span>
-                            </div>
-                        </div>
-                        <div class="p-5">
-                            <h3 class="text-lg font-semibold text-foreground mb-2" data-i18n="projects.beiramar.title">
-                                Beiramar Shopping</h3>
-                            <p class="mb-4 text-sm leading-relaxed text-muted-foreground line-clamp-2"
-                                data-i18n="projects.beiramar.desc">Projeto de
-                                instalações elétricas e hidrossanitárias para expansão do shopping.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Elétrico</span>
-                                <span
-                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Hidrossanitário</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 2: SESC Minas Gerais -->
-                    <div data-project="sesc"
-                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
-                        <div class="relative aspect-[4/3] overflow-hidden">
-                            <!-- Icon Badge -->
-                            <div
-                                class="absolute top-4 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
-                                <i data-lucide="thermometer" class="h-6 w-6"></i>
-                            </div>
-                            <img src="assets/images/Capa_projetoSescMG.jpg" alt="SESC Minas Gerais"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            <img src="assets/images/Projetos/Makai/makai02.webp" alt="Makai"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
                                 loading="lazy">
-                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent"></div>
-                            <!-- Category Badge -->
-                            <div class="absolute bottom-4 left-4">
-                                <span
-                                    class="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-md">
-                                    Climatização & Prevenção
-                                </span>
-                            </div>
-                        </div>
-                        <div class="p-5">
-                            <h3 class="text-lg font-semibold text-foreground mb-2" data-i18n="projects.sesc.title">SESC
-                                Florianópolis</h3>
-                            <p class="mb-4 text-sm leading-relaxed text-muted-foreground line-clamp-2"
-                                data-i18n="projects.sesc.desc">Projetos de
-                                climatização e prevenção contra incêndio.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Climatização</span>
-                                <span
-                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Prevenção
-                                    de Incêndio</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 3: Prefeitura de Porto Alegre -->
-                    <div data-project="prefeitura"
-                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
-                        <div class="relative aspect-[4/3] overflow-hidden">
-                            <!-- Icon Badge -->
-                            <div
-                                class="absolute top-4 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
-                                <i data-lucide="clipboard-list" class="h-6 w-6"></i>
-                            </div>
-                            <img src="assets/images/Capa_projetoPrefeituaPoa.jpg" alt="Prefeitura de Porto Alegre"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            <img src="assets/images/Projetos/Makai/makai03.webp" alt="Makai"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
                                 loading="lazy">
-                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent"></div>
-                            <!-- Category Badge -->
-                            <div class="absolute bottom-4 left-4">
-                                <span
-                                    class="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-md">
-                                    Consultoria Técnica
-                                </span>
-                            </div>
-                        </div>
-                        <div class="p-5">
-                            <h3 class="text-lg font-semibold text-foreground mb-2"
-                                data-i18n="projects.prefeitura.title">Prefeitura de Porto Alegre</h3>
-                            <p class="mb-4 text-sm leading-relaxed text-muted-foreground line-clamp-2"
-                                data-i18n="projects.prefeitura.desc">Consultoria
-                                técnica e projetos de instalações para edifícios públicos.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Consultoria</span>
-                                <span
-                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Instalações</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 4: Hospital Regional Curitiba -->
-                    <div data-project="hospital-curitiba"
-                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
-                        <div class="relative aspect-[4/3] overflow-hidden">
-                            <!-- Icon Badge -->
-                            <div
-                                class="absolute top-4 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
-                                <i data-lucide="shield-check" class="h-6 w-6"></i>
-                            </div>
-                            <img src="assets/images/Capa_ProjetoHospitalRegionalCuritiba.jpg"
-                                alt="Hospital Regional Curitiba"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            <img src="assets/images/Projetos/Makai/makaicapa02.webp" alt="Makai"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
                                 loading="lazy">
-                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent"></div>
-                            <!-- Category Badge -->
-                            <div class="absolute bottom-4 left-4">
-                                <span
-                                    class="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-md">
-                                    SST & Climatização
-                                </span>
-                            </div>
-                        </div>
-                        <div class="p-5">
-                            <h3 class="text-lg font-semibold text-foreground mb-2">Hospital Regional Curitiba</h3>
-                            <p class="mb-4 text-sm leading-relaxed text-muted-foreground line-clamp-2">
-                                Sistema de climatização hospitalar e programa de saúde e segurança do trabalho.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Climatização</span>
-                                <span
-                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">SST</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 5: Grupo OAD - Unidade São Paulo -->
-                    <div data-project="grupo-oad-sp"
-                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
-                        <div class="relative aspect-[4/3] overflow-hidden">
-                            <!-- Icon Badge -->
-                            <div
-                                class="absolute top-4 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
-                                <i data-lucide="settings" class="h-6 w-6"></i>
-                            </div>
-                            <img src="assets/images/Capa_ProjetoGrupoOADUnidadeSaoPaulo.avif"
-                                alt="Grupo OAD - Unidade São Paulo"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            <img src="assets/images/Projetos/Makai/makaicapa03.webp" alt="Makai"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
                                 loading="lazy">
-                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent"></div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent pointer-events-none"></div>
                             <!-- Category Badge -->
-                            <div class="absolute bottom-4 left-4">
-                                <span
-                                    class="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-md">
-                                    Adequações Técnicas
-                                </span>
-                            </div>
-                        </div>
-                        <div class="p-5">
-                            <h3 class="text-lg font-semibold text-foreground mb-2">Grupo OAD - Unidade São Paulo</h3>
-                            <p class="mb-4 text-sm leading-relaxed text-muted-foreground line-clamp-2">
-                                Adequação de sistemas prediais e implementação de programa de saúde ocupacional.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Sistemas
-                                    Prediais</span>
-                                <span
-                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Saúde
-                                    Ocupacional</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 6: Complexo Industrial BH -->
-                    <div data-project="complexo-industrial-bh"
-                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
-                        <div class="relative aspect-[4/3] overflow-hidden">
-                            <!-- Icon Badge -->
-                            <div
-                                class="absolute top-4 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
-                                <i data-lucide="layers" class="h-6 w-6"></i>
-                            </div>
-                            <img src="assets/images/Capa_ProjetoComplexoIndustrialBH.png" alt="Complexo Industrial BH"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                loading="lazy">
-                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent"></div>
-                            <!-- Category Badge -->
-                            <div class="absolute bottom-4 left-4">
-                                <span
-                                    class="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-md">
-                                    Projetos Integrados
-                                </span>
-                            </div>
-                        </div>
-                        <div class="p-5">
-                            <h3 class="text-lg font-semibold text-foreground mb-2">Complexo Industrial BH</h3>
-                            <p class="mb-4 text-sm leading-relaxed text-muted-foreground line-clamp-2">
-                                Projetos hidrossanitários e elétricos para complexo industrial.</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span
-                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Hidrossanitário</span>
-                                <span
-                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Elétrico</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project Card 7: Edifício Empresarial Florianópolis -->
-                    <div data-project="edificio-florianopolis"
-                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
-                        <div class="relative aspect-[4/3] overflow-hidden">
-                            <!-- Icon Badge -->
-                            <div
-                                class="absolute top-4 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
-                                <i data-lucide="file-check" class="h-6 w-6"></i>
-                            </div>
-                            <img src="assets/images/Capa_ProjetoEdifícioEmpresarialFlorianópolis.jpg"
-                                alt="Edifício Empresarial Florianópolis"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                loading="lazy">
-                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent"></div>
-                            <!-- Category Badge -->
-                            <div class="absolute bottom-4 left-4">
+                            <div class="absolute bottom-4 left-4 z-10">
                                 <span
                                     class="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-md">
                                     Projeto Completo
@@ -1252,19 +1048,131 @@
                             </div>
                         </div>
                         <div class="p-5">
-                            <h3 class="text-lg font-semibold text-foreground mb-2">Edifício Empresarial Florianópolis
-                            </h3>
-                            <p class="mb-4 text-sm leading-relaxed text-muted-foreground line-clamp-2">
-                                Projeto elétrico completo e sistema de climatização para edifício corporativo.</p>
+                            <h3 class="text-lg font-semibold text-foreground mb-2">Residencial Makai – Florianópolis SC</h3>
+                            <div class="project-desc-container">
+                                <p class="project-short-desc mb-2 text-sm leading-relaxed text-muted-foreground line-clamp-2">
+                                    O Residencial Makai é um empreendimento multifamiliar em Florianópolis – SC, com 64.000 m² de área construída, desenvolvido com foco em segurança, tecnologia e eficiência construtiva.
+                                </p>
+                                <div class="project-full-desc hidden mb-4 text-sm leading-relaxed text-muted-foreground space-y-2">
+                                    <p>O Residencial Makai é um empreendimento multifamiliar em Florianópolis – SC, com 64.000 m² de área construída, desenvolvido com foco em segurança, tecnologia e eficiência construtiva.</p>
+                                    <p>O projeto contempla serviços de Projeto Preventivo Contra Incêndio, Modelagem BIM, compatibilização de projetos e aprovação junto aos órgãos competentes, garantindo conformidade com as normas técnicas e maior qualidade na execução da obra.</p>
+                                    <p class="font-semibold text-foreground mt-2">Escopo dos Serviços:</p>
+                                    <ul class="list-disc pl-5">
+                                        <li>Projeto Preventivo Contra Incêndio</li>
+                                        <li>Modelagem e Compatibilização BIM</li>
+                                        <li>Aprovação junto aos órgãos competentes</li>
+                                    </ul>
+                                </div>
+                                <button onclick="toggleProjectDesc(this)" class="text-primary text-sm font-semibold hover:underline flex items-center gap-1 mb-4">Ler mais <i data-lucide="chevron-down" class="h-4 w-4 transition-transform"></i></button>
+                            </div>
                             <div class="flex flex-wrap gap-2">
                                 <span
-                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Elétrico</span>
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Prevenção de Incêndio</span>
                                 <span
-                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Climatização</span>
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Modelagem BIM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2: MPPU -->
+                    <div data-project="mppu"
+                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
+                        <div class="relative aspect-[4/3] overflow-hidden project-carousel">
+                            <!-- Icon Badge -->
+                            <div
+                                class="absolute top-4 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
+                                <i data-lucide="shield" class="h-6 w-6"></i>
+                            </div>
+                            <img src="assets/images/Projetos/MPPU/mppupreventivo01.webp" alt="MPPU"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-100 group-hover:scale-110"
+                                loading="lazy">
+                            <img src="assets/images/Projetos/MPPU/mppupreventivo01_1.webp" alt="MPPU"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy">
+                            <img src="assets/images/Projetos/MPPU/mppupreventivo02.webp" alt="MPPU"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy">
+                            <img src="assets/images/Projetos/MPPU/mppupreventivo02_1.webp" alt="MPPU"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent pointer-events-none"></div>
+                            <!-- Category Badge -->
+                            <div class="absolute bottom-4 left-4 z-10">
+                                <span
+                                    class="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-md">
+                                    Preventivo
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-foreground mb-2">Ministério Público de Porto União – SC</h3>
+                            <div class="project-desc-container">
+                                <p class="project-short-desc mb-2 text-sm leading-relaxed text-muted-foreground line-clamp-2">
+                                    Projeto desenvolvido para o Ministério Público de Porto União – SC, com aproximadamente 3.100 m² de área construída, contemplando os projetos hidrossanitário e preventivo contra incêndio.
+                                </p>
+                                <div class="project-full-desc hidden mb-4 text-sm leading-relaxed text-muted-foreground space-y-2">
+                                    <p>Projeto desenvolvido para o Ministério Público de Porto União – SC, com aproximadamente 3.100 m² de área construída, contemplando os projetos hidrossanitário e preventivo contra incêndio.</p>
+                                    <p>Os serviços foram elaborados conforme as normas técnicas vigentes, garantindo segurança, eficiência e conformidade para a edificação.</p>
+                                    <p class="font-semibold text-foreground mt-2">Escopo dos Serviços:</p>
+                                    <ul class="list-disc pl-5">
+                                        <li>Projeto Hidrossanitário</li>
+                                        <li>Projeto Preventivo Contra Incêndio</li>
+                                    </ul>
+                                </div>
+                                <button onclick="toggleProjectDesc(this)" class="text-primary text-sm font-semibold hover:underline flex items-center gap-1 mb-4">Ler mais <i data-lucide="chevron-down" class="h-4 w-4 transition-transform"></i></button>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Prevenção de Incêndio</span>
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Hidrossanitário</span>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const carousels = document.querySelectorAll('.project-carousel');
+                        
+                        carousels.forEach(carousel => {
+                            const images = carousel.querySelectorAll('.carousel-img');
+                            if(images.length <= 1) return;
+                            
+                            let currentIndex = 0;
+                            
+                            setInterval(() => {
+                                images[currentIndex].classList.remove('opacity-100');
+                                images[currentIndex].classList.add('opacity-0');
+                                
+                                currentIndex = (currentIndex + 1) % images.length;
+                                
+                                images[currentIndex].classList.remove('opacity-0');
+                                images[currentIndex].classList.add('opacity-100');
+                            }, 3500); // 3.5 seconds per image
+                        });
+                    });
+
+                    function toggleProjectDesc(btn) {
+                        const container = btn.closest('.project-desc-container');
+                        const shortDesc = container.querySelector('.project-short-desc');
+                        const fullDesc = container.querySelector('.project-full-desc');
+                        
+                        if (fullDesc.classList.contains('hidden')) {
+                            fullDesc.classList.remove('hidden');
+                            shortDesc.classList.add('hidden');
+                            btn.innerHTML = 'Ler menos <i data-lucide="chevron-up" class="h-4 w-4 transition-transform"></i>';
+                        } else {
+                            fullDesc.classList.add('hidden');
+                            shortDesc.classList.remove('hidden');
+                            btn.innerHTML = 'Ler mais <i data-lucide="chevron-down" class="h-4 w-4 transition-transform"></i>';
+                        }
+                        
+                        if (window.lucide) {
+                            window.lucide.createIcons();
+                        }
+                    }
+                </script>
 
                 <!-- Issue #5: Show More button for mobile -->
                 <div class="projects-show-more hidden justify-center mb-16">
