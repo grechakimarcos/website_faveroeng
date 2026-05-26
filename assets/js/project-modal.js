@@ -4,101 +4,211 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectsData = {
         'beiramar': {
             title: 'Beiramar Shopping',
+            i18n: {
+                pt: {
+                    description: 'Projeto completo de instalações elétricas, hidrossanitárias e sistema de prevenção contra incêndio para a expansão do Beiramar Shopping. O projeto contemplou mais de 15.000m² de área construída, incluindo novas lojas, praça de alimentação e estacionamento.',
+                    services: ['Projeto Elétrico', 'Hidrossanitário', 'PPCI', 'Climatização']
+                },
+                en: {
+                    description: 'Complete project of electrical, plumbing, and fire prevention systems for the expansion of Beiramar Shopping. The project covered over 15,000m² of built area, including new stores, a food court, and parking.',
+                    services: ['Electrical Project', 'Plumbing', 'Fire Safety', 'HVAC']
+                },
+                es: {
+                    description: 'Proyecto completo de instalaciones eléctricas, hidrosanitarias y sistema de prevención de incendios para la expansión de Beiramar Shopping. El proyecto abarcó más de 15.000m² de área construida, incluyendo nuevas tiendas, patio de comidas y estacionamiento.',
+                    services: ['Proyecto Eléctrico', 'Hidrosanitario', 'PPCI', 'Climatización']
+                }
+            },
             location: 'Florianópolis, SC',
             year: '2024',
             category: 'Comercial',
-            description: 'Projeto completo de instalações elétricas, hidrossanitárias e sistema de prevenção contra incêndio para a expansão do Beiramar Shopping. O projeto contemplou mais de 15.000m² de área construída, incluindo novas lojas, praça de alimentação e estacionamento.',
-            services: ['Projeto Elétrico', 'Hidrossanitário', 'PPCI', 'Climatização'],
             images: [
                 'assets/images/Capa_projetoBeriamarShopping.jpg',
                 'assets/images/civil-engineering-team-working-professional.jpg',
                 'assets/images/civil-engineering-office-professional-team.jpg'
             ],
-            stats: { area: '15.000 m²', duration: '8 meses', team: '12 engenheiros' }
+            stats: { area: '15.000 m²', duration: '8 meses', team: '12' }
         },
         'sesc': {
             title: 'SESC Minas Gerais',
+            i18n: {
+                pt: {
+                    description: 'Desenvolvimento de projetos de climatização e sistema preventivo contra incêndio para unidade do SESC em Florianópolis. Projeto focado em eficiência energética e sustentabilidade, atendendo às normas mais rigorosas do mercado.',
+                    services: ['Climatização', 'PPCI', 'Consultoria Técnica']
+                },
+                en: {
+                    description: 'Development of HVAC and fire prevention system projects for a SESC unit in Florianópolis. The project focused on energy efficiency and sustainability, meeting the strictest market standards.',
+                    services: ['HVAC', 'Fire Safety', 'Technical Consulting']
+                },
+                es: {
+                    description: 'Desarrollo de proyectos de climatización y sistema preventivo contra incendios para una unidad de SESC en Florianópolis. Proyecto enfocado en la eficiencia energética y la sostenibilidad, cumpliendo con las normas más rigurosas del mercado.',
+                    services: ['Climatización', 'PPCI', 'Consultoría Técnica']
+                }
+            },
             location: 'Belo Horizonte, MG',
             year: '2023',
             category: 'Institucional',
-            description: 'Desenvolvimento de projetos de climatização e sistema preventivo contra incêndio para unidade do SESC em Florianópolis. Projeto focado em eficiência energética e sustentabilidade, atendendo às normas mais rigorosas do mercado.',
-            services: ['Climatização', 'PPCI', 'Consultoria Técnica'],
             images: [
                 'assets/images/Capa_projetoSescMG.jpg',
                 'assets/images/civil-engineering-construction-site-modern.jpg',
                 'assets/images/civil-engineering-team-working-professional.jpg'
             ],
-            stats: { area: '8.500 m²', duration: '6 meses', team: '8 engenheiros' }
+            stats: { area: '8.500 m²', duration: '6 meses', team: '8' }
         },
         'prefeitura': {
             title: 'Prefeitura de Porto Alegre',
+            i18n: {
+                pt: {
+                    description: 'Consultoria técnica e desenvolvimento de projetos de instalações para diversos edifícios públicos da Prefeitura de Porto Alegre. Trabalho envolveu adequação às normas de acessibilidade e modernização dos sistemas existentes.',
+                    services: ['Elétrico', 'Hidrossanitário', 'Consultoria', 'Adequação NR']
+                },
+                en: {
+                    description: 'Technical consulting and development of installation projects for several public buildings of the Porto Alegre City Hall. The work involved adapting to accessibility standards and modernizing existing systems.',
+                    services: ['Electrical', 'Plumbing', 'Consulting', 'NR Compliance']
+                },
+                es: {
+                    description: 'Consultoría técnica y desarrollo de proyectos de instalaciones para diversos edificios públicos del Ayuntamiento de Porto Alegre. El trabajo implicó la adecuación a las normas de accesibilidad y la modernización de los sistemas existentes.',
+                    services: ['Eléctrico', 'Hidrosanitario', 'Consultoría', 'Adecuación NR']
+                }
+            },
             location: 'Porto Alegre, RS',
             year: '2023',
             category: 'Público',
-            description: 'Consultoria técnica e desenvolvimento de projetos de instalações para diversos edifícios públicos da Prefeitura de Porto Alegre. Trabalho envolveu adequação às normas de acessibilidade e modernização dos sistemas existentes.',
-            services: ['Elétrico', 'Hidrossanitário', 'Consultoria', 'Adequação NR'],
             images: [
                 'assets/images/Capa_projetoPrefeituaPoa.jpg',
                 'assets/images/civil-engineering-office-professional-team.jpg',
                 'assets/images/civil-engineering-construction-site-modern.jpg'
             ],
-            stats: { area: '25.000 m²', duration: '12 meses', team: '15 engenheiros' }
+            stats: { area: '25.000 m²', duration: '12 meses', team: '15' }
         },
         'hospital-curitiba': {
             title: 'Hospital Regional Curitiba',
+            i18n: {
+                pt: {
+                    description: 'Projeto completo de sistema de climatização hospitalar e implementação do programa de saúde e segurança do trabalho. O projeto contemplou adequação dos sistemas de HVAC para ambientes hospitalares críticos, incluindo salas cirúrgicas, UTI e áreas de isolamento, seguindo as normas da ANVISA e NR-32.',
+                    services: ['Climatização', 'SST', 'HVAC Hospitalar', 'Adequação NR-32']
+                },
+                en: {
+                    description: 'Complete project for a hospital air conditioning system and implementation of a health and safety at work program. The project included adapting HVAC systems for critical hospital environments, including operating rooms, ICUs, and isolation areas, following ANVISA and NR-32 standards.',
+                    services: ['HVAC', 'Occupational Health & Safety', 'Hospital HVAC', 'NR-32 Compliance']
+                },
+                es: {
+                    description: 'Proyecto completo de sistema de climatización hospitalaria e implementación del programa de salud y seguridad en el trabajo. El proyecto contempló la adecuación de los sistemas de HVAC para ambientes hospitalarios críticos, incluyendo quirófanos, UCI y áreas de aislamiento, siguiendo las normas de ANVISA y NR-32.',
+                    services: ['Climatización', 'SST', 'HVAC Hospitalario', 'Adecuación NR-32']
+                }
+            },
             location: 'Curitiba, PR',
             year: '2024',
             category: 'SST & Climatização',
-            description: 'Projeto completo de sistema de climatização hospitalar e implementação do programa de saúde e segurança do trabalho. O projeto contemplou adequação dos sistemas de HVAC para ambientes hospitalares críticos, incluindo salas cirúrgicas, UTI e áreas de isolamento, seguindo as normas da ANVISA e NR-32.',
-            services: ['Climatização', 'SST', 'HVAC Hospitalar', 'Adequação NR-32'],
             images: [
                 'assets/images/Capa_ProjetoHospitalRegionalCuritiba.jpg',
                 'assets/images/civil-engineering-construction-site-modern.jpg',
                 'assets/images/civil-engineering-team-working-professional.jpg'
             ],
-            stats: { area: '12.000 m²', duration: '10 meses', team: '10 engenheiros' }
+            stats: { area: '12.000 m²', duration: '10 meses', team: '10' }
         },
         'grupo-oad-sp': {
             title: 'Grupo OAD - Unidade São Paulo',
+            i18n: {
+                pt: {
+                    description: 'Adequação de sistemas prediais e implementação de programa de saúde ocupacional para a unidade do Grupo OAD em São Paulo. O projeto envolveu modernização completa das instalações elétricas, hidrossanitárias e de climatização, além da implementação do PCMSO e PPRA.',
+                    services: ['Sistemas Prediais', 'Saúde Ocupacional', 'PCMSO', 'Adequação NR']
+                },
+                en: {
+                    description: 'Adaptation of building systems and implementation of an occupational health program for the Grupo OAD unit in São Paulo. The project involved a complete modernization of electrical, plumbing, and air conditioning installations, in addition to the implementation of PCMSO and PPRA.',
+                    services: ['Building Systems', 'Occupational Health', 'PCMSO', 'NR Compliance']
+                },
+                es: {
+                    description: 'Adecuación de sistemas de edificios e implementación de un programa de salud ocupacional para la unidad del Grupo OAD en São Paulo. El proyecto implicó la modernización completa de las instalaciones eléctricas, hidrosanitarias y de climatización, además de la implementación del PCMSO y PPRA.',
+                    services: ['Sistemas de Edificios', 'Salud Ocupacional', 'PCMSO', 'Adecuación NR']
+                }
+            },
             location: 'São Paulo, SP',
             year: '2024',
             category: 'Adequações Técnicas',
-            description: 'Adequação de sistemas prediais e implementação de programa de saúde ocupacional para a unidade do Grupo OAD em São Paulo. O projeto envolveu modernização completa das instalações elétricas, hidrossanitárias e de climatização, além da implementação do PCMSO e PPRA.',
-            services: ['Sistemas Prediais', 'Saúde Ocupacional', 'PCMSO', 'Adequação NR'],
             images: [
                 'assets/images/Capa_ProjetoGrupoOADUnidadeSaoPaulo.avif',
                 'assets/images/civil-engineering-office-professional-team.jpg',
                 'assets/images/civil-engineering-team-working-professional.jpg'
             ],
-            stats: { area: '9.200 m²', duration: '7 meses', team: '9 engenheiros' }
+            stats: { area: '9.200 m²', duration: '7 meses', team: '9' }
         },
         'complexo-industrial-bh': {
             title: 'Complexo Industrial BH',
+            i18n: {
+                pt: {
+                    description: 'Desenvolvimento de projetos hidrossanitários e elétricos integrados para complexo industrial em Belo Horizonte. O escopo incluiu dimensionamento completo das redes de água fria, esgoto sanitário, águas pluviais e instalações elétricas de média e baixa tensão.',
+                    services: ['Hidrossanitário', 'Elétrico', 'Águas Pluviais', 'Média Tensão']
+                },
+                en: {
+                    description: 'Development of integrated plumbing and electrical projects for an industrial complex in Belo Horizonte. The scope included complete sizing of cold water, sanitary sewer, rainwater networks, and medium and low voltage electrical installations.',
+                    services: ['Plumbing', 'Electrical', 'Rainwater', 'Medium Voltage']
+                },
+                es: {
+                    description: 'Desarrollo de proyectos hidrosanitarios y eléctricos integrados para un complejo industrial en Belo Horizonte. El alcance incluyó el dimensionamiento completo de las redes de agua fría, alcantarillado sanitario, aguas pluviales e instalaciones eléctricas de media y baja tensión.',
+                    services: ['Hidrosanitario', 'Eléctrico', 'Aguas Pluviales', 'Media Tensión']
+                }
+            },
             location: 'Belo Horizonte, MG',
             year: '2023',
             category: 'Projetos Integrados',
-            description: 'Desenvolvimento de projetos hidrossanitários e elétricos integrados para complexo industrial em Belo Horizonte. O escopo incluiu dimensionamento completo das redes de água fria, esgoto sanitário, águas pluviais e instalações elétricas de média e baixa tensão.',
-            services: ['Hidrossanitário', 'Elétrico', 'Águas Pluviais', 'Média Tensão'],
             images: [
                 'assets/images/Capa_ProjetoComplexoIndustrialBH.png',
                 'assets/images/civil-engineering-construction-site-modern.jpg',
                 'assets/images/civil-engineering-office-professional-team.jpg'
             ],
-            stats: { area: '18.000 m²', duration: '9 meses', team: '14 engenheiros' }
+            stats: { area: '18.000 m²', duration: '9 meses', team: '14' }
         },
         'edificio-florianopolis': {
             title: 'Edifício Empresarial Florianópolis',
+            i18n: {
+                pt: {
+                    description: 'Projeto elétrico completo e sistema de climatização para edifício corporativo em Florianópolis. Incluiu projetos de instalações elétricas, SPDA, cabeamento estruturado, climatização VRF e sistema preventivo contra incêndio, atendendo às mais rigorosas normas técnicas.',
+                    services: ['Elétrico', 'Climatização', 'SPDA', 'Cabeamento', 'PPCI']
+                },
+                en: {
+                    description: 'Complete electrical project and air conditioning system for a corporate building in Florianópolis. It included projects for electrical installations, lightning protection, structured cabling, VRF air conditioning, and a fire prevention system, meeting the strictest technical standards.',
+                    services: ['Electrical', 'HVAC', 'Lightning Protection', 'Cabling', 'Fire Safety']
+                },
+                es: {
+                    description: 'Proyecto eléctrico completo y sistema de climatización para un edificio corporativo en Florianópolis. Incluyó proyectos de instalaciones eléctricas, SPDA, cableado estructurado, climatización VRF y sistema preventivo contra incendios, cumpliendo con las más rigurosas normas técnicas.',
+                    services: ['Eléctrico', 'Climatización', 'SPDA', 'Cableado', 'PPCI']
+                }
+            },
             location: 'Florianópolis, SC',
             year: '2024',
             category: 'Projeto Completo',
-            description: 'Projeto elétrico completo e sistema de climatização para edifício corporativo em Florianópolis. Incluiu projetos de instalações elétricas, SPDA, cabeamento estruturado, climatização VRF e sistema preventivo contra incêndio, atendendo às mais rigorosas normas técnicas.',
-            services: ['Elétrico', 'Climatização', 'SPDA', 'Cabeamento', 'PPCI'],
             images: [
                 'assets/images/Capa_ProjetoEdifícioEmpresarialFlorianópolis.jpg',
                 'assets/images/civil-engineering-team-working-professional.jpg',
                 'assets/images/civil-engineering-construction-site-modern.jpg'
             ],
-            stats: { area: '20.000 m²', duration: '11 meses', team: '13 engenheiros' }
+            stats: { area: '20.000 m²', duration: '11 meses', team: '13' }
+        },
+        'makai-florianopolis': {
+            title: 'Residencial Makai',
+            i18n: {
+                pt: {
+                    description: 'O Residencial Makai é um empreendimento multifamiliar com 64.000 m² de área construída. O projeto contempla serviços de Projeto Preventivo Contra Incêndio, Modelagem BIM, compatibilização de projetos e aprovação junto aos órgãos competentes, garantindo conformidade com as normas técnicas e maior qualidade na execução da obra.',
+                    services: ['Projeto Preventivo Contra Incêndio', 'Modelagem BIM', 'Compatibilização']
+                },
+                en: {
+                    description: 'Residencial Makai is a multi-family development with 64,000 m² of built area. The project includes Fire Prevention Project services, BIM Modeling, project compatibility, and approval with competent bodies, ensuring compliance with technical standards and higher quality in the work execution.',
+                    services: ['Fire Prevention Project', 'BIM Modeling', 'Compatibility']
+                },
+                es: {
+                    description: 'Residencial Makai es un desarrollo multifamiliar con 64.000 m² de área construida. El proyecto contempla servicios de Proyecto de Prevención de Incendios, Modelado BIM, compatibilización de proyectos y aprobación ante los órganos competentes, garantizando el cumplimiento de las normas técnicas y una mayor calidad en la ejecución de la obra.',
+                    services: ['Proyecto de Prevención de Incendios', 'Modelado BIM', 'Compatibilización']
+                }
+            },
+            location: 'Florianópolis, SC',
+            year: '2024',
+            category: 'Residencial',
+            images: [
+                'assets/images/civil-engineering-construction-site-modern.jpg',
+                'assets/images/civil-engineering-office-professional-team.jpg',
+                'assets/images/civil-engineering-team-working-professional.jpg'
+            ],
+            stats: { area: '64.000 m²', duration: '18 meses', team: '20' }
         }
     };
 
@@ -297,6 +407,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const project = projectsData[projectId];
         if (!project) return;
 
+        // Get current language and translated content
+        const lang = localStorage.getItem('site_lang') || 'pt';
+        const projectContent = project.i18n[lang] || project.i18n.pt; // Fallback to 'pt'
+        const t = (typeof translations !== 'undefined' && translations[lang]) ? translations[lang] : {};
+
         currentProject = project;
         currentImageIndex = 0;
 
@@ -322,28 +437,28 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${project.year}
                 </span>
             </div>
-            <h2 class="text-2xl md:text-3xl font-bold text-foreground mb-4">${project.title}</h2>
-            <p class="text-muted-foreground leading-relaxed mb-6">${project.description}</p>
+            <h2 class="text-2xl md:text-3xl font-bold text-foreground mb-4">${projectContent.title}</h2>
+            <p class="text-muted-foreground leading-relaxed mb-6">${projectContent.description}</p>
             
             <div class="grid grid-cols-3 gap-4 mb-6">
                 <div class="stat-card">
                     <div class="text-lg font-bold text-foreground">${project.stats.area}</div>
-                    <div class="text-xs text-muted-foreground">Área Total</div>
+                    <div class="text-xs text-muted-foreground">${t['modal.stat.area'] || 'Área Total'}</div>
                 </div>
                 <div class="stat-card">
                     <div class="text-lg font-bold text-foreground">${project.stats.duration}</div>
-                    <div class="text-xs text-muted-foreground">Duração</div>
+                    <div class="text-xs text-muted-foreground">${t['modal.stat.duration'] || 'Duração'}</div>
                 </div>
                 <div class="stat-card">
                     <div class="text-lg font-bold text-foreground">${project.stats.team}</div>
-                    <div class="text-xs text-muted-foreground">Equipe</div>
+                    <div class="text-xs text-muted-foreground">${t['modal.stat.team'] || 'Equipe'}</div>
                 </div>
             </div>
 
             <div>
-                <h3 class="text-sm font-semibold text-foreground mb-3">Serviços Realizados</h3>
+                <h3 class="text-sm font-semibold text-foreground mb-3">${t['modal.services.title'] || 'Serviços Realizados'}</h3>
                 <div class="flex flex-wrap gap-2">
-                    ${project.services.map(s => `<span class="service-tag">${s}</span>`).join('')}
+                    ${projectContent.services.map(s => `<span class="service-tag">${s}</span>`).join('')}
                 </div>
             </div>
         `;
