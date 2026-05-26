@@ -13,10 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: FTP Deploy Locaweb
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          password: ${{ secrets.PASS }}
-          local-dir: ./
+      - name: Instalar lftp
+        run: sudo apt-get install -y lftp
+
+      - name: Deploy via FTP (lftp)
+        run: |
+          lftp -c "
+            set ftp:ssl-allow no;
+            open -u ${{ secrets.USER }},${{ secrets.PASS }} ${{ secrets.HOST }};
+            mirror --reverse --delete --verbose --exclude .git --exclude .github --exclude README.md ./ /;
+          "
