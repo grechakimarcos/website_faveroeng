@@ -1,5 +1,4 @@
-name: Deploy via FTP
-
+name: Deploy via ftp
 on:
   push:
     branches:
@@ -11,24 +10,12 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-      - name: Instalar lftp
-        run: sudo apt-get install -y lftp
-
-      - name: Deploy via FTP (lftp)
-        run: |
-          lftp -d -c "
-            set ftp:ssl-allow no;
-            set ftp:ssl-force no;
-            set ftp:ssl-protect-data no;
-            set net:max-retries 3;
-            set net:reconnect-interval-base 5;
-            set ftp:passive-mode yes;
-            open -u '${{ secrets.USER }}','${{ secrets.PASS }}' '${{ secrets.HOST }}';
-            mirror --reverse --delete --verbose \
-              --exclude-glob .git \
-              --exclude-glob .github \
-              --exclude-glob README.md \
-              ./ /;
-          "
+    - name: FTP Deploy Locaweb
+      uses: locaweb/ftp-deploy@1.0.0
+      with:
+        host: ${{ secrets.HOST }}
+        user: ${{ secrets.USER }}
+        password: ${{ secrets.PASS }}
+        localDir: "." # Configurado como "." pois seu site não tem pasta "dist" (é direto na raiz)
