@@ -1,21 +1,22 @@
-name: Deploy via ftp
+name: Deploy via FTP
+
 on:
   push:
     branches:
-      - main # ou master, dependendo de como sua branch principal se chama
-  workflow_dispatch: # permite executar manualmente pelo GitHub
+      - main
+  workflow_dispatch:
 
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: FTP Deploy Locaweb
-      uses: locaweb/ftp-deploy@1.0.0
-      with:
-        host: ${{ secrets.HOST }}
-        user: ${{ secrets.USER }}
-        password: ${{ secrets.PASS }}
-        localDir: "." # Configurado como "." pois seu site não tem pasta "dist" (é direto na raiz)
+      - name: FTP Deploy Locaweb
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASS }}
+          local-dir: ./
