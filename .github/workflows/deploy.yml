@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main # ou master, dependendo de como sua branch principal se chama
+  workflow_dispatch: # permite executar manualmente pelo GitHub
 
 jobs:
   deploy:
