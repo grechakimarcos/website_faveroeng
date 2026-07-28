@@ -650,9 +650,9 @@
                     </div>
                     <div class="relative animate-on-scroll fade-right delay-200">
                         <div
-                            class="relative aspect-square overflow-hidden rounded-2xl bg-secondary/30 border border-border shadow-2xl">
+                            class="relative overflow-hidden rounded-2xl bg-[#1a1a2e] border border-border shadow-2xl flex items-center justify-center">
                             <img src="assets/images/EquipeFavero.webp" alt="Equipe Favero"
-                                class="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                                class="w-full h-auto object-contain transition-transform duration-700 hover:scale-105"
                                 loading="lazy" width="500" height="500">
                         </div>
                         <div
@@ -865,24 +865,6 @@
                                     <h3 class="card-title text-xl font-bold text-white mb-1">Adriel Brito</h3>
                                     <p class="text-xs font-bold text-[#7db3e8] uppercase tracking-wider"
                                         data-i18n="team.adriel.role">Engenheiro Civil</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 4: Vinicius -->
-                        <div class="team-card w-[85vw] sm:w-[300px] shrink-0 snap-center sm:snap-start flex flex-col cursor-pointer"
-                            onclick="openTeamModal(this.querySelector('img').src)">
-                            <div
-                                class="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-xl transition-all duration-300">
-                                <img src="assets/images/CarrosselSobre/SobreVinicius.webp" alt="Vinicius Vila Verde"
-                                    class="w-full h-full object-cover pointer-events-none object-top" loading="lazy" width="400" height="500">
-                                <div
-                                    class="card-gradient absolute inset-0 bg-gradient-to-t from-[#1e3a5f]/95 via-[#1e3a5f]/50 to-transparent opacity-90">
-                                </div>
-                                <div class="card-inner absolute bottom-0 left-0 w-full p-6">
-                                    <h3 class="card-title text-xl font-bold text-white mb-1">Vinicius Vila Verde</h3>
-                                    <p class="text-xs font-bold text-[#7db3e8] uppercase tracking-wider"
-                                        data-i18n="team.vinicius.role">Engenheiro Civil</p>
                                 </div>
                             </div>
                         </div>
@@ -1173,6 +1155,404 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Project Card 3: Ambulatório MG -->
+                    <div data-project="ambulatorio-mg"
+                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
+                        <div class="relative aspect-[4/3] overflow-hidden project-carousel">
+                            <!-- Icon Badge -->
+                            <div
+                                class="absolute top-4 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
+                                <i data-lucide="activity" class="h-6 w-6"></i>
+                            </div>
+                            <img src="assets/images/Projetos/Ambulat%C3%B3rio%20em%20mg/Ambulatorio_em_mg01.png" alt="Ambulatório MG"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-100 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Ambulat%C3%B3rio%20em%20mg/Ambulatorio_em_mg02.png" alt="Ambulatório MG"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Ambulat%C3%B3rio%20em%20mg/Ambulatorio_em_mg03.png" alt="Ambulatório MG"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Ambulat%C3%B3rio%20em%20mg/Ambulatorio_em_mg04.png" alt="Ambulatório MG"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Ambulat%C3%B3rio%20em%20mg/Ambulatorio_em_mg05.png" alt="Ambulatório MG"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Ambulat%C3%B3rio%20em%20mg/Ambulatorio_em_mg06.png" alt="Ambulatório MG"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Ambulat%C3%B3rio%20em%20mg/Ambulatorio_em_mg07.png" alt="Ambulatório MG"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent pointer-events-none"></div>
+                            <!-- Category Badge -->
+                            <div class="absolute bottom-4 left-4 z-10">
+                                <span
+                                    class="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-md">
+                                    Hospitalar
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-foreground mb-2">Ambulatório – Minas Gerais</h3>
+                            <div class="project-desc-container">
+                                <p class="project-short-desc mb-2 text-sm leading-relaxed text-muted-foreground line-clamp-2">
+                                    Edificação hospitalar com aproximadamente 12.450 m² de área construída, desenvolvida com foco em segurança, eficiência operacional e conformidade com as normas técnicas para estabelecimentos de saúde.
+                                </p>
+                                <div class="project-full-desc hidden mb-4 text-sm leading-relaxed text-muted-foreground space-y-2">
+                                    <p>O Ambulatório, localizado em Minas Gerais, é uma edificação hospitalar com aproximadamente 12.450 m² de área construída, desenvolvida com foco em segurança, eficiência operacional e conformidade com as normas técnicas para estabelecimentos de saúde.</p>
+                                    <p>O projeto contemplou o desenvolvimento dos sistemas hidrossanitários e de prevenção e combate a incêndio, utilizando modelagem e compatibilização BIM, além do acompanhamento para aprovação junto aos órgãos competentes, garantindo maior qualidade, integração entre disciplinas e confiabilidade na execução da obra.</p>
+                                    <p class="font-semibold text-foreground mt-2">Escopo dos Serviços:</p>
+                                    <ul class="list-disc pl-5">
+                                        <li>Projeto Hidrossanitário</li>
+                                        <li>Projeto Preventivo Contra Incêndio</li>
+                                        <li>Modelagem e Compatibilização BIM</li>
+                                        <li>Aprovação junto aos órgãos competentes</li>
+                                    </ul>
+                                </div>
+                                <button onclick="toggleProjectDesc(this)" class="text-primary text-sm font-semibold hover:underline flex items-center gap-1 mb-4">Ler mais <i data-lucide="chevron-down" class="h-4 w-4 transition-transform"></i></button>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Hospitalar</span>
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Hidrossanitário</span>
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">BIM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4: ED Comercial -->
+                    <div data-project="ed-comercial"
+                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
+                        <div class="relative aspect-[4/3] overflow-hidden project-carousel">
+                            <!-- Icon Badge -->
+                            <div
+                                class="absolute top-4 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
+                                <i data-lucide="zap" class="h-6 w-6"></i>
+                            </div>
+                            <img src="assets/images/Projetos/ED%20Comercial/ED_01.png" alt="Edifício Comercial"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-100 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/ED%20Comercial/ED_02.png" alt="Edifício Comercial"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/ED%20Comercial/ED_03.png" alt="Edifício Comercial"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/ED%20Comercial/ED_04.png" alt="Edifício Comercial"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/ED%20Comercial/ED_05.png" alt="Edifício Comercial"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/ED%20Comercial/ED_06.png" alt="Edifício Comercial"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/ED%20Comercial/ED_07.png" alt="Edifício Comercial"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent pointer-events-none"></div>
+                            <!-- Category Badge -->
+                            <div class="absolute bottom-4 left-4 z-10">
+                                <span
+                                    class="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-md">
+                                    Elétrico
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-foreground mb-2">Edifício Comercial</h3>
+                            <div class="project-desc-container">
+                                <p class="project-short-desc mb-2 text-sm leading-relaxed text-muted-foreground line-clamp-2">
+                                    Empreendimento com aproximadamente 3.600 m² de área construída, desenvolvido para atender às demandas de infraestrutura elétrica e de comunicação, garantindo segurança, desempenho e confiabilidade.
+                                </p>
+                                <div class="project-full-desc hidden mb-4 text-sm leading-relaxed text-muted-foreground space-y-2">
+                                    <p>O Edifício Comercial é um empreendimento com aproximadamente 3.600 m² de área construída, desenvolvido para atender às demandas de infraestrutura elétrica e de comunicação, garantindo segurança, desempenho e confiabilidade para as operações do edifício.</p>
+                                    <p>O projeto contemplou o desenvolvimento das instalações elétricas e do sistema de cabeamento estruturado, proporcionando uma infraestrutura moderna para distribuição de energia e redes de dados. Também foi realizado todo o processo de aprovação junto à CELESC, assegurando a conformidade com as normas técnicas e regulamentações aplicáveis.</p>
+                                    <p class="font-semibold text-foreground mt-2">Escopo dos Serviços:</p>
+                                    <ul class="list-disc pl-5">
+                                        <li>Projeto de Instalações Elétricas</li>
+                                        <li>Projeto de Cabeamento Estruturado</li>
+                                        <li>Aprovação junto à CELESC</li>
+                                    </ul>
+                                </div>
+                                <button onclick="toggleProjectDesc(this)" class="text-primary text-sm font-semibold hover:underline flex items-center gap-1 mb-4">Ler mais <i data-lucide="chevron-down" class="h-4 w-4 transition-transform"></i></button>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Instalações Elétricas</span>
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Cabeamento Estruturado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 5: Parque Linear -->
+                    <div data-project="parque-linear"
+                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
+                        <div class="relative aspect-[4/3] overflow-hidden project-carousel">
+                            <!-- Icon Badge -->
+                            <div
+                                class="absolute top-4 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
+                                <i data-lucide="lamp" class="h-6 w-6"></i>
+                            </div>
+                            <img src="assets/images/Projetos/Parque%20Linear/Parque_01.png" alt="Parque Linear"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-100 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Parque%20Linear/Parque_02.png" alt="Parque Linear"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Parque%20Linear/Parque_03.png" alt="Parque Linear"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Parque%20Linear/Parque_04.png" alt="Parque Linear"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Parque%20Linear/Parque_05.png" alt="Parque Linear"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent pointer-events-none"></div>
+                            <!-- Category Badge -->
+                            <div class="absolute bottom-4 left-4 z-10">
+                                <span
+                                    class="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-md">
+                                    Obra Pública
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-foreground mb-2">Parque Linear</h3>
+                            <div class="project-desc-container">
+                                <p class="project-short-desc mb-2 text-sm leading-relaxed text-muted-foreground line-clamp-2">
+                                    Obra pública com aproximadamente 64.000 m² de área, desenvolvida para proporcionar infraestrutura urbana segura, eficiente e sustentável, contribuindo para a valorização dos espaços públicos.
+                                </p>
+                                <div class="project-full-desc hidden mb-4 text-sm leading-relaxed text-muted-foreground space-y-2">
+                                    <p>O Parque Linear é uma obra pública com aproximadamente 64.000 m² de área, desenvolvida para proporcionar infraestrutura urbana segura, eficiente e sustentável, contribuindo para a valorização dos espaços públicos e melhoria da mobilidade da população.</p>
+                                    <p>O projeto contemplou o desenvolvimento completo das instalações elétricas e do sistema de iluminação pública, priorizando eficiência energética, segurança, confiabilidade operacional e atendimento às normas técnicas vigentes para infraestrutura urbana.</p>
+                                    <p class="font-semibold text-foreground mt-2">Escopo dos Serviços:</p>
+                                    <ul class="list-disc pl-5">
+                                        <li>Projeto de Instalações Elétricas</li>
+                                        <li>Projeto de Iluminação Pública</li>
+                                    </ul>
+                                </div>
+                                <button onclick="toggleProjectDesc(this)" class="text-primary text-sm font-semibold hover:underline flex items-center gap-1 mb-4">Ler mais <i data-lucide="chevron-down" class="h-4 w-4 transition-transform"></i></button>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Instalações Elétricas</span>
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Iluminação Pública</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 6: Residencial Site -->
+                    <div data-project="residencial-site"
+                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
+                        <div class="relative aspect-[4/3] overflow-hidden project-carousel">
+                            <!-- Icon Badge -->
+                            <div
+                                class="absolute top-4 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
+                                <i data-lucide="home" class="h-6 w-6"></i>
+                            </div>
+                            <img src="assets/images/Projetos/Residencial%20Site/Site_01.png" alt="Residencial Site"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-100 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Residencial%20Site/Site_02.png" alt="Residencial Site"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Residencial%20Site/Site_03.png" alt="Residencial Site"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Residencial%20Site/Site_04.png" alt="Residencial Site"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Residencial%20Site/Site_05.png" alt="Residencial Site"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent pointer-events-none"></div>
+                            <!-- Category Badge -->
+                            <div class="absolute bottom-4 left-4 z-10">
+                                <span
+                                    class="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-md">
+                                    Residencial
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-foreground mb-2">Residencial Site</h3>
+                            <div class="project-desc-container">
+                                <p class="project-short-desc mb-2 text-sm leading-relaxed text-muted-foreground line-clamp-2">
+                                    Empreendimento residencial com aproximadamente 1.600 m² de área construída, desenvolvido com foco na eficiência dos sistemas hidrossanitários, segurança sanitária e conformidade com as normas técnicas vigentes.
+                                </p>
+                                <div class="project-full-desc hidden mb-4 text-sm leading-relaxed text-muted-foreground space-y-2">
+                                    <p>O Residencial Site é um empreendimento residencial com aproximadamente 1.600 m² de área construída, desenvolvido com foco na eficiência dos sistemas hidrossanitários, segurança sanitária e conformidade com as normas técnicas vigentes.</p>
+                                    <p>O projeto contemplou o desenvolvimento completo das instalações hidrossanitárias, priorizando funcionalidade, desempenho e sustentabilidade dos sistemas prediais. Além disso, foi realizado todo o processo de aprovação junto à Vigilância Sanitária, garantindo que o empreendimento atendesse às exigências legais e técnicas para sua execução.</p>
+                                    <p class="font-semibold text-foreground mt-2">Escopo dos Serviços:</p>
+                                    <ul class="list-disc pl-5">
+                                        <li>Projeto Hidrossanitário</li>
+                                        <li>Aprovação junto à Vigilância Sanitária</li>
+                                    </ul>
+                                </div>
+                                <button onclick="toggleProjectDesc(this)" class="text-primary text-sm font-semibold hover:underline flex items-center gap-1 mb-4">Ler mais <i data-lucide="chevron-down" class="h-4 w-4 transition-transform"></i></button>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Hidrossanitário</span>
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Vigilância Sanitária</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 7: SENAC Pouso Alegre -->
+                    <div data-project="senac-pouso-alegre"
+                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
+                        <div class="relative aspect-[4/3] overflow-hidden project-carousel">
+                            <!-- Icon Badge -->
+                            <div
+                                class="absolute top-4 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
+                                <i data-lucide="wind" class="h-6 w-6"></i>
+                            </div>
+                            <img src="assets/images/Projetos/Senac%20Pouso%20Alegre/Senac_01.png" alt="SENAC Pouso Alegre"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-100 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Senac%20Pouso%20Alegre/Senac_02.png" alt="SENAC Pouso Alegre"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Senac%20Pouso%20Alegre/Senac_03.png" alt="SENAC Pouso Alegre"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Senac%20Pouso%20Alegre/Senac_04.png" alt="SENAC Pouso Alegre"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/Senac%20Pouso%20Alegre/Senac_05.png" alt="SENAC Pouso Alegre"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent pointer-events-none"></div>
+                            <!-- Category Badge -->
+                            <div class="absolute bottom-4 left-4 z-10">
+                                <span
+                                    class="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-md">
+                                    Climatização
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-foreground mb-2">SENAC – Pouso Alegre</h3>
+                            <div class="project-desc-container">
+                                <p class="project-short-desc mb-2 text-sm leading-relaxed text-muted-foreground line-clamp-2">
+                                    Unidade do SENAC em Pouso Alegre com aproximadamente 2.000 m² de área construída, desenvolvida com foco em conforto térmico, qualidade do ar e eficiência energética para ambientes de ensino.
+                                </p>
+                                <div class="project-full-desc hidden mb-4 text-sm leading-relaxed text-muted-foreground space-y-2">
+                                    <p>A unidade do SENAC em Pouso Alegre é uma obra pública com aproximadamente 2.000 m² de área construída, desenvolvida para oferecer ambientes com elevado padrão de conforto térmico, qualidade do ar e eficiência energética, atendendo às necessidades de instituições de ensino e capacitação profissional.</p>
+                                    <p>O projeto contemplou o desenvolvimento completo dos sistemas de climatização e renovação de ar, garantindo condições adequadas de conforto ambiental, controle da qualidade do ar interno e conformidade com as normas técnicas aplicáveis, proporcionando ambientes seguros e confortáveis para alunos, professores e colaboradores.</p>
+                                    <p class="font-semibold text-foreground mt-2">Escopo dos Serviços:</p>
+                                    <ul class="list-disc pl-5">
+                                        <li>Projeto de Climatização</li>
+                                        <li>Projeto de Renovação de Ar</li>
+                                    </ul>
+                                </div>
+                                <button onclick="toggleProjectDesc(this)" class="text-primary text-sm font-semibold hover:underline flex items-center gap-1 mb-4">Ler mais <i data-lucide="chevron-down" class="h-4 w-4 transition-transform"></i></button>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Climatização</span>
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Renovação de Ar</span>
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">HVAC</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 8: CEIM -->
+                    <div data-project="ceim"
+                        class="project-card-item group rounded-xl border bg-card text-card-foreground shadow-sm overflow-hidden h-full transition-all hover:shadow-soft hover:-translate-y-1 cursor-pointer">
+                        <div class="relative aspect-[4/3] overflow-hidden project-carousel">
+                            <!-- Icon Badge -->
+                            <div
+                                class="absolute top-4 left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg">
+                                <i data-lucide="graduation-cap" class="h-6 w-6"></i>
+                            </div>
+                            <img src="assets/images/Projetos/CEIM/CEIM1.png" alt="CEIM"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-100 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/CEIM/CEIM2.png" alt="CEIM"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/CEIM/CEIM3.png" alt="CEIM"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/CEIM/CEIM4.png" alt="CEIM"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/CEIM/CEIM5.png" alt="CEIM"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/CEIM/CEIM6.png" alt="CEIM"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/CEIM/CEIM7.png" alt="CEIM"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/CEIM/CEIM8.png" alt="CEIM"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/CEIM/CEIM9.png" alt="CEIM"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <img src="assets/images/Projetos/CEIM/CEIM10.png" alt="CEIM"
+                                class="carousel-img absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 group-hover:scale-110"
+                                loading="lazy" width="800" height="600">
+                            <div class="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent pointer-events-none"></div>
+                            <!-- Category Badge -->
+                            <div class="absolute bottom-4 left-4 z-10">
+                                <span
+                                    class="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground shadow-md">
+                                    Projeto Completo
+                                </span>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold text-foreground mb-2">Edificação Escolar – Governador Celso Ramos SC</h3>
+                            <div class="project-desc-container">
+                                <p class="project-short-desc mb-2 text-sm leading-relaxed text-muted-foreground line-clamp-2">
+                                    Edificação escolar em Governador Celso Ramos – SC, com aproximadamente 2.362,50 m² de área construída, desenvolvida para atender aos requisitos técnicos de segurança, funcionalidade, eficiência e conforto para ambientes educacionais.
+                                </p>
+                                <div class="project-full-desc hidden mb-4 text-sm leading-relaxed text-muted-foreground space-y-2">
+                                    <p>A Edificação Escolar, localizada em Governador Celso Ramos – SC, possui aproximadamente 2.362,50 m² de área construída e foi desenvolvida para atender aos requisitos técnicos de segurança, funcionalidade, eficiência e conforto exigidos para ambientes educacionais.</p>
+                                    <p>O projeto contemplou o desenvolvimento multidisciplinar das instalações prediais, incluindo sistemas hidrossanitários, elétricos, telecomunicações, climatização, prevenção e combate a incêndio e proteção contra descargas atmosféricas (SPDA). Todo o empreendimento foi modelado e compatibilizado em BIM, permitindo maior integração entre as disciplinas, redução de interferências e maior qualidade durante a execução, além da aprovação junto aos órgãos competentes.</p>
+                                    <p class="font-semibold text-foreground mt-2">Escopo dos Serviços:</p>
+                                    <ul class="list-disc pl-5">
+                                        <li>Projeto Hidrossanitário</li>
+                                        <li>Projeto Preventivo Contra Incêndio</li>
+                                        <li>Projeto de Instalações Elétricas</li>
+                                        <li>Projeto de Telecomunicações</li>
+                                        <li>Projeto de Climatização e Renovação de Ar</li>
+                                        <li>Projeto de SPDA (Sistema de Proteção contra Descargas Atmosféricas)</li>
+                                        <li>Modelagem e Compatibilização BIM</li>
+                                        <li>Aprovação junto aos órgãos competentes</li>
+                                    </ul>
+                                </div>
+                                <button onclick="toggleProjectDesc(this)" class="text-primary text-sm font-semibold hover:underline flex items-center gap-1 mb-4">Ler mais <i data-lucide="chevron-down" class="h-4 w-4 transition-transform"></i></button>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Instalações Elétricas</span>
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">Hidrossanitário</span>
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">BIM</span>
+                                <span
+                                    class="inline-flex items-center rounded-full border border-border bg-secondary/50 px-3 py-1 text-xs font-medium text-muted-foreground">SPDA</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
                 <script>
@@ -1423,96 +1803,23 @@
                         engenharia civil e construção.</p>
                 </div>
 
-                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 animate-on-scroll fade-up delay-200">
-                    <!-- Blog Post Card 1 -->
-                    <a href="blog/post-1.html" class="group">
-                        <article
-                            class="flex flex-col overflow-hidden rounded-xl border bg-card text-card-foreground shadow-sm transition-all hover:shadow-soft hover:-translate-y-1 card-hover h-full">
-                            <div class="aspect-video w-full bg-gradient-to-br from-[#4D7493] to-[#2C4156]">
-                                <div class="flex h-full items-center justify-center text-white/80">
-                                    <i data-lucide="file-text"
-                                        class="h-12 w-12 transform group-hover:scale-110 transition-transform duration-300"></i>
-                                </div>
-                            </div>
-                            <div class="flex flex-1 flex-col p-6">
-                                <h3 class="text-xl font-bold leading-tight mb-2 text-foreground group-hover:text-primary transition-colors"
-                                    data-i18n="blog.post1.title">
-                                    Normas NBR para projetos elétricos
-                                </h3>
-                                <p class="text-muted-foreground text-sm mb-4 line-clamp-3" data-i18n="blog.post1.desc">
-                                    Conheça as principais normas brasileiras para instalações elétricas em edificações.
-                                </p>
-                                <div class="mt-auto flex items-center justify-between">
-                                    <span class="text-xs text-muted-foreground">27 Jan 2026</span>
-                                    <span
-                                        class="text-sm font-medium text-primary flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                                        <span data-i18n="blog.read_more">Ler artigo</span> <i data-lucide="arrow-right"
-                                            class="h-4 w-4"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
-
-                    <!-- Blog Post Card 2 -->
-                    <a href="blog/post-2.html" class="group">
-                        <article
-                            class="flex flex-col overflow-hidden rounded-xl border bg-card text-card-foreground shadow-sm transition-all hover:shadow-soft hover:-translate-y-1 card-hover h-full">
-                            <div class="aspect-video w-full bg-gradient-to-br from-[#7F99B2] to-[#39586D]">
-                                <div class="flex h-full items-center justify-center text-white/80">
-                                    <i data-lucide="flame"
-                                        class="h-12 w-12 transform group-hover:scale-110 transition-transform duration-300"></i>
-                                </div>
-                            </div>
-                            <div class="flex flex-1 flex-col p-6">
-                                <h3 class="text-xl font-bold leading-tight mb-2 text-foreground group-hover:text-primary transition-colors"
-                                    data-i18n="blog.post2.title">
-                                    Prevenção contra incêndio em edifícios
-                                </h3>
-                                <p class="text-muted-foreground text-sm mb-4 line-clamp-3" data-i18n="blog.post2.desc">
-                                    Sistemas preventivos essenciais para garantir a segurança de edificações.
-                                </p>
-                                <div class="mt-auto flex items-center justify-between">
-                                    <span class="text-xs text-muted-foreground">20 Jan 2026</span>
-                                    <span
-                                        class="text-sm font-medium text-primary flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                                        <span data-i18n="blog.read_more">Ler artigo</span> <i data-lucide="arrow-right"
-                                            class="h-4 w-4"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
-
-                    <!-- Blog Post Card 3 -->
-                    <a href="blog/post-3.html" class="group">
-                        <article
-                            class="flex flex-col overflow-hidden rounded-xl border bg-card text-card-foreground shadow-sm transition-all hover:shadow-soft hover:-translate-y-1 card-hover h-full">
-                            <div class="aspect-video w-full bg-gradient-to-br from-[#90ADC1] to-[#4D7493]">
-                                <div class="flex h-full items-center justify-center text-white/80">
-                                    <i data-lucide="droplets"
-                                        class="h-12 w-12 transform group-hover:scale-110 transition-transform duration-300"></i>
-                                </div>
-                            </div>
-                            <div class="flex flex-1 flex-col p-6">
-                                <h3 class="text-xl font-bold leading-tight mb-2 text-foreground group-hover:text-primary transition-colors"
-                                    data-i18n="blog.post3.title">
-                                    Eficiência em sistemas hidrossanitários
-                                </h3>
-                                <p class="text-muted-foreground text-sm mb-4 line-clamp-3" data-i18n="blog.post3.desc">
-                                    Dicas para projetos eficientes e sustentáveis de água e esgoto.
-                                </p>
-                                <div class="mt-auto flex items-center justify-between">
-                                    <span class="text-xs text-muted-foreground">15 Jan 2026</span>
-                                    <span
-                                        class="text-sm font-medium text-primary flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                                        <span data-i18n="blog.read_more">Ler artigo</span> <i data-lucide="arrow-right"
-                                            class="h-4 w-4"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </article>
-                    </a>
+                <!-- Coming Soon -->
+                <div class="animate-on-scroll fade-up delay-200 flex flex-col items-center justify-center py-16 px-4">
+                    <div class="relative w-24 h-24 mb-8">
+                        <div class="absolute inset-0 rounded-full bg-primary/20 animate-ping"></div>
+                        <div class="relative flex h-24 w-24 items-center justify-center rounded-full bg-primary/10 border border-primary/30">
+                            <i data-lucide="newspaper" class="h-10 w-10 text-primary"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-foreground mb-4 text-center">Em breve, novidades por aqui!</h3>
+                    <p class="text-muted-foreground text-base sm:text-lg text-center max-w-xl leading-relaxed">
+                        Estamos preparando artigos, dicas técnicas e novidades sobre engenharia civil para você.
+                        Fique atento — em breve publicaremos nossos primeiros conteúdos.
+                    </p>
+                    <div class="mt-8 flex items-center gap-2 text-sm text-primary font-semibold">
+                        <i data-lucide="clock" class="h-4 w-4"></i>
+                        <span>Conteúdo em desenvolvimento</span>
+                    </div>
                 </div>
             </div>
         </section>

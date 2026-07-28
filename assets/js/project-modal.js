@@ -184,31 +184,261 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             stats: { area: '20.000 m²', duration: '11 meses', team: '13' }
         },
-        'makai-florianopolis': {
-            title: 'Residencial Makai',
+        'makai': {
+            title: 'Residencial Makai – Florianópolis SC',
             i18n: {
                 pt: {
-                    description: 'O Residencial Makai é um empreendimento multifamiliar com 64.000 m² de área construída. O projeto contempla serviços de Projeto Preventivo Contra Incêndio, Modelagem BIM, compatibilização de projetos e aprovação junto aos órgãos competentes, garantindo conformidade com as normas técnicas e maior qualidade na execução da obra.',
-                    services: ['Projeto Preventivo Contra Incêndio', 'Modelagem BIM', 'Compatibilização']
+                    title: 'Residencial Makai – Florianópolis SC',
+                    description: 'O Residencial Makai é um empreendimento multifamiliar em Florianópolis – SC, com 64.000 m² de área construída, desenvolvido com foco em segurança, tecnologia e eficiência construtiva. O projeto contempla serviços de Projeto Preventivo Contra Incêndio, Modelagem BIM, compatibilização de projetos e aprovação junto aos órgãos competentes, garantindo conformidade com as normas técnicas e maior qualidade na execução da obra.',
+                    services: ['Projeto Preventivo Contra Incêndio', 'Modelagem e Compatibilização BIM', 'Aprovação junto aos órgãos competentes']
                 },
                 en: {
-                    description: 'Residencial Makai is a multi-family development with 64,000 m² of built area. The project includes Fire Prevention Project services, BIM Modeling, project compatibility, and approval with competent bodies, ensuring compliance with technical standards and higher quality in the work execution.',
-                    services: ['Fire Prevention Project', 'BIM Modeling', 'Compatibility']
+                    title: 'Residencial Makai – Florianópolis SC',
+                    description: 'Residencial Makai is a multi-family development in Florianópolis – SC, with 64,000 m² of built area, developed with a focus on safety, technology and constructive efficiency. The project includes Fire Prevention, BIM Modeling, project compatibility and approval with competent bodies.',
+                    services: ['Fire Prevention Project', 'BIM Modeling & Compatibility', 'Regulatory Approval']
                 },
                 es: {
-                    description: 'Residencial Makai es un desarrollo multifamiliar con 64.000 m² de área construida. El proyecto contempla servicios de Proyecto de Prevención de Incendios, Modelado BIM, compatibilización de proyectos y aprobación ante los órganos competentes, garantizando el cumplimiento de las normas técnicas y una mayor calidad en la ejecución de la obra.',
-                    services: ['Proyecto de Prevención de Incendios', 'Modelado BIM', 'Compatibilización']
+                    title: 'Residencial Makai – Florianópolis SC',
+                    description: 'Residencial Makai es un desarrollo multifamiliar en Florianópolis – SC, con 64.000 m² de área construida, desarrollado con foco en seguridad, tecnología y eficiencia constructiva. El proyecto contempla servicios de Prevención de Incendios, Modelado BIM, compatibilización de proyectos y aprobación ante los órganos competentes.',
+                    services: ['Proyecto de Prevención de Incendios', 'Modelado BIM y Compatibilización', 'Aprobación Regulatoria']
                 }
             },
             location: 'Florianópolis, SC',
             year: '2024',
-            category: 'Residencial',
+            category: 'Projeto Completo',
             images: [
-                'assets/images/civil-engineering-construction-site-modern.jpg',
-                'assets/images/civil-engineering-office-professional-team.jpg',
-                'assets/images/civil-engineering-team-working-professional.jpg'
+                'assets/images/Projetos/Makai/MakaiCapa.webp',
+                'assets/images/Projetos/Makai/makai02.webp',
+                'assets/images/Projetos/Makai/makai03.webp',
+                'assets/images/Projetos/Makai/makaicapa02.webp',
+                'assets/images/Projetos/Makai/makaicapa03.webp'
             ],
             stats: { area: '64.000 m²', duration: '18 meses', team: '20' }
+        },
+        'mppu': {
+            title: 'Ministério Público de Porto União – SC',
+            i18n: {
+                pt: {
+                    title: 'Ministério Público de Porto União – SC',
+                    description: 'Projeto desenvolvido para o Ministério Público de Porto União – SC, com aproximadamente 3.100 m² de área construída, contemplando os projetos hidrossanitário e preventivo contra incêndio. Os serviços foram elaborados conforme as normas técnicas vigentes, garantindo segurança, eficiência e conformidade para a edificação.',
+                    services: ['Projeto Hidrossanitário', 'Projeto Preventivo Contra Incêndio']
+                },
+                en: {
+                    title: 'Ministério Público de Porto União – SC',
+                    description: 'Project developed for the Ministério Público de Porto União – SC, with approximately 3,100 m² of built area, encompassing plumbing and fire prevention projects. Services were executed in accordance with current technical standards, ensuring safety, efficiency and compliance.',
+                    services: ['Plumbing Project', 'Fire Prevention Project']
+                },
+                es: {
+                    title: 'Ministério Público de Porto União – SC',
+                    description: 'Proyecto desarrollado para el Ministério Público de Porto União – SC, con aproximadamente 3.100 m² de área construida, contemplando proyectos hidrosanitarios y de prevención contra incendios. Los servicios fueron elaborados conforme las normas técnicas vigentes.',
+                    services: ['Proyecto Hidrosanitario', 'Proyecto de Prevención de Incendios']
+                }
+            },
+            location: 'Porto União, SC',
+            year: '2024',
+            category: 'Preventivo',
+            images: [
+                'assets/images/Projetos/MPPU/mppupreventivo01.webp',
+                'assets/images/Projetos/MPPU/mppupreventivo01_1.webp',
+                'assets/images/Projetos/MPPU/mppupreventivo02.webp',
+                'assets/images/Projetos/MPPU/mppupreventivo02_1.webp'
+            ],
+            stats: { area: '3.100 m²', duration: '8 meses', team: '7' }
+        },
+        'ambulatorio-mg': {
+            title: 'Ambulatório – Minas Gerais',
+            i18n: {
+                pt: {
+                    title: 'Ambulatório – Minas Gerais',
+                    description: 'O Ambulatório, localizado em Minas Gerais, é uma edificação hospitalar com aproximadamente 12.450 m² de área construída, desenvolvida com foco em segurança, eficiência operacional e conformidade com as normas técnicas para estabelecimentos de saúde. O projeto contemplou o desenvolvimento dos sistemas hidrossanitários e de prevenção e combate a incêndio, utilizando modelagem e compatibilização BIM, além do acompanhamento para aprovação junto aos órgãos competentes.',
+                    services: ['Projeto Hidrossanitário', 'Projeto Preventivo Contra Incêndio', 'Modelagem e Compatibilização BIM', 'Aprovação junto aos órgãos competentes']
+                },
+                en: {
+                    title: 'Outpatient Clinic – Minas Gerais',
+                    description: 'A hospital building in Minas Gerais with approximately 12,450 m² of built area, developed with a focus on safety, operational efficiency and compliance with technical standards for healthcare facilities. The project included plumbing systems, fire prevention and BIM modeling.',
+                    services: ['Plumbing Project', 'Fire Prevention Project', 'BIM Modeling & Compatibility', 'Regulatory Approval']
+                },
+                es: {
+                    title: 'Ambulatorio – Minas Gerais',
+                    description: 'Edificio hospitalario en Minas Gerais con aproximadamente 12.450 m² de área construida, desarrollado con foco en seguridad, eficiencia operacional y conformidad con normas técnicas para establecimientos de salud. El proyecto incluyó sistemas hidrosanitarios, prevención de incendios y modelado BIM.',
+                    services: ['Proyecto Hidrosanitario', 'Prevención de Incendios', 'Modelado BIM y Compatibilización', 'Aprobación Regulatoria']
+                }
+            },
+            location: 'Minas Gerais, MG',
+            year: '2024',
+            category: 'Hospitalar',
+            images: [
+                'assets/images/Projetos/Ambulat%C3%B3rio%20em%20mg/Ambulatorio_em_mg01.png',
+                'assets/images/Projetos/Ambulat%C3%B3rio%20em%20mg/Ambulatorio_em_mg02.png',
+                'assets/images/Projetos/Ambulat%C3%B3rio%20em%20mg/Ambulatorio_em_mg03.png',
+                'assets/images/Projetos/Ambulat%C3%B3rio%20em%20mg/Ambulatorio_em_mg04.png',
+                'assets/images/Projetos/Ambulat%C3%B3rio%20em%20mg/Ambulatorio_em_mg05.png',
+                'assets/images/Projetos/Ambulat%C3%B3rio%20em%20mg/Ambulatorio_em_mg06.png',
+                'assets/images/Projetos/Ambulat%C3%B3rio%20em%20mg/Ambulatorio_em_mg07.png'
+            ],
+            stats: { area: '12.450 m²', duration: '12 meses', team: '10' }
+        },
+        'ed-comercial': {
+            title: 'Edifício Comercial',
+            i18n: {
+                pt: {
+                    title: 'Edifício Comercial',
+                    description: 'O Edifício Comercial é um empreendimento com aproximadamente 3.600 m² de área construída, desenvolvido para atender às demandas de infraestrutura elétrica e de comunicação, garantindo segurança, desempenho e confiabilidade para as operações do edifício. O projeto contemplou o desenvolvimento das instalações elétricas e do sistema de cabeamento estruturado, além do processo de aprovação junto à CELESC.',
+                    services: ['Projeto de Instalações Elétricas', 'Projeto de Cabeamento Estruturado', 'Aprovação junto à CELESC']
+                },
+                en: {
+                    title: 'Commercial Building',
+                    description: 'A commercial building with approximately 3,600 m² of built area, developed to meet electrical infrastructure and communication demands, ensuring safety, performance and reliability. The project included electrical installations, structured cabling and CELESC approval.',
+                    services: ['Electrical Installations Project', 'Structured Cabling Project', 'CELESC Approval']
+                },
+                es: {
+                    title: 'Edificio Comercial',
+                    description: 'Edificio comercial con aproximadamente 3.600 m² de área construida, desarrollado para atender las demandas de infraestructura eléctrica y de comunicación, garantizando seguridad, desempeño y confiabilidad. El proyecto incluyó instalaciones eléctricas, cableado estructurado y aprobación ante CELESC.',
+                    services: ['Instalaciones Eléctricas', 'Cableado Estructurado', 'Aprobación CELESC']
+                }
+            },
+            location: 'Santa Catarina, SC',
+            year: '2024',
+            category: 'Elétrico',
+            images: [
+                'assets/images/Projetos/ED%20Comercial/ED_01.png',
+                'assets/images/Projetos/ED%20Comercial/ED_02.png',
+                'assets/images/Projetos/ED%20Comercial/ED_03.png',
+                'assets/images/Projetos/ED%20Comercial/ED_04.png',
+                'assets/images/Projetos/ED%20Comercial/ED_05.png',
+                'assets/images/Projetos/ED%20Comercial/ED_06.png',
+                'assets/images/Projetos/ED%20Comercial/ED_07.png'
+            ],
+            stats: { area: '3.600 m²', duration: '6 meses', team: '6' }
+        },
+        'parque-linear': {
+            title: 'Parque Linear',
+            i18n: {
+                pt: {
+                    title: 'Parque Linear',
+                    description: 'O Parque Linear é uma obra pública com aproximadamente 64.000 m² de área, desenvolvida para proporcionar infraestrutura urbana segura, eficiente e sustentável, contribuindo para a valorização dos espaços públicos e melhoria da mobilidade da população. O projeto contemplou o desenvolvimento completo das instalações elétricas e do sistema de iluminação pública, priorizando eficiência energética e segurança.',
+                    services: ['Projeto de Instalações Elétricas', 'Projeto de Iluminação Pública']
+                },
+                en: {
+                    title: 'Linear Park',
+                    description: 'A public infrastructure project with approximately 64,000 m² of area, developed to provide safe, efficient and sustainable urban infrastructure, contributing to the enhancement of public spaces and improved population mobility. The project covered electrical installations and public lighting systems.',
+                    services: ['Electrical Installations Project', 'Public Lighting Project']
+                },
+                es: {
+                    title: 'Parque Lineal',
+                    description: 'Obra pública con aproximadamente 64.000 m² de área, desarrollada para proporcionar infraestructura urbana segura, eficiente y sostenible, contribuyendo a la valorización de los espacios públicos y mejora de la movilidad. El proyecto incluyó instalaciones eléctricas e iluminación pública.',
+                    services: ['Instalaciones Eléctricas', 'Iluminación Pública']
+                }
+            },
+            location: 'Brasil',
+            year: '2024',
+            category: 'Obra Pública',
+            images: [
+                'assets/images/Projetos/Parque%20Linear/Parque_01.png',
+                'assets/images/Projetos/Parque%20Linear/Parque_02.png',
+                'assets/images/Projetos/Parque%20Linear/Parque_03.png',
+                'assets/images/Projetos/Parque%20Linear/Parque_04.png',
+                'assets/images/Projetos/Parque%20Linear/Parque_05.png'
+            ],
+            stats: { area: '64.000 m²', duration: '18 meses', team: '15' }
+        },
+        'residencial-site': {
+            title: 'Residencial Site',
+            i18n: {
+                pt: {
+                    title: 'Residencial Site',
+                    description: 'O Residencial Site é um empreendimento residencial com aproximadamente 1.600 m² de área construída, desenvolvido com foco na eficiência dos sistemas hidrossanitários, segurança sanitária e conformidade com as normas técnicas vigentes. O projeto contemplou o desenvolvimento completo das instalações hidrossanitárias e o processo de aprovação junto à Vigilância Sanitária.',
+                    services: ['Projeto Hidrossanitário', 'Aprovação junto à Vigilância Sanitária']
+                },
+                en: {
+                    title: 'Residencial Site',
+                    description: 'A residential development with approximately 1,600 m² of built area, developed with a focus on plumbing system efficiency, sanitary safety and compliance with current technical standards. The project included complete plumbing installations and health authority approval.',
+                    services: ['Plumbing Project', 'Health Authority Approval']
+                },
+                es: {
+                    title: 'Residencial Site',
+                    description: 'Desarrollo residencial con aproximadamente 1.600 m² de área construida, enfocado en la eficiencia de sistemas hidrosanitarios, seguridad sanitaria y conformidad con las normas técnicas vigentes. El proyecto incluyó instalaciones hidrosanitarias y aprobación ante la Vigilancia Sanitaria.',
+                    services: ['Proyecto Hidrosanitario', 'Aprobación Sanitaria']
+                }
+            },
+            location: 'Brasil',
+            year: '2024',
+            category: 'Residencial',
+            images: [
+                'assets/images/Projetos/Residencial%20Site/Site_01.png',
+                'assets/images/Projetos/Residencial%20Site/Site_02.png',
+                'assets/images/Projetos/Residencial%20Site/Site_03.png',
+                'assets/images/Projetos/Residencial%20Site/Site_04.png',
+                'assets/images/Projetos/Residencial%20Site/Site_05.png'
+            ],
+            stats: { area: '1.600 m²', duration: '4 meses', team: '4' }
+        },
+        'senac-pouso-alegre': {
+            title: 'SENAC – Pouso Alegre',
+            i18n: {
+                pt: {
+                    title: 'SENAC – Pouso Alegre',
+                    description: 'A unidade do SENAC em Pouso Alegre é uma obra pública com aproximadamente 2.000 m² de área construída, desenvolvida para oferecer ambientes com elevado padrão de conforto térmico, qualidade do ar e eficiência energética, atendendo às necessidades de instituições de ensino. O projeto contemplou o desenvolvimento completo dos sistemas de climatização e renovação de ar, garantindo condições adequadas de conforto ambiental e controle da qualidade do ar interno.',
+                    services: ['Projeto de Climatização', 'Projeto de Renovação de Ar']
+                },
+                en: {
+                    title: 'SENAC – Pouso Alegre',
+                    description: 'The SENAC unit in Pouso Alegre is a public work with approximately 2,000 m² of built area, developed to provide environments with high thermal comfort, air quality and energy efficiency standards for professional training institutions. The project included complete HVAC and air renewal systems.',
+                    services: ['HVAC Project', 'Air Renewal Project']
+                },
+                es: {
+                    title: 'SENAC – Pouso Alegre',
+                    description: 'La unidad del SENAC en Pouso Alegre es una obra pública con aproximadamente 2.000 m² de área construida, desarrollada para proporcionar ambientes con alto estándar de confort térmico, calidad del aire y eficiencia energética para instituciones educativas. El proyecto incluyó sistemas completos de climatización y renovación de aire.',
+                    services: ['Proyecto de Climatización', 'Proyecto de Renovación de Aire']
+                }
+            },
+            location: 'Pouso Alegre, MG',
+            year: '2024',
+            category: 'Climatização',
+            images: [
+                'assets/images/Projetos/Senac%20Pouso%20Alegre/Senac_01.png',
+                'assets/images/Projetos/Senac%20Pouso%20Alegre/Senac_02.png',
+                'assets/images/Projetos/Senac%20Pouso%20Alegre/Senac_03.png',
+                'assets/images/Projetos/Senac%20Pouso%20Alegre/Senac_04.png',
+                'assets/images/Projetos/Senac%20Pouso%20Alegre/Senac_05.png'
+            ],
+            stats: { area: '2.000 m²', duration: '5 meses', team: '5' }
+        },
+        'ceim': {
+            title: 'Edificação Escolar – Governador Celso Ramos SC',
+            i18n: {
+                pt: {
+                    title: 'Edificação Escolar – Governador Celso Ramos SC',
+                    description: 'A Edificação Escolar, localizada em Governador Celso Ramos – SC, possui aproximadamente 2.362,50 m² de área construída e foi desenvolvida para atender aos requisitos técnicos de segurança, funcionalidade, eficiência e conforto exigidos para ambientes educacionais. O projeto contemplou o desenvolvimento multidisciplinar das instalações prediais, incluindo sistemas hidrossanitários, elétricos, telecomunicações, climatização, prevenção e combate a incêndio e proteção contra descargas atmosféricas (SPDA), com modelagem e compatibilização em BIM.',
+                    services: ['Projeto Hidrossanitário', 'Projeto Preventivo Contra Incêndio', 'Projeto de Instalações Elétricas', 'Projeto de Telecomunicações', 'Projeto de Climatização e Renovação de Ar', 'Projeto de SPDA', 'Modelagem e Compatibilização BIM', 'Aprovação junto aos órgãos competentes']
+                },
+                en: {
+                    title: 'School Building – Governador Celso Ramos SC',
+                    description: 'A school building located in Governador Celso Ramos – SC, with approximately 2,362.50 m² of built area, developed to meet technical requirements for safety, functionality, efficiency and comfort in educational environments. The project included multidisciplinary development of building installations, including plumbing, electrical, telecommunications, HVAC, fire prevention and lightning protection (SPDA), all modeled and coordinated in BIM.',
+                    services: ['Plumbing Project', 'Fire Prevention Project', 'Electrical Installations Project', 'Telecommunications Project', 'HVAC & Air Renewal Project', 'Lightning Protection (SPDA)', 'BIM Modeling & Compatibility', 'Regulatory Approval']
+                },
+                es: {
+                    title: 'Edificio Escolar – Governador Celso Ramos SC',
+                    description: 'Edificio escolar ubicado en Governador Celso Ramos – SC, con aproximadamente 2.362,50 m² de área construida, desarrollado para cumplir con los requisitos técnicos de seguridad, funcionalidad, eficiencia y confort en ambientes educativos. El proyecto incluyó el desarrollo multidisciplinar de instalaciones prediales, con modelado y compatibilización BIM.',
+                    services: ['Proyecto Hidrosanitario', 'Prevención de Incendios', 'Instalaciones Eléctricas', 'Telecomunicaciones', 'Climatización y Renovación de Aire', 'SPDA', 'Modelado BIM y Compatibilización', 'Aprobación Regulatoria']
+                }
+            },
+            location: 'Governador Celso Ramos, SC',
+            year: '2024',
+            category: 'Projeto Completo',
+            images: [
+                'assets/images/Projetos/CEIM/CEIM1.png',
+                'assets/images/Projetos/CEIM/CEIM2.png',
+                'assets/images/Projetos/CEIM/CEIM3.png',
+                'assets/images/Projetos/CEIM/CEIM4.png',
+                'assets/images/Projetos/CEIM/CEIM5.png',
+                'assets/images/Projetos/CEIM/CEIM6.png',
+                'assets/images/Projetos/CEIM/CEIM7.png',
+                'assets/images/Projetos/CEIM/CEIM8.png',
+                'assets/images/Projetos/CEIM/CEIM9.png',
+                'assets/images/Projetos/CEIM/CEIM10.png'
+            ],
+            stats: { area: '2.362 m²', duration: '10 meses', team: '12' }
         }
     };
 
@@ -437,7 +667,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${project.year}
                 </span>
             </div>
-            <h2 class="text-2xl md:text-3xl font-bold text-foreground mb-4">${projectContent.title}</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-foreground mb-4">${projectContent.title || project.title}</h2>
             <p class="text-muted-foreground leading-relaxed mb-6">${projectContent.description}</p>
             
             <div class="grid grid-cols-3 gap-4 mb-6">
